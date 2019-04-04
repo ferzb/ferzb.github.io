@@ -252,7 +252,7 @@ textarea:-ms-input-placeholder {
 }
 
 .page .container {
-  max-width: 1100px;
+  max-width: 1500px;
   position: relative;
   padding: 30px 20px;
   margin: auto;
@@ -264,6 +264,12 @@ textarea:-ms-input-placeholder {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (min-width: 1500px) {
+  .page .container {
+    max-width: 1500px;
+  }
 }
 
 .page .main-constructor {
@@ -289,7 +295,7 @@ textarea:-ms-input-placeholder {
 }
 
 .page .main-box {
-  width: 50%;
+  width: 100%;
 }
 
 @media screen and (min-width: 780px) {
