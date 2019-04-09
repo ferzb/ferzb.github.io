@@ -1,7 +1,9 @@
 .object
     position: absolute
     z-index: 10
-    display: block
+    display: none
+    @media screen and (min-width: #{$dw-640})
+        display: block
     &.ball
         animation: 3s liner-ball infinite
         &.num-1

@@ -1,23 +1,46 @@
 body
     position: relative
+    max-height: 16430px
 .page
     &-wrap
-        position: fixed
+        position: static
         width: 100%
+        top: 0
+        left: 0
         overflow-y: auto
         overflow-x: hidden
+        @media screen and (min-width: #{$dw-640})
+            position: fixed
     &_header
         position: absolute
         left: 0
         top: 0
         z-index: 1000
         width: 100%
+        background: transparent
+        div
+           background: transparent 
+        .header_logo
+            font-size: 24px
+            position: relative
+            &:after
+                content: ""
+                display: block
+                width: 37px
+                height: 2px
+                position: absolute
+                left: 22px
+                bottom: 0px
+                background: $sec-color
+
 
 .main
     &_scroll
         display: flex
-        justify-content: space-between
+        flex-wrap: wrap
         position: relative
+        @media screen and (min-width: #{$dw-640})
+            flex-wrap: nowrap
     &_box
         min-width: 100vw
         min-height: 100vh
@@ -36,6 +59,7 @@ body
                 display: flex
                 align-items: center
                 margin-top: 12px
+                margin-right: 12px
                 &:hover
                     img
                         transform: scale(1.2)
@@ -89,29 +113,48 @@ body
 
     &_content
         min-height: 100vh
-        padding-left: 100px
-        width: auto
+        padding: 20px
+        width: 100%
         background: #223045
         color: #fff
         position: relative
+        @media screen and (min-width: #{$dw-640})
+            width: auto
+            padding: 0px 0px 0px 100px
         &_inner
             display: flex
+            flex-wrap: wrap
             height: 100%
+            width: 100%
+            @media screen and (min-width: #{$dw-640})
+                flex-wrap: nowrap
+                width: auto
             .general-title
                 color: #fff
-                font-size: 50px
+                font-size: 30px
                 position: relative
+                @media screen and (min-width: #{$dw-640})
+                    font-size: 50px
             .inner-box
-                min-height: 500px
-                max-width: 600px
-                width: 100vw
-                margin-right: 50px
+                margin-right: 0px
+                margin-bottom: 50px
+                max-height: 500px
+                width: 100%
+                height: auto
+                @media screen and (min-width: #{$dw-640})
+                    max-width: 600px
+                    width: 100vw
+                    margin-right: 50px
+                    margin-bottom: 0px
+                    height: 100%
                 &:first-child
                     .general-title
-                        font-size: 60px
+                        font-size: 35px
+                        @media screen and (min-width: #{$dw-640})
+                            font-size: 60px
                 &:nth-child(2)
                     .picture
-                        height: 400px
+                        max-height: 400px
                 .general-paragraph
                     margin-top: 20px
                     display: block
@@ -120,16 +163,28 @@ body
                     height: 500px
                     overflow: hidden
                     background: $thr-color
+                    img
+                        height: auto
+                        width: auto
                 .inner-content
                     margin-top: auto
+                    width: 100%
+                    @media screen and (min-width: #{$dw-640})
+                        width: auto
                     .picture
-                        max-width: 370px
+                        max-width: 100%
                         max-height: 220px
                         margin-top: 40px
+                        @media screen and (min-width: #{$dw-640})
+                            max-width: 370px
                 &.small-img
-                    max-width: 320px
+                    max-width: 100%
+                    @media screen and (min-width: #{$dw-640})
+                        max-width: 320px
                 &.middle-img
-                    max-width: 520px
+                    max-width: 100%
+                    @media screen and (min-width: #{$dw-640})
+                        max-width: 520px
 
     &_why-us
         background: $sec-color
@@ -138,6 +193,15 @@ body
         &_content
             margin-top: auto
             color: #fff
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            @media screen and (min-width: #{$dw-640})
+                justify-content: space-between
+        &_logo
+            width: 100%
+            @media screen and (min-width: #{$dw-640})
+                width: calc(50% - 50px)
         span
             margin-top: auto
             a
@@ -159,6 +223,9 @@ body
                     &:after
                         left: 0
         &_text
+            width: 100%
+            @media screen and (min-width: #{$dw-640})
+                width: calc(50% - 50px)
             li
                 margin-top: 22px
             span
