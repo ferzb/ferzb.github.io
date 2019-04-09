@@ -27,54 +27,76 @@
 			<div class="container">
 				<h2>Abonē žurnālu Forbes</h2>
 				<span class="title-span">Izveleties abonēšanas veidu</span>
+
 				<div class="wrap-box choose-veidu">
-					<div class="box-item personal-item active">
+					<label for="personal-item" class="box-item personal-item active">
 						<i class="checkbox"></i>
 						<h4>Personal</h4>
 						<span>Pērciet sev vai kā davanu citam</span>
-					</div>
-					<div class="box-item business-item">
+					</label>
+					<label for="business-item" class="box-item business-item">
 						<i class="checkbox"></i>
 						<h4>Business</h4>
 						<span>Biznesa žurnāls nopitenam biznesam</span>
-					</div>
+					</label>
 				</div>
+
 				<span class="title-span">Izveleties abonēšanas periodu</span>
+
 				<div class="wrap-box choose-periodu">
-					<div class="box-item box-offer active">
+
+					<label for="offer-1" class="box-item box-offer active">
 						<div class="sale">Iepazīšanās abonements</div>
 						<i class="checkbox"></i>
 						<span>3 mēnešiem – <br>3 numuri</span>
 						<span class="price"><i>11,</i>99 €</span>
 						<span>-20 % atlaide</span>
-					</div>
-					<div class="box-item box-offer">
+					</label>
+
+					<label for="offer-2" class="box-item box-offer">
 						<i class="checkbox"></i>
 						<span>6 mēnešiem – <br>5 numuri</span>
 						<span class="price"><i>20,</i>99 €</span>
 						<span>-30 % atlaide</span>
-					</div>
-					<div class="box-item box-offer">
+					</label>
+
+					<label for="offer-3" class="box-item box-offer">
 						<i class="checkbox"></i>
 						<span>Vienam gadam – <br>10 numuri</span>
 						<span class="price"><i>11,</i>99 €</span>
 						<span>-34 % atlaide</span>
-					</div>
-					<div class="box-item box-offer">
+					</label>
+
+					<label for="offer-4" class="box-item box-offer">
 						<i class="checkbox"></i>
 						<span>Diviem gadiem –<br>20 numuri</span>
 						<span class="price"><i>54,</i>99 €</span>
 						<span>-45 % atlaide</span>
-					</div>
-					<div class="box-item box-offer">
+					</label>
+
+					<label for="offer-5" class="box-item box-offer">
 						<i class="checkbox"></i>
 						<span>Diviem gadiem –<br>20 numuri</span>
 						<span class="price"><i>54,</i>99 €</span>
 						<span>-45 % atlaide</span>
-					</div>
+					</label>
 					
 				</div>
-				<a class="global-btn" href="#">Subscribe</a>
+
+				<form action="">
+					<input type="radio" id="personal-item" name="type_magazine" checked>
+					<input type="radio" id="business-item" name="type_magazine">
+
+					<input type="radio" id="offer-1" name="choose-periodu" checked>
+					<input type="radio" id="offer-2" name="choose-periodu">
+					<input type="radio" id="offer-3" name="choose-periodu">
+					<input type="radio" id="offer-4" name="choose-periodu">
+					<input type="radio" id="offer-5" name="choose-periodu">
+					<button type="submit" class="global-btn" href="#">Subscribe</button>
+				</form>
+				
+
+
 				<div class="text-box">
 					<h3>Abonē šodien un saņem pastkastē jau pirmo žurnāla numuru maija sākumā!</h3>
 					<p>
