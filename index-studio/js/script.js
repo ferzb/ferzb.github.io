@@ -26,8 +26,21 @@ $(document).ready(function() {
 			$('.squer').css('transform', 'rotate('+valueTop/10+'deg)');
 		}
 	};
-
-	
+	$(function() {
+		$(window).scroll(function(){
+			var window_offset_top = $(window).scrollTop();
+			if (window_offset_top >= 1450) {
+				$('.header_logo').css('color', '#fff')
+			} else(
+				$('.header_logo').removeAttr('style')
+			)
+			if (window_offset_top >= 2400) {
+				$('.nav-icon_line').css('background', '#fff')
+			} else(
+				$('.nav-icon_line').removeAttr('style')
+			)
+		})
+	})
 
 	$(window).resize(function() {
 		if ($(window).width() > 640) {
