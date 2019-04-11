@@ -1,4 +1,6 @@
-@import "setting.sass";
+@import 'components/font'
+
+@import 'components/setting'
 
 /*General styles*/
 *
@@ -11,7 +13,7 @@
 html, body
 	min-width: 320px 
 	font-family: $global-font
-	color: $text-color  
+	color: $f-color
 	font-size: $min-font-size
 	position: relative
 	@media screen and (min-width: #{$dw-640})
@@ -48,37 +50,35 @@ a
 	-ms-transition: all 0.3s ease 
 	-o-transition: all 0.3s ease 
 	transition: all 0.3s ease 
-nav
-	font-family: $font-nav
-	a
-		font-size: $nav-size
+
 ul
 	list-style: none 
+
 img
 	width: 100%
-nav ul li
-	margin: 10px 0px 
-	@media screen and (min-width: #{$dw-width-nav-toggle})
-		margin-right: $offset-nav-right
-		margin-left: $offset-nav-left 
+	height: auto
 
 input, textarea, button
 	outline: none
-	font-family: $global-font 
-		
-textarea::-webkit-input-placeholder
 	font-family: $global-font
-textarea::-moz-placeholder
+	border: none
+
+input::-webkit-input-placeholder, input::-moz-placeholder, input:-moz-placeholder, input:-ms-input-placeholder 
+	color: $input-color
+
+
+textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-placeholder, textarea:-ms-input-placeholder 
 	font-family: $global-font
-textarea:-moz-placeholder
-	font-family: $global-font
-textarea:-ms-input-placeholder
-	font-family: $global-font
+
 	
 /*container-block*/
-.container-block
-	margin: 40px 0
-	
+.container-wrap
+	margin: $min-container-wrapper-margin
+	padding: $min-container-wrapper-padding
+	@media screen and (min-width: #{$dw-width-section})
+		margin: $container-wrapper-margin
+		padding: $container-wrapper-padding
+		
 /*wrapper*/
 .wrapper
 	max-width: $wrap-size
@@ -96,83 +96,88 @@ textarea:-ms-input-placeholder
 		padding: $container-max-pading
 
 /*section-block*/
-.section-block
-	margin: 0px
-	padding: 20px 0px
+.section-wrap
+	margin: $min-margin-section-block
+	padding: $min-padding-section-block
 	@media screen and (min-width: #{$dw-width-section})
 		margin: $margin-section-block 
 		padding: $padding-section-block
-.img img
-	width: 100%
-	height: auto
-	
-/*nav-toggle-block*/
-.block-toggle
+
+/*navbar*/
+.navbar
+	font-family: $font-nav
+	&_list
+		li
+			margin: $margin-nav-min-offest
+			@media screen and (min-width: #{$dw-width-nav-toggle})
+				margin: $margin-nav-offest	
+			a
+				font-size: $nav-size
+/*navbar*/	
+
+/*navigation icon*/
+.nav-icon
 	display: block
 	@media screen and (min-width: #{$dw-width-nav-toggle})
 		display: none
-	span
-		margin-left: auto 
-
-.nav-toggle-block
-	margin: 0px
-	cursor: pointer
-	display: block
-	width: 42px
-	height: 39px
-	position: relative
-	-webkit-transition: all 0.35s ease 
-	-moz-transition: all 0.35s ease 
-	-ms-transition: all 0.35s ease 
-	-o-transition: all 0.35s ease 
-	transition: all 0.35s ease
-	
-
-.nav-toggle-line
-	width: 80%
-	-webkit-border-radius: 16px 
-	border-radius: 16px 
-	display: block
-	height: $nav-line-height
-	background: $nav-toggle-background
-	position: absolute
-	left: 3px
-	top: 0
-	-webkit-transition: background 0.3s, opacity 0.35s 0.2s, top 0.2s 0.4s, transform 0.2s 0.2s ease 
-	-moz-transition: background 0.3s, opacity 0.35s 0.2s, top 0.2s 0.4s, transform 0.2s 0.2s ease 
-	-ms-transition: background 0.3s, opacity 0.35s 0.2s, top 0.2s 0.4s, transform 0.2s 0.2s ease 
-	-o-transition: background 0.3s, opacity 0.35s 0.2s, top 0.2s 0.4s, transform 0.2s 0.2s ease 
-	transition: background 0.3s, opacity 0.35s 0.2s, top 0.2s 0.4s, transform 0.2s 0.2s ease 
-	&:nth-child(1)
-		top: 5px
-	&:nth-child(2)
-		top: 17px
-	&:nth-child(3)
-		top: 29px
-	&.active-line
-		-webkit-transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease 
-		-moz-transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease 
-		-ms-transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease 
-		-o-transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease 
-		transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease 
-		background: #fff
+	&_box
+		margin: 0px
+		cursor: pointer
+		display: block
+		width: 42px
+		height: 39px
+		position: relative
+		-webkit-transition: all 0.35s ease 
+		-moz-transition: all 0.35s ease 
+		-ms-transition: all 0.35s ease 
+		-o-transition: all 0.35s ease 
+		transition: all 0.35s ease
+	&_line
+		width: 80%
+		-webkit-border-radius: 16px 
+		border-radius: 16px 
+		display: block
+		height: $nav-line-height
+		background: $nav-toggle-background
+		position: absolute
+		left: 3px
+		top: 0
+		-webkit-transition: background 0.3s, opacity 0.35s 0.2s, top 0.2s 0.4s, transform 0.2s 0.2s ease 
+		-moz-transition: background 0.3s, opacity 0.35s 0.2s, top 0.2s 0.4s, transform 0.2s 0.2s ease 
+		-ms-transition: background 0.3s, opacity 0.35s 0.2s, top 0.2s 0.4s, transform 0.2s 0.2s ease 
+		-o-transition: background 0.3s, opacity 0.35s 0.2s, top 0.2s 0.4s, transform 0.2s 0.2s ease 
+		transition: background 0.3s, opacity 0.35s 0.2s, top 0.2s 0.4s, transform 0.2s 0.2s ease 
 		&:nth-child(1)
-			top: 12px
-			-webkit-transform: rotate(45deg) 
-			-moz-transform: rotate(45deg) 
-			-ms-transform: rotate(45deg) 
-			-o-transform: rotate(45deg) 
-			transform: rotate(45deg) 
+			top: 5px
 		&:nth-child(2)
-			opacity: 0 
+			top: 17px
 		&:nth-child(3)
-			top: 12px
-			-webkit-transform: rotate(-45deg) 
-			-moz-transform: rotate(-45deg) 
-			-ms-transform: rotate(-45deg) 
-			-o-transform: rotate(-45deg) 
-			transform: rotate(-45deg)
-/*end nav toggle*/
+			top: 29px
+		&.active
+			-webkit-transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease 
+			-moz-transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease 
+			-ms-transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease 
+			-o-transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease 
+			transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease 
+			background: $nav-toggle-background
+			&:nth-child(1)
+				top: 12px
+				-webkit-transform: rotate(45deg) 
+				-moz-transform: rotate(45deg) 
+				-ms-transform: rotate(45deg) 
+				-o-transform: rotate(45deg) 
+				transform: rotate(45deg) 
+			&:nth-child(2)
+				opacity: 0 
+			&:nth-child(3)
+				top: 12px
+				-webkit-transform: rotate(-45deg) 
+				-moz-transform: rotate(-45deg) 
+				-ms-transform: rotate(-45deg) 
+				-o-transform: rotate(-45deg) 
+				transform: rotate(-45deg)
+	
+/*end navigation icon*/
 
 /*start btn up*/
 .btn-up

@@ -1,0 +1,364 @@
+body
+    p
+        font-weight: 300
+
+.main
+    &_header
+        height: 100vh
+        max-height: 660px
+        padding-top: 120px
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+        text-align: center
+        background-image: linear-gradient(to right, #17b6ff 50%, #0a5bff 100%)
+        img
+            width: 100%
+            opacity: 0
+            transform: translateY(50px)
+            transition: 0.5s 0.5s
+            @media screen and (min-width: #{$dw-780})
+                width: auto
+        &.show
+            img
+                opacity: 1
+                transform: translateY(0px)
+
+    
+    &_about
+        opacity: 0
+        transform: rotateX(90deg)
+        transition: 1s 0.7s
+        &.show
+            opacity: 1
+            transform: rotateX(0deg)
+        article
+            margin-top: 40px
+        h2
+            margin-bottom: 40px
+        p
+            line-height: 28px
+            color: $first-color
+
+    &_services
+        margin: 80px 0px
+        &_title
+            padding-left: 0vw
+            width: 100%
+            @media screen and (min-width: #{$dw-780})
+                padding-left: 4vw
+                width: 50%
+            @media screen and (min-width: 1366px)
+                padding-left: 16vw
+            .inner-box
+                background: #14a1ff
+                border-top-left-radius: 0px
+                border-bottom-left-radius: 0px
+                color: #fff
+                padding: 55px
+                height: 350px
+                display: flex
+                flex-direction: column
+                justify-content: center
+                position: relative
+                z-index: 1
+                @media screen and (min-width: #{$dw-780})
+                    height: 550px
+                    border-top-left-radius: 10px
+                    border-bottom-left-radius: 10px
+                    margin-top: -85px
+                span
+                    font-size: 20px
+                    font-weight: 300
+                    line-height: 26px
+                    @media screen and (min-width: #{$dw-640})
+                        font-size: 29px
+                        line-height: 36px
+                h2
+                    color: #ffffff
+                    margin-bottom: 10px
+                &:after
+                    content: ''
+                    display: none
+                    width: 94px
+                    height: 82px
+                    position: absolute
+                    background-image: url('../img/services_dots.svg')
+                    background-repeat: no-repeat
+                    right: 10px
+                    bottom: 0
+                    transform: translateY(112%)
+                    @media screen and (min-width: #{$dw-640})
+                        display: block
+        &_nav
+            padding: 10px 20px
+            position: relative
+            z-index: 0
+            box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.1)
+            border-top-left-radius: 0px
+            border-bottom-left-radius: 0px
+            background-color: #fff
+            width: 100%
+            @media screen and (min-width: #{$dw-640})
+                padding: 45px 50px 85px 50px
+            @media screen and (min-width: #{$dw-780})
+                border-top-left-radius: 10px
+                border-bottom-left-radius: 10px
+                width: 50%
+            ul
+                max-width: 530px
+                width: 100%
+                li
+                    margin-bottom: 20px
+                a
+                    display: flex
+                    align-items: center
+                    border-radius: 10px
+                    padding: 20px 25px
+                    img
+                        margin-right: 10%
+                        max-width: 80px
+                    span
+                        display: block
+                        font-size: 20px
+                        color: #2d4a57
+                        font-weight: 600
+                        line-height: 24px
+                        i
+                            display: block
+                            font-size: 14px
+                            color: #666666
+                            font-weight: 400
+                    &:hover
+                        background: #f3f3f3
+            .general_btn
+                background: #f4ba00
+                color: #fff
+                position: absolute
+                bottom: 0
+                right: 20%
+                transform: translateY(50%)
+                &:hover
+                    transform: translateY(35%)
+
+    &_information
+        margin: 80px 0px
+        &_text
+            padding: 60px 20px 60px 20px
+            background: #ffffff
+            box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.1)
+            border-top-right-radius: 0px
+            border-bottom-right-radius: 0px
+            width: 100%
+            height: 100%
+            position: relative
+            z-index: 0
+            @media screen and (min-width: #{$dw-480})
+                padding: 60px 65px 60px 5vw
+            @media screen and (min-width: #{$dw-780})
+                border-top-right-radius: 10px
+                border-bottom-right-radius: 10px
+                height: 600px
+                width: 50%
+            @media screen and (min-width: 1366px)
+                padding: 60px 65px 60px 18vw
+            &:after
+                content: ''
+                display: none
+                width: 94px
+                height: 82px
+                position: absolute
+                background-image: url('../img/services_dots.svg')
+                background-repeat: no-repeat
+                right: 14px
+                bottom: 16px
+                @media screen and (min-width: #{$dw-640})
+                    display: block
+            h2
+                margin-bottom: 30px
+            p
+                font-size: 20px
+                color: #01243b
+                line-height: 26px
+        &_pic
+            position: relative
+            z-index: 1
+            width: 100%
+            max-height: 420px
+            overflow: hidden
+            @media screen and (min-width: #{$dw-780})
+                width: 50%
+            img
+                width: 100%
+                height: auto
+
+
+    &_product
+        img
+            width: auto
+            display: block
+            margin-bottom: 40px
+        &_text
+            max-width: 520px
+            margin-bottom: 40px
+            h2
+                margin-bottom: 30px
+        &_video
+            min-height: 300px
+            background-color: #fbb74d
+            position: relative
+            @media screen and (min-width: #{$dw-480})
+                min-height: 500px
+            .play-icon
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+        h3
+            margin-top: 50px
+        &_box 
+            .box-item
+                background-color: #ffffff
+                border-radius: 20px
+                padding: 38px 35px
+                box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1)
+                font-size: 14px
+                margin-bottom: 50px
+                h4
+                    margin-bottom: 12px
+                img
+                    margin-bottom: 27px
+                p
+                    line-height: 24px
+
+    
+    &_testimonials
+        background-color: #a9d9cb
+        &_carousel 
+            margin-top: 40px
+            .owl-nav
+                button
+                    position: absolute
+                    top: 50%
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 35px
+                    height: 35px
+                    border-radius: 50%
+                    background: #5b927d!important
+                    @media screen and (min-width: #{$dw-560})
+                        width: 50px
+                        height: 50px
+                    span
+                        width: 8px
+                        height: 8px
+                        display: block
+                        border-right: 2px solid #fff
+                        border-bottom: 2px solid #fff
+                        @media screen and (min-width: #{$dw-560})
+                            width: 15px
+                            height: 15px
+                    &.owl-prev
+                        left: 0
+                        padding-left: 4px!important
+                        transform: translate(-50%, -50%)
+                        @media screen and (min-width: #{$dw-560})
+                            padding-left: 6px!important
+                        span
+                            transform: rotate(135deg)
+                    &.owl-next
+                        right: 0
+                        padding-right: 6px!important
+                        transform: translate(50%, -50%)
+                        @media screen and (min-width: #{$dw-560})
+                            padding-right: 8px!important
+                        span
+                            transform: rotate(-45deg)
+        &_box
+            padding: 25px 35px
+            border-radius: 20px
+            background-color: #fff
+            @media screen and (min-width: #{$dw-480})
+                padding: 55px 65px
+            p
+                display: block
+                margin-bottom: 30px
+                font-size: 16px
+                line-height: 25px
+        .user-box
+            &_photo
+                width: 100px
+                height: 100px
+                border-radius: 50%
+                margin-right: 0px
+                overflow: hidden
+                margin-bottom: 20px
+                @media screen and (min-width: #{$dw-640})
+                    margin-bottom: 0px
+                    margin-right: 20px
+                img
+                    width: auto
+                    height: auto
+            &_info
+                line-height: 23px
+                span
+                    display: block
+                    font-size: 16px
+                    color: #333
+
+
+.footer
+    span
+        font-weight: 400
+        font-size: 14px
+        line-height: 28px
+        a
+            font-size: 20px
+            display: block
+            color: #333
+            font-weight: 800
+    &_contact
+        display: flex
+        flex-direction: column
+        margin-bottom: 40px
+        @media screen and (min-width: #{$dw-780})
+            margin-bottom: 0
+        h2
+            margin-bottom: 50px
+        .copyright
+            margin-top: auto
+            display: none
+            @media screen and (min-width: #{$dw-780})
+                display: block
+    &_mail
+        margin-bottom: 50px
+        a
+            color: #0d73ff!important
+    &_phone
+        .phone-box
+            display: flex
+            align-items: flex-start
+            margin-bottom: 60px
+            img
+                width: auto
+                margin-right: 20px
+    &_map
+        iframe
+            width: 100%
+            border: 6px solid #fff
+            box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.1)
+            border-radius: 10px
+            margin-bottom: 30px
+        span
+            font-size: 18px
+            color: #666666
+            line-height: 24px
+        .copyright
+            margin-top: 20px
+            display: block
+            font-weight: 400
+            font-size: 14px
+            @media screen and (min-width: #{$dw-780})
+                display: none
