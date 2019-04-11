@@ -413,6 +413,9 @@ body p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   z-index: 1;
 }
@@ -442,6 +445,13 @@ body p {
 .main_services_title .inner-box h2 {
   color: #ffffff;
   margin-bottom: 10px;
+  margin-right: 34px;
+}
+
+@media screen and (min-width: 640px) {
+  .main_services_title .inner-box h2 {
+    margin-right: 52px;
+  }
 }
 
 .main_services_title .inner-box:after {
@@ -719,6 +729,8 @@ body p {
   height: 35px;
   border-radius: 50%;
   background: #5b927d !important;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 @media screen and (min-width: 560px) {
@@ -726,6 +738,10 @@ body p {
     width: 50px;
     height: 50px;
   }
+}
+
+.main_testimonials_carousel .owl-nav button:hover {
+  background: #3b5a4f !important;
 }
 
 .main_testimonials_carousel .owl-nav button span {
@@ -991,7 +1007,7 @@ body p {
 @media screen and (min-width: 640px) {
   .main-services_description .inner-box {
     border-radius: 10px;
-    font-size: 29px;
+    font-size: 26px;
   }
 }
 
@@ -1122,7 +1138,7 @@ body p {
 
 @media screen and (min-width: 640px) {
   .crm_page_description p {
-    line-height: 28px;
+    line-height: 26px;
   }
 }
 
@@ -1158,7 +1174,7 @@ body p {
 }
 
 .salesforce_page_cycles_item .item-text span {
-  font-size: 28px;
+  font-size: 22px;
   margin-bottom: 20px;
   display: block;
   text-align: center;
@@ -1166,7 +1182,7 @@ body p {
 
 @media screen and (min-width: 640px) {
   .salesforce_page_cycles_item .item-text span {
-    font-size: 40px;
+    font-size: 34px;
     text-align: left;
   }
 }

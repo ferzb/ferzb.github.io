@@ -44,13 +44,13 @@ h1, h2, h3, h4, h5, h6, p, a, i, em, strong {
 }
 
 h1 {
-  font-size: 38px;
+  font-size: 32px;
   margin: 0px;
 }
 
 @media screen and (min-width: 640px) {
   h1 {
-    font-size: 56px;
+    font-size: 52px;
   }
 }
 
@@ -60,12 +60,12 @@ h2 {
 
 @media screen and (min-width: 640px) {
   h2 {
-    font-size: 40px;
+    font-size: 38px;
   }
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 26px;
 }
 
 h4 {
@@ -192,8 +192,8 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
   margin: 0px;
   cursor: pointer;
   display: block;
-  width: 42px;
-  height: 39px;
+  width: 34px;
+  height: 27px;
   position: relative;
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
@@ -203,7 +203,7 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
   width: 80%;
   border-radius: 16px;
   display: block;
-  height: 3px;
+  height: 2px;
   background: #fff;
   position: absolute;
   left: 3px;
@@ -220,11 +220,11 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
 }
 
 .nav-icon_line:nth-child(2) {
-  top: 17px;
+  top: 13px;
 }
 
 .nav-icon_line:nth-child(3) {
-  top: 29px;
+  top: 21px;
 }
 
 .nav-icon_line.active {

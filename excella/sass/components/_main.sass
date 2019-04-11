@@ -61,6 +61,7 @@ body
                 display: flex
                 flex-direction: column
                 justify-content: center
+                align-items: center
                 position: relative
                 z-index: 1
                 @media screen and (min-width: #{$dw-780})
@@ -78,6 +79,9 @@ body
                 h2
                     color: #ffffff
                     margin-bottom: 10px
+                    margin-right: 34px
+                    @media screen and (min-width: #{$dw-640})
+                        margin-right: 52px
                 &:after
                     content: ''
                     display: none
@@ -248,9 +252,12 @@ body
                     height: 35px
                     border-radius: 50%
                     background: #5b927d!important
+                    transition: 0.2s
                     @media screen and (min-width: #{$dw-560})
                         width: 50px
                         height: 50px
+                    &:hover
+                        background: #3b5a4f!important
                     span
                         width: 8px
                         height: 8px
