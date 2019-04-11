@@ -307,12 +307,28 @@
   color: #0e2c4d;
 }
 
+.services_header.header .header_logo span {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.services_header.header .header_logo span:last-child {
+  -webkit-transform: rotateX(180deg) rotateY(0deg) translateY(1px);
+          transform: rotateX(180deg) rotateY(0deg) translateY(1px);
+}
+
 .services_header.header .header_logo:before {
+  opacity: 1;
   background-image: url("../img/logo_services.svg");
 }
 
 .services_header.header .header_info {
+  opacity: 1;
   color: #333333;
+}
+
+.services_header.header .nav-icon {
+  opacity: 1;
 }
 
 .services_header.header .nav-icon .nav-icon_line {
@@ -1023,7 +1039,7 @@ body p {
 @media screen and (min-width: 640px) {
   .main-services_description .inner-box {
     border-radius: 10px;
-    font-size: 26px;
+    font-size: 22px;
   }
 }
 
@@ -1198,7 +1214,7 @@ body p {
 
 @media screen and (min-width: 640px) {
   .salesforce_page_cycles_item .item-text span {
-    font-size: 34px;
+    font-size: 30px;
     text-align: left;
   }
 }

@@ -120,11 +120,18 @@
         position: static
         .header_logo
             color: #0e2c4d
+            span
+                transform: rotateY(0deg)
+                &:last-child
+                    transform: rotateX(180deg) rotateY(0deg) translateY(1px)
             &:before
+                opacity: 1
                 background-image: url('../img/logo_services.svg')
         .header_info
+            opacity: 1
             color: #333333
         .nav-icon
+            opacity: 1
             .nav-icon_line
                 background: #0b5fff
 
