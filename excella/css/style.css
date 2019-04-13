@@ -1073,6 +1073,10 @@ body p {
   color: #fff;
 }
 
+.crm_page p {
+  line-height: 28px;
+}
+
 .crm_page_header .main-services_header_content, .crm_page_header .main-services_header_pic {
   width: 100%;
 }
