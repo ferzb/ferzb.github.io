@@ -3,21 +3,17 @@ body
     max-height: 16430px
 .page
     &-wrap
-        position: static
+        position: relative
         width: 100%
-        top: 0
-        left: 0
-        overflow-y: auto
-        overflow-x: hidden
-        @media screen and (min-width: #{$dw-640})
-            position: fixed
     &_header
-        position: absolute
+        position: static
         left: 0
         top: 0
         z-index: 1000
-        width: 100%
+        width: 100vw
         background: transparent
+        @media screen and (min-width: #{$dw-640})
+            position: fixed
         div
            background: transparent 
         .header_logo
@@ -39,10 +35,16 @@ body
         display: flex
         flex-wrap: wrap
         position: relative
+        top: 0
+        left: 0
+        overflow-y: auto
+        overflow-x: hidden
         @media screen and (min-width: #{$dw-640})
+            position: fixed
             flex-wrap: nowrap
+            width: 9408px
     &_box
-        min-width: 100vw
+        width: 1366px
         min-height: 100vh
         .container
             height: 100%

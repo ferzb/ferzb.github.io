@@ -33,27 +33,23 @@ body {
 }
 
 .page-wrap {
-  position: static;
+  position: relative;
   width: 100%;
-  top: 0;
-  left: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-@media screen and (min-width: 640px) {
-  .page-wrap {
-    position: fixed;
-  }
 }
 
 .page_header {
-  position: absolute;
+  position: static;
   left: 0;
   top: 0;
   z-index: 1000;
-  width: 100%;
+  width: 100vw;
   background: transparent;
+}
+
+@media screen and (min-width: 640px) {
+  .page_header {
+    position: fixed;
+  }
 }
 
 .page_header div {
@@ -83,17 +79,23 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 @media screen and (min-width: 640px) {
   .main_scroll {
+    position: fixed;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    width: 9408px;
   }
 }
 
 .main_box {
-  min-width: 100vw;
+  width: 1366px;
   min-height: 100vh;
 }
 
