@@ -1379,7 +1379,7 @@ body p {
 
 @media screen and (min-width: 780px) {
   .integration_page_description_content, .integration_page_description_pic {
-    width: calc(50% - 60px);
+    width: calc(50% - 15px);
   }
 }
 
@@ -1434,7 +1434,7 @@ body p {
 
 @media screen and (min-width: 780px) {
   .integration_page_description_content {
-    margin-left: 40px;
+    margin-left: 30px;
   }
 }
 
