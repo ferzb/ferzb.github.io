@@ -44,13 +44,13 @@ h1, h2, h3, h4, h5, h6, p, a, i, em, strong {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 28px;
   margin: 0px;
 }
 
 @media screen and (min-width: 640px) {
   h1 {
-    font-size: 52px;
+    font-size: 46px;
   }
 }
 
@@ -173,7 +173,7 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
 }
 
 .navbar_list li a {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /*navbar*/

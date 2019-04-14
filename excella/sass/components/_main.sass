@@ -42,7 +42,6 @@ body
             color: $first-color
 
     &_services
-        margin: 80px 0px
         &_title
             padding-left: 0vw
             width: 100%
@@ -147,7 +146,7 @@ body
                     transform: translateY(35%)
 
     &_information
-        margin: 80px 0px
+        margin: 40px 0px 0px
         &_text
             padding: 60px 20px 60px 20px
             background: #ffffff
@@ -163,7 +162,7 @@ body
             @media screen and (min-width: #{$dw-780})
                 border-top-right-radius: 10px
                 border-bottom-right-radius: 10px
-                height: 600px
+                height: 610px
                 width: 50%
             @media screen and (min-width: 1366px)
                 padding: 60px 65px 60px 18vw
@@ -214,6 +213,12 @@ body
             position: relative
             @media screen and (min-width: #{$dw-480})
                 min-height: 500px
+            iframe
+                width: 100%
+                height: 300px
+                display: block
+                @media screen and (min-width: #{$dw-480})
+                    height: 500px
             .play-icon
                 position: absolute
                 top: 50%

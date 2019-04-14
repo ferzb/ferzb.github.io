@@ -187,6 +187,7 @@
 
 .header .navbar {
   margin-left: 0%;
+  padding: 20px 10px;
   position: absolute;
   background: #fff;
   -webkit-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.1);
@@ -195,7 +196,14 @@
   top: 60px;
   right: 20px;
   width: auto;
+  opacity: 0;
   display: none;
+  -webkit-transition: opacity 0.5s 0.5s;
+  transition: opacity 0.5s 0.5s;
+}
+
+.header .navbar.show {
+  opacity: 1;
 }
 
 @media screen and (min-width: 640px) {
@@ -206,6 +214,7 @@
 
 @media screen and (min-width: 960px) {
   .header .navbar {
+    padding: 0;
     display: block;
     margin-left: 1%;
     position: static;
@@ -353,7 +362,7 @@
 }
 
 .page_nav .container {
-  padding: 0;
+  padding: 0 30px;
   overflow: auto;
 }
 
@@ -367,6 +376,7 @@
   padding: 30px 0px;
   display: block;
   position: relative;
+  font-size: 15px;
 }
 
 .page_nav ul a:after {
@@ -512,10 +522,6 @@ body p {
 .main_about p {
   line-height: 28px;
   color: #01243b;
-}
-
-.main_services {
-  margin: 80px 0px;
 }
 
 .main_services_title {
@@ -700,7 +706,7 @@ body p {
 }
 
 .main_information {
-  margin: 80px 0px;
+  margin: 40px 0px 0px;
 }
 
 .main_information_text {
@@ -726,7 +732,7 @@ body p {
   .main_information_text {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    height: 600px;
+    height: 610px;
     width: 50%;
   }
 }
@@ -808,6 +814,18 @@ body p {
 @media screen and (min-width: 480px) {
   .main_product_video {
     min-height: 500px;
+  }
+}
+
+.main_product_video iframe {
+  width: 100%;
+  height: 300px;
+  display: block;
+}
+
+@media screen and (min-width: 480px) {
+  .main_product_video iframe {
+    height: 500px;
   }
 }
 
@@ -1082,7 +1100,7 @@ body p {
 }
 
 .main-services {
-  margin: 40px 0px;
+  margin: 0px 0px 40px;
 }
 
 .main-services_header_content img {
@@ -1099,7 +1117,7 @@ body p {
 
 @media screen and (min-width: 640px) {
   .main-services_header_content span {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -1112,7 +1130,7 @@ body p {
 
 @media screen and (min-width: 640px) {
   .main-services_header_content p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -1134,7 +1152,7 @@ body p {
   background: #14a1ff;
   padding: 65px 15px;
   border-radius: 0px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
 }
 
@@ -1147,7 +1165,7 @@ body p {
 @media screen and (min-width: 640px) {
   .main-services_description .inner-box {
     border-radius: 10px;
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -1202,23 +1220,9 @@ body p {
   z-index: 1;
 }
 
-@media screen and (min-width: 780px) {
-  .crm_page_header .main-services_header_content {
-    padding-left: 4vw;
-  }
-}
-
-@media screen and (min-width: 1366px) {
-  .crm_page_header .main-services_header_content {
-    padding-left: 17vw;
-  }
-}
-
 .crm_page_header .main-services_header_pic {
   padding: 0px;
   background: #fff;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
   -webkit-box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -1229,14 +1233,13 @@ body p {
 @media screen and (min-width: 780px) {
   .crm_page_header .main-services_header_pic {
     margin-top: 0;
-    padding: 10px 0px 10px 10px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    padding: 10px;
+    border-radius: 10px;
   }
 }
 
 .crm_page_header .main-services_header_pic .pic-wrap {
-  height: 490px;
+  height: auto;
   overflow: hidden;
 }
 
@@ -1254,8 +1257,8 @@ body p {
 
 @media screen and (min-width: 1366px) {
   .crm_page_header .main-services_header_pic .pic-wrap img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
   }
 }
 
@@ -1270,7 +1273,7 @@ body p {
 
 @media screen and (min-width: 640px) {
   .crm_page_description p, .crm_page_description li {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -1318,7 +1321,7 @@ body p {
 }
 
 .salesforce_page_cycles_item .item-text span {
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 20px;
   display: block;
   text-align: center;
@@ -1326,7 +1329,7 @@ body p {
 
 @media screen and (min-width: 640px) {
   .salesforce_page_cycles_item .item-text span {
-    font-size: 30px;
+    font-size: 26px;
     text-align: left;
   }
 }
@@ -1339,7 +1342,7 @@ body p {
 
 @media screen and (min-width: 640px) {
   .salesforce_page_cycles_item .item-text p {
-    font-size: 20px;
+    font-size: 18px;
     text-align: left;
   }
 }
@@ -1375,8 +1378,6 @@ body p {
 .integration_page_description_pic {
   padding: 0px;
   background: #fff;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
   -webkit-box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -1387,20 +1388,19 @@ body p {
 @media screen and (min-width: 780px) {
   .integration_page_description_pic {
     margin-top: 0;
-    padding: 10px 10px 10px 0px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    padding: 10px;
+    border-radius: 10px;
   }
 }
 
 .integration_page_description_pic .pic-wrap {
-  height: 490px;
+  height: auto;
   overflow: hidden;
 }
 
 .integration_page_description_pic .pic-wrap img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 
 @media screen and (min-width: 780px) {
@@ -1427,13 +1427,6 @@ body p {
 @media screen and (min-width: 780px) {
   .integration_page_description_content {
     margin-left: 40px;
-    padding-right: 4vw;
-  }
-}
-
-@media screen and (min-width: 1366px) {
-  .integration_page_description_content {
-    padding-right: 10vw;
   }
 }
 
