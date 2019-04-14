@@ -149,8 +149,8 @@
 }
 
 .header_logo span:last-child {
-  -webkit-transform: rotateX(180deg) rotateY(90deg) translateY(2px);
-          transform: rotateX(180deg) rotateY(90deg) translateY(2px);
+  -webkit-transform: rotateX(180deg) rotateY(90deg) translateY(1px);
+          transform: rotateX(180deg) rotateY(90deg) translateY(1px);
   -webkit-transition: -webkit-transform 1s 0.8s;
   transition: -webkit-transform 1s 0.8s;
   transition: transform 1s 0.8s;
@@ -163,8 +163,8 @@
 }
 
 .header_logo.show span:last-child {
-  -webkit-transform: rotateX(180deg) rotateY(0deg) translateY(2px);
-          transform: rotateX(180deg) rotateY(0deg) translateY(2px);
+  -webkit-transform: rotateX(180deg) rotateY(0deg) translateY(1px);
+          transform: rotateX(180deg) rotateY(0deg) translateY(1px);
 }
 
 .header_logo.show:before {
@@ -1103,6 +1103,14 @@ body p {
   margin: 0px 0px 40px;
 }
 
+.main-services.services_page .main_header {
+  max-height: 400px;
+}
+
+.main-services.services_page .main_header h1 {
+  color: #ffffff;
+}
+
 .main-services_header_content img {
   max-width: 135px;
   margin-bottom: 30px;
@@ -1300,7 +1308,7 @@ body p {
 }
 
 .salesforce_page_cycles_item {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .salesforce_page_cycles_item .item-pic {
