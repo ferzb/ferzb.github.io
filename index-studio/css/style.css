@@ -29,12 +29,25 @@
 
 body {
   position: relative;
-  max-height: 16430px;
+  overflow: auto;
+}
+
+@media screen and (min-width: 640px) {
+  body {
+    overflow: hidden;
+  }
 }
 
 .page-wrap {
   position: relative;
   width: 100%;
+  overflow: auto;
+}
+
+@media screen and (min-width: 640px) {
+  .page-wrap {
+    overflow: hidden;
+  }
 }
 
 .page_header {
@@ -83,19 +96,19 @@ body {
   left: 0;
   overflow-y: auto;
   overflow-x: hidden;
+  -webkit-transition: 1.2s 0s;
+  transition: 1.2s 0s;
 }
 
 @media screen and (min-width: 640px) {
   .main_scroll {
-    position: fixed;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    width: 9408px;
   }
 }
 
 .main_box {
-  width: 1366px;
+  min-width: 100vw;
   min-height: 100vh;
 }
 
@@ -335,6 +348,7 @@ body {
 
 .section_why-us {
   background: #e33630;
+  width: 100vw;
 }
 
 .section_why-us .container {
@@ -434,6 +448,8 @@ body {
   position: absolute;
   z-index: 10;
   display: none;
+  -webkit-transition: 1.2s 0s;
+  transition: 1.2s 0s;
 }
 
 @media screen and (min-width: 640px) {
@@ -445,6 +461,8 @@ body {
 .object.ball {
   -webkit-animation: 3s liner-ball infinite;
           animation: 3s liner-ball infinite;
+  -webkit-transition: 1.2s 0s;
+  transition: 1.2s 0s;
 }
 
 .object.ball.num-1 {
@@ -470,6 +488,8 @@ body {
 .object.ball .ball {
   border-radius: 50%;
   display: block;
+  -webkit-transition: 1.2s 0s;
+  transition: 1.2s 0s;
 }
 
 .object.ball .ball.num-1 {
@@ -499,6 +519,8 @@ body {
 .object.triangle {
   -webkit-animation: 4.5s liner-triangle infinite;
           animation: 4.5s liner-triangle infinite;
+  -webkit-transition: 1.2s 0s;
+  transition: 1.2s 0s;
 }
 
 .object.triangle.num-1 {
@@ -508,6 +530,8 @@ body {
 
 .object.triangle.num-1 .triangle {
   display: block;
+  -webkit-transition: 1.2s 0s;
+  transition: 1.2s 0s;
   border-top: 0px solid transparent;
   border-bottom: 40px solid #efbe16;
   border-right: 25px solid transparent;
@@ -515,12 +539,14 @@ body {
 }
 
 .object.triangle.num-2 {
-  left: 53%;
+  left: 43%;
   top: 33%;
 }
 
 .object.triangle.num-2 .triangle {
   width: 127px;
+  -webkit-transition: 1.2s 0s;
+  transition: 1.2s 0s;
   display: block;
   height: 129px;
   background-image: url("../img/trigle.svg");
@@ -533,6 +559,8 @@ body {
   width: 40px;
   height: 40px;
   background: #ffa552;
+  -webkit-transition: 1.2s 0s;
+  transition: 1.2s 0s;
 }
 
 @-webkit-keyframes liner-ball {

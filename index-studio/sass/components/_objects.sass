@@ -2,10 +2,12 @@
     position: absolute
     z-index: 10
     display: none
+    transition: 1.2s 0s
     @media screen and (min-width: #{$dw-640})
         display: block
     &.ball
         animation: 3s liner-ball infinite
+        transition: 1.2s 0s
         &.num-1
             top: 50%
             left: 32%
@@ -21,6 +23,7 @@
         .ball
             border-radius: 50%
             display: block
+            transition: 1.2s 0s
             &.num-1
                 width: 41px
                 height: 41px
@@ -42,20 +45,23 @@
             
     &.triangle
         animation: 4.5s liner-triangle infinite
+        transition: 1.2s 0s
         &.num-1
             top: 70%
             left: 20%
             .triangle
                 display: block
+                transition: 1.2s 0s
                 border-top: 0px solid transparent
                 border-bottom: 40px solid #efbe16
                 border-right: 25px solid transparent
                 border-left: 25px solid transparent
         &.num-2
-            left: 53%
+            left: 43%
             top: 33%
             .triangle
                 width: 127px
+                transition: 1.2s 0s
                 display: block
                 height: 129px
                 background-image: url('../img/trigle.svg')
@@ -66,6 +72,7 @@
         width: 40px
         height: 40px
         background: #ffa552
+        transition: 1.2s 0s
 
 @keyframes liner-ball
     0%
