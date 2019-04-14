@@ -42,5 +42,38 @@ $(document).ready(function() {
 			$('.btn-up').removeClass('active');
 		}
 	});
+
+	var modal_btn = $('.modal_btn'),
+		modal_overlay = $('.modal_box').find('.overlay'),
+		modal_close_box = $('.modal_box').find('.close_btn'),
+		modal_form = $('.modal_box').find('form');
+		
+	modal_btn.click(function(){
+		var modal_box = $(this).attr('data-target');
+		$('#'+modal_box).addClass('open');
+		modal_form.addClass('show');
+		$('body, html').css({
+			overflow: 'hidden',
+			'padding-right': '8px'
+		});
+	})
+
+	modal_overlay.click(function(){
+		$('.modal_box').removeClass('open');
+		$('body, html').removeAttr('style')
+	})
+
+	modal_close_box.click(function(){
+		$('.modal_box').removeClass('open')
+		$('body, html').removeAttr('style')
+	})
+
+	$('.modal-input').focus(function(){
+		$(this).parent().addClass('focus')
+	}).blur(function(){
+		if($(this).val() === ''){
+			$(this).parent().removeClass('focus')
+		}
+	})
 	
 });

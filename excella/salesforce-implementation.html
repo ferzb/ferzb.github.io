@@ -148,7 +148,7 @@
                     <h2 class="general_h2">
                         Get your free consultation
                     </h2>
-                    <a class="general_btn" href="#">Contact us</a>
+                    <button class="general_btn modal_btn" data-target="modal_box" href="#">Contact us</button>
                 </div>
             </section>
             <!--/main services consultation-->
@@ -197,6 +197,35 @@
             </div>
         </footer>
     <!-- end footer page -->
+
+    <!--model box-->
+        <div id="modal_box" class="modal_box">
+            <div class="overlay"></div>
+            <form action="" class="flex flex-vertical-center flex-sb">
+                <div class="modal_box_input col-12">
+                    <label for="userName">Full Name</label>
+                    <input type="name" id="userName" class="modal-input" required>
+                </div>
+
+                <div class="modal_box_input col-12">
+                    <label for="userEmail">E-mail</label>
+                    <input type="mail" id="userEmail" class="modal-input" required>
+                </div>
+
+                <div class="modal_box_input col-12">
+                    <label for="userCompany">Company</label>
+                    <input type="text" id="userCompany" class="modal-input">
+                </div>
+
+                <div class="modal_box_message col-12">
+                    <label for="userMessage">Message</label>
+                    <textarea name="message" id="userMessage" class="modal-input"></textarea>
+                </div>
+
+                <button class="general_btn">Submit</button>
+                <button class="general_btn close_btn">Close</button>
+            </form>
+        </div>
     
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="js/owl.carousel.min.js"></script>
