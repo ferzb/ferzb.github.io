@@ -1,0 +1,78 @@
+/****Grid layout settings****/
+/*General for documetn settings*/
+/*Color*/
+/*Typography*/
+/*h1*/
+/*navbar*/
+/*navigation icon*/
+/*container*/
+/*wrapper*/
+/*section wrapper*/
+/*container wrapper*/
+/*btn up*/
+@import url("grid.css");
+@import url("https://fonts.googleapis.com/css?family=Numans");
+input {
+  -webkit-box-shadow: 0px 0px 0px 1px #000;
+          box-shadow: 0px 0px 0px 1px #000;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 780px) {
+  input {
+    width: auto;
+    margin-top: 0px;
+  }
+}
+
+input.focus {
+  -webkit-box-shadow: 0px 0px 0px 3px green;
+          box-shadow: 0px 0px 0px 3px green;
+}
+
+#calc {
+  margin-top: 40px;
+}
+
+.general_h {
+  text-align: center;
+}
+
+.input_box, .total_start_up_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.total_start_up_price {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.total_start_up_price .total {
+  font-size: 24px;
+  color: green;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 780px) {
+  .total_start_up_price .total {
+    width: auto;
+    margin-top: 0px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
