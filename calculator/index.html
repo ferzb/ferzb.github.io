@@ -15,9 +15,27 @@
 		<link rel="stylesheet" href="css/style.css"/>
 	</head>
 	<body>
+		<header>
+			<div class="container">
+				<div class="nav-icon">
+					<span class="nav-icon_box">
+						<i class="nav-icon_line"></i>
+						<i class="nav-icon_line"></i>
+						<i class="nav-icon_line"></i>
+					</span>
+				</div>
+				<nav class="navbar">
+					<ul class="navbar_list">
+						<li><a href="index.html">Calculator</a></li>
+						<li><a href="price-list.html">Price list</a></li>
+					</ul>
+				</nav>
+			</div>
+			
+		</header>
 		<div class="container calculator">
 			<h2 class="general_h">Калькулятор рассходов на оборудование</h2>
-			<div id="calc" class="wrapper calc calc1">
+			<div class="wrapper calc calc1">
 				<div class="input_box">
 					<span>Прицеп для шаурмы (грн)</span>
 					<input name="price1" type="text" class="price" value="">
@@ -61,7 +79,7 @@
 			</div>
 
 			<h2 class="general_h">Калькулятор рассходов на продукты на неделю</h2>
-			<div id="calc" class="wrapper calc calc2">
+			<div class="wrapper calc calc2">
 				<div class="input_box">
 					<span>Куриное мясо (грн/кг)</span>
 					<input name="price1" type="text" class="price" value="">
@@ -139,10 +157,10 @@
 				</div>
 			</div>
 
-			<h2 class="general_h">Калькулятор рассходов на продукты на неделю</h2>
-			<div id="calc" class="wrapper calc calc2">
+			<h2 class="general_h">Собестоимость бургера</h2>
+			<div class="wrapper calc calc3">
 				<div class="input_box">
-					<span>Куриное мясо (грн/кг)</span>
+					<span>Кол-во мяся для бургера (гр)</span>
 					<input name="price1" type="text" class="price" value="">
 				</div>
 
@@ -151,7 +169,10 @@
 				</div>
 			</div>
 
-			<div class="total_start_up_price calc3">
+
+
+
+			<div class="total_start_up_price calc4">
 				Общая примерная стоимость: <span class="total"></span>
 			</div>
 

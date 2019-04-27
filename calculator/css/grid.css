@@ -42,13 +42,13 @@ h1, h2, h3, h4, h5, h6, p, a, i, em, strong {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 30px;
   margin: 16px 0px 16px 0px;
 }
 
 @media screen and (min-width: 640px) {
   h1 {
-    font-size: 80px;
+    font-size: 50px;
   }
 }
 
@@ -164,7 +164,7 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
   margin: 12px 12px 12px 12px;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 2640px) {
   .navbar_list li {
     margin: 0px 0px 0px 38px;
   }
@@ -178,9 +178,10 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
 /*navigation icon*/
 .nav-icon {
   display: block;
+  cursor: pointer;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 2640px) {
   .nav-icon {
     display: none;
   }
@@ -201,8 +202,8 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
   width: 80%;
   border-radius: 16px;
   display: block;
-  height: 3px;
-  background: #fff;
+  height: 2px;
+  background: #000;
   position: absolute;
   left: 3px;
   top: 0;
@@ -231,7 +232,7 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
   transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, -webkit-transform 0.3s 0.4s ease;
   transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease;
   transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease, -webkit-transform 0.3s 0.4s ease;
-  background: #fff;
+  background: #000;
 }
 
 .nav-icon_line.active:nth-child(1) {

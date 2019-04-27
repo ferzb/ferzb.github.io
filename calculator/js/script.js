@@ -1,4 +1,26 @@
 
+var toggleBlock = $('.nav-icon'),
+	toggleLine = $('.nav-icon_line'),
+	overlay = $('.overlay'),
+	nav = $('.navbar');
+
+//
+//toggle classes when click toggleBlock
+//
+toggleBlock.on('click', function(event) {
+	$(this).toggleClass('open');
+	toggleLine.toggleClass('active');
+	nav.toggleClass('show');
+	overlay.toggleClass('active');
+	if (nav.hasClass('active')) {
+		$('body', 'html').css('overflow', 'hidden');
+	} else{
+		$('body', 'html').removeAttr('style');
+	}
+});
+
+
+
 (function ($) {
 	$(function () {
 		calculate();
@@ -15,7 +37,7 @@
 			calculate();
 		})
 		function calculate() {
-			var price1, price2, price3;
+
 			$('.calc').each(function(key, val){
 				calcInputs = {};
 
@@ -81,6 +103,9 @@
 							case 'price19':
 								val = '';
 								break;
+							case 'priceBurg1':
+								val = '';
+								break;
 							
 							default:
 								break;
@@ -91,8 +116,6 @@
 				});
 
 				total_start_up_price = 0;
-
-
 
 				if (calcInputs.price2 >= 1) {
 					total_start_up_price += calcInputs.price2 * 1;
@@ -172,33 +195,31 @@
 
 				total_start_up_price += ' грн';
 
+				burg_price = 0;
 
 				jQuery(this).find('span.total').html(total_start_up_price);
 
-				price1 = jQuery('.calc1').find('span.total').text();
+				function roughScale(x, base) {
+					var parsed = parseInt(x, base);
+					if (isNaN(parsed)) { return 0 }
+					return parsed;
+				}
 
+				price1 = jQuery('.calc1').find('span.total').text();
 				price2 = jQuery('.calc2').find('span.total').text();
 
+				var price3 = roughScale(price1) - roughScale(price2);
 
+				jQuery('.calc4').find('span.total').html(price3);	
 			});
 
-
-			function roughScale(x, base) {
-				var parsed = parseInt(x, base);
-				if (isNaN(parsed)) { return 0 }
-				return parsed;
-			}
-			  
-			var price3 = roughScale(price1) - roughScale(price2)
-
-			jQuery('.calc3').find('span.total').html(price3);
 			
-
-			
-			
-
 		}
 	});
+
+	
+	  
+	
 })(jQuery);
 
 
