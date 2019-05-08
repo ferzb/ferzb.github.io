@@ -1,0 +1,33 @@
+.footer_page
+    padding-top: 200px
+    color: #fff
+    background: $thr-color
+    .container
+        border-bottom: 2px solid #999999
+        padding-bottom: 60px
+    .copyright
+        text-align: center
+        color: #999999
+        display: block
+        font-size: 15px
+        padding: 40px 0px
+    &_article
+        &:nth-child(1)
+            img
+                max-width: 273px
+                display: block
+                margin-bottom: 30px
+            p
+                font-size: 18px
+        &:nth-child(2)
+            margin-top: 40px
+            @media screen and (min-width: #{$dw-960})
+                margin-top: 0
+            li
+                margin-bottom: 14px
+                a
+                    font-size: 15px
+                    font-family: 'Avenir Next LT Pro Demi', sans-serif
+                    i
+                        margin-right: 10px
+                        color: $first-color

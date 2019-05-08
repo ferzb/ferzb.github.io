@@ -1,0 +1,472 @@
+//main sections styles
+.home
+    
+    //section banner
+    &_banner
+        width: 100%
+        min-height: 800px
+        padding-top: calc(122px + 6vw)
+        background-image: url('../img/object_3.png')
+        background-size: auto
+        background-position: bottom left
+        background-color: $first-color
+        background-repeat: no-repeat
+        opacity: 0
+        transition: 0.8s
+        @media screen and (min-width: #{$dw-960})
+            background-color: transparent
+            min-height: 1100px
+        &.show
+            opacity: 1
+        &_carousel
+            width: 70%
+            margin: auto
+            transform: translateX(-100px)
+            opacity: 0
+            transition: 0.8s 0.2s
+            &.show
+                transform: translateX(0px)
+                opacity: 1
+            @media screen and (min-width: #{$dw-640})
+                width: 50%
+                margin: auto
+            @media screen and (min-width: #{$dw-960})
+                width: calc(33.33333% - 50px)
+                margin: 0
+            .owl-dots
+                display: flex
+                justify-content: center
+                button
+                    background: #fff
+                    opacity: .5
+                    transition: 0.2s
+                    width: 10px
+                    height: 10px
+                    margin: 0px 6px
+                    border-radius: 50%
+                    &.active, &:hover
+                        opacity: 1
+        &_content
+            color: #fff
+            margin-bottom: 40px
+            @media screen and (min-width: #{$dw-960})
+                margin-bottom: 0
+            span
+                display: inline-block
+                border: 2px solid #ffffff
+                border-radius: 6px
+                padding: 7px 18px
+                margin-bottom: 34px
+                font-size: 18px
+                font-family: 'Avenir Next LT Pro Bold'
+                text-transform: uppercase
+                color: #fff
+                transform: translateY(50px)
+                opacity: 0
+                transition: 0.8s 0.2s
+                &.show
+                    opacity: 1
+                    transform: translateY(0px)
+                i
+                    color: #000
+                    font-size: 18px
+                    font-weight: bold
+            h1
+                line-height: 48px
+                transform: translateY(50px)
+                opacity: 0
+                transition: 0.8s 0.5s
+                &.show
+                    opacity: 1
+                    transform: translateY(0px)
+                @media screen and (min-width: #{$dw-640})
+                    line-height: 55px
+                    font-size: 42px
+                @media screen and (min-width: #{$dw-780})
+                    font-size: 55px
+            p
+                display: block
+                margin-top: 39px
+                font-weight: lighter
+                transform: translateY(50px)
+                opacity: 0
+                transition: 0.8s 0.7s
+                &.show
+                    opacity: 1
+                    transform: translateY(0px)
+    
+    
+    //section description
+    &_description
+        margin-top: 80px
+        &_content
+            transform: translateX(-150px)
+            opacity: 0
+            transition: 0.8s
+            &.show
+                opacity: 1
+                transform: translateX(0px)
+            p
+                display: block
+                margin-top: 40px
+                span
+                    font-family: 'Avenir Next LT Pro Demi', sans-serif
+        
+        &_carousel
+            width: 70%
+            margin: 40px auto
+            transform: translateX(150px)
+            opacity: 0
+            transition: 0.8s
+            &.show
+                opacity: 1
+                transform: translateX(0px)
+            @media screen and (min-width: #{$dw-640})
+                width: 50%
+            @media screen and (min-width: #{$dw-960})
+                width: calc(41.66666667% - 50px)
+                margin: 0px
+            .owl-nav
+                button
+                    position: absolute
+                    top: 50%
+                    height: 20px
+                    &:hover
+                        span
+                            background: $first-color
+                            animation: 1s liner-arrow infinite
+                            &:after, &:before
+                                background: $first-color
+                    span
+                        width: 30px
+                        height: 2px
+                        position: relative
+                        background: #999999
+                        display: block
+                        transition: 0.2s
+                        &:after, &:before
+                            content: ''
+                            display: block
+                            position: absolute
+                            right: 0
+                            width: 10px
+                            height: 2px
+                            transition: 0.2s
+                            background: #999999
+                        &:before
+                            top: -2px
+                            transform: rotate(32deg)
+                        &:after
+                            bottom: -2px
+                            transform: rotate(-32deg)
+                    &.owl-prev
+                        left: -40px
+                        transform: rotate(180deg) translateY(50%)
+                    &.owl-next
+                        transform: translateY(-50%)
+                        right: -40px
+                        @media screen and (min-width: #{$dw-960})
+                            right: 0px
+
+    
+    //section services
+    &_services
+        margin-top: 80px
+        @media screen and (min-width: #{$dw-780})
+            margin-top: 160px
+        .general_h2
+            margin-bottom: 40px
+            text-align: center
+            &:after
+                margin: 40px auto
+            transform: translateY(50px)
+            opacity: 0
+            transition: 0.8s
+            &.show
+                opacity: 1
+                transform: translateY(0px)
+        .container > p
+            transform: translateY(50px)
+            opacity: 0
+            transition: 0.8s
+            &.show
+                opacity: 1
+                transform: translateY(0px)
+        &_box
+            margin-top: 80px
+            .box_item
+                border-radius: 4px
+                box-shadow: 0px 0px 5px 1px rgba(50, 50, 50, 0.2)
+                transition: 0.2s
+                padding: 38px 30px
+                margin-bottom: 40px
+                transform: rotateX(-90deg)
+                &:nth-child(1)
+                    &.show
+                        animation: 3s liner-rotate 1
+                        transform: rotateX(0deg)
+                &:nth-child(2)
+                    transition-delay: 0.3s
+                    &.show
+                        animation: 3s liner-rotate 1
+                        animation-delay: .2s
+                        transform: rotateX(0deg)
+                &:nth-child(3)
+                    transition-delay: 0.3s
+                    &.show
+                        animation: 3s liner-rotate 1
+                        animation-delay: .5s
+                        transform: rotateX(0deg)
+                &:hover
+                    box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.2)
+                    a
+                        span
+                            background: $first-color
+                            animation: 1s liner-arrow infinite
+                            &:after, &:before
+                                background: $first-color
+                img
+                    width: auto
+                    display: block
+                    margin-bottom: 30px
+                p
+                    font-size: 18px
+                    line-height: 26px
+                a
+                    display: flex
+                    align-items: center
+                    height: 10px
+                    width: 100%
+                    margin-top: 30px
+                    span
+                        width: 30px
+                        height: 2px
+                        position: relative
+                        background: #999999
+                        display: block
+                        transition: 0.2s
+                        &:after, &:before
+                            content: ''
+                            display: block
+                            position: absolute
+                            right: 0
+                            width: 10px
+                            height: 2px
+                            transition: 0.2s
+                            background: #999999
+                        &:before
+                            top: -2px
+                            transform: rotate(32deg)
+                        &:after
+                            bottom: -2px
+                            transform: rotate(-32deg)
+
+
+    //section about
+    &_about
+        margin-top: 40px
+        @media screen and (min-width: #{$dw-780})
+            margin-top: 80px
+        &_content
+            margin-bottom: 40px
+            transform: translateY(150px)
+            opacity: 0
+            transition: 0.8s
+            &.show
+                opacity: 1
+                transform: translateY(0px)
+            @media screen and (min-width: #{$dw-960})
+                margin-bottom: 0
+            p
+                display: block
+                margin-top: 40px
+        &_video
+            transform: translateY(-150px)
+            opacity: 0
+            transition: 0.8s
+            &.show
+                opacity: 1
+                transform: translateY(0px)
+            img
+                width: auto
+                margin: auto
+                display: block
+                max-width: 270px
+                @media screen and (min-width: #{$dw-480})
+                    max-width: 100%
+                @media screen and (min-width: #{$dw-960})
+                    width: 100%
+    
+
+    //section testimonial
+    &_testimonial
+        margin-top: 80px
+        .general_h2
+            text-align: center
+            text-transform: uppercase
+            transform: translateY(-150px)
+            opacity: 0
+            transition: 0.8s
+            &.show
+                opacity: 1
+                transform: translateY(0px)
+            &:after
+                margin: 40px auto
+        p
+            text-align: center
+            display: block
+            max-width: 830px
+            margin: auto
+            transform: translateY(-150px)
+            opacity: 0
+            transition: 0.8s
+            &.show
+                opacity: 1
+                transform: translateY(0px)
+        &_carousel
+            margin-top: 80px
+            transform: translateY(150px)
+            opacity: 0
+            transition: 0.8s
+            &.show
+                opacity: 1
+                transform: translateY(0px)
+            .carousel-item
+                margin: auto
+                max-width: 780px
+                position: relative
+                img
+                    width: 50%
+                    margin: auto
+                    max-width: 402px
+                    @media screen and (min-width: #{$dw-960})
+                        width: auto
+                        margin: 0
+                &_text
+                    text-align: center
+                    padding: 62px 30px 30px
+                    position: static
+                    max-width: 470px
+                    width: 80%
+                    top: 50%
+                    right: 0
+                    margin: 10vw auto 0px
+                    transform: translateY(-20%)
+                    background: #ffffff
+                    box-shadow: 0px 0px 20px 1px rgba(50, 50, 50, 0.2)
+                    @media screen and (min-width: #{$dw-960})
+                        position: absolute
+                        transform: translateY(-50%)
+                        width: auto
+                        margin: 0
+
+                    h4
+                        font-size: 20px
+                        font-family: 'Avenir Next LT Pro Bold', sans-serif
+                        margin-top: 30px
+                    .fa-quote-left
+                        position: absolute
+                        top: 0
+                        left: 50%
+                        transform: translate(-50%, -50%)
+                        background: $first-color
+                        color: #ffffff
+                        padding: 20px
+                        border-radius: 50%
+            .owl-nav
+                button
+                    position: absolute
+                    top: 50%
+                    height: 20px
+                    &:hover
+                        span
+                            background: $first-color
+                            animation: 1s liner-arrow infinite
+                            &:after, &:before
+                                background: $first-color
+                    span
+                        width: 30px
+                        height: 2px
+                        position: relative
+                        background: #999999
+                        display: block
+                        transition: 0.2s
+                        &:after, &:before
+                            content: ''
+                            display: block
+                            position: absolute
+                            right: 0
+                            width: 10px
+                            height: 2px
+                            transition: 0.2s
+                            background: #999999
+                        &:before
+                            top: -2px
+                            transform: rotate(32deg)
+                        &:after
+                            bottom: -2px
+                            transform: rotate(-32deg)
+                    &.owl-prev
+                        left: 0px
+                        transform: rotate(180deg) translateY(50%)
+                    &.owl-next
+                        transform: translateY(-50%)
+                        right: 0px
+
+    //section contact
+    &_contact
+        transform: translateY(43%)
+        .container
+            position: relative
+            border-radius: 10px
+            box-shadow: 0px 0px 20px 1px rgba(50, 50, 50, 0.3)
+            background: #ffffff
+            @media screen and (min-width: #{$dw-960})
+                background: transparent
+                box-shadow: none
+                border-radius: 0px
+                height: 250px
+        .overlay_bg
+            position: absolute
+            display: none
+            top: 0
+            right: 0
+            width: 100%
+            height: 100%
+            background: #ffffff
+            border-radius: 10px
+            box-shadow: 0px 0px 20px 1px rgba(50, 50, 50, 0.3)
+            @media screen and (min-width: #{$dw-960})
+                display: block
+            @media screen and (min-width: 1200px)
+                transform: matrix3d(1,0,0,0.0004,0,1,0,0,0,0,1,0,115,0,0,1)
+        &_inner
+            z-index: 2
+            position: relative
+            height: 100%
+            width: 95%
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            span
+                font-size: 32px
+                font-family: 'Avenir Next LT Pro Bold', sans-serif
+                color: #323232
+                line-height: 45px
+                width: 100%
+                margin-bottom: 40px
+                @media screen and (min-width: #{$dw-640})
+                    width: 60%
+                    margin-bottom: 0px
+                @media screen and (min-width: #{$dw-960})
+                    font-size: 45px
+                    width: 80%
+                    line-height: 65px
+            .general_btn
+                background: $first-color
+                border: 1px solid $first-color
+                &:hover
+                    background: transparent
+                    color: $first-color
+                @media screen and (min-width: #{$dw-480})
+                    margin-left: auto

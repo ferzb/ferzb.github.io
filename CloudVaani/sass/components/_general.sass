@@ -1,0 +1,35 @@
+p
+    line-height: 30px
+
+.general
+    &_h1
+        font-family: 'Avenir Next LT Pro Bold'
+    &_h2
+        font-family: 'Avenir Next LT Pro Bold'
+        color: $thr-color
+        &:after
+            content: ''
+            display: block
+            width: 70px
+            height: 4px
+            background: $first-color
+            margin-top: 45px
+    &_h4
+        font-family: 'Avenir Next LT Pro Bold'
+        color: $thr-color
+        margin-bottom: 30px
+    &_btn
+        font-size: 15px
+        text-transform: uppercase
+        color: #ffffff
+        font-weight: bold
+        background: $sec-color
+        border: 1px solid $sec-color
+        padding: 18px 34px
+        border-radius: 50px
+        transition: 0.2s
+        min-width: 149px
+        @media screen and (min-width: #{$dw-1100})
+            margin-left: 35px
+        &:hover
+            background: transparent

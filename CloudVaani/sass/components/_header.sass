@@ -1,0 +1,80 @@
+.header_page
+    position: absolute
+    width: 100%
+    top: 0
+    left: 0
+    transition: 0.8s
+    opacity: 0
+    z-index: 10
+    &.show
+        opacity: 1
+    &.fixed
+        position: fixed
+        z-index: 999
+        background: $first-color
+        box-shadow: 0px 2px 10px 1px rgba(50, 50, 50, 0.3)
+        .container
+            padding: 10px
+    &_logo
+        max-width: 200px
+        position: relative
+        top: 8px
+        @media screen and (min-width: #{$dw-480})
+            max-width: 100%
+    .nav-icon
+        z-index: 1000
+    li
+        a
+            @media screen and (min-width: #{$dw-1100})
+                color: #fff
+            &:after
+                content: ''
+                display: none
+                margin-top: 2px
+                transform: rotateY(90deg)
+                width: 100%
+                height: 2px
+                background: $sec-color
+                transition: 0.2s
+                @media screen and (min-width: #{$dw-1100})
+                    display: block
+            &:hover
+                &:after
+                    transform: rotateY(0deg)
+
+    .navbar
+        position: fixed
+        top: 0
+        left: 0
+        height: 100%
+        width: 40%
+        padding: 40px
+        background: #fff
+        min-width: 320px
+        z-index: 999
+        transform: translateX(-100%)
+        transition: 0.2s
+        @media screen and (min-width: #{$dw-1100})
+            position: static
+            background: transparent
+            padding: 0
+            height: auto
+            width: auto
+            transform: translate(0)
+        &.show
+            transform: translate(0)
+
+
+    .overlay
+        position: fixed
+        min-height: 100vh
+        width: 100%
+        height: 100%
+        background: #000
+        opacity: 0.5
+        top: 0
+        left: 0
+        display: none
+        z-index: 998
+        &.show
+            display: block
