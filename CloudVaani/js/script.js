@@ -120,5 +120,12 @@ $(document).ready(function() {
 			$('.header_page').removeClass('fixed');
 		}
 	});
+
+	var videoYoutube = $('.home_about_video iframe').attr('src');
+
+	$('.home_about_video img').click(function(){
+		$(this).css('display', 'none');
+		$('.home_about_video iframe').attr('src', videoYoutube+'?autoplay=1').css('opacity', '1');
+	})
 	
 });

@@ -3,6 +3,7 @@ $('.home_banner_carousel').owlCarousel({
     loop:true,
     nav:false,
     dots: true,
+    autoplay: true,
     margin:10
 });
 
@@ -12,6 +13,7 @@ $('.home_description_carousel').owlCarousel({
     nav:true,
     dots: false,
     margin:10,
+    autoplay: true,
     navText: ["<span></span>", "<span></span>"]
 });
 
