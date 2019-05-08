@@ -167,6 +167,12 @@ p {
   line-height: 30px;
 }
 
+.section-wrapper {
+  background-image: url("../img/object_2.svg");
+  background-repeat: no-repeat;
+  background-position: -100% bottom;
+}
+
 .general_h1 {
   font-family: 'Avenir Next LT Pro Bold';
 }
@@ -338,6 +344,56 @@ p {
   display: block;
 }
 
+body, html {
+  overflow-x: hidden;
+}
+
+.home_main {
+  position: relative;
+}
+
+.home_main .object {
+  display: block;
+  width: 77px;
+  height: 77px;
+  background-image: url("../img/object_1.svg");
+  background-repeat: no-repeat;
+  top: 23%;
+  left: 2vw;
+  position: absolute;
+  -webkit-animation: 3s liner-object infinite;
+          animation: 3s liner-object infinite;
+}
+
+.home_main .object_1 {
+  display: block;
+  width: 77px;
+  height: 77px;
+  background-image: url("../img/object_4.svg");
+  background-repeat: no-repeat;
+  top: 25%;
+  left: 2vw;
+  position: absolute;
+  -webkit-animation: 3s liner-object_1 infinite;
+          animation: 3s liner-object_1 infinite;
+}
+
+.home_main .object_2 {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-image: url("../img/object_1.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+  top: 35%;
+  right: 0;
+  position: absolute;
+  -webkit-animation: 3s liner-object_2 infinite;
+          animation: 3s liner-object_2 infinite;
+}
+
 .home_banner {
   width: 100%;
   min-height: 800px;
@@ -504,6 +560,7 @@ p {
 
 .home_description {
   margin-top: 80px;
+  position: relative;
 }
 
 .home_description_content {
@@ -675,6 +732,7 @@ p {
 }
 
 .home_services_box .box_item {
+  background: #ffffff;
   border-radius: 4px;
   -webkit-box-shadow: 0px 0px 5px 1px rgba(50, 50, 50, 0.2);
           box-shadow: 0px 0px 5px 1px rgba(50, 50, 50, 0.2);
@@ -795,6 +853,10 @@ p {
 
 .home_about {
   margin-top: 40px;
+  background-image: url("../img/object_5.svg");
+  background-repeat: no-repeat;
+  background-position: 130% center;
+  background-size: 40% 100%;
 }
 
 @media screen and (min-width: 780px) {
@@ -864,6 +926,10 @@ p {
 
 .home_testimonial {
   margin-top: 80px;
+  background-image: url("../img/object_3.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 50% 80%;
 }
 
 .home_testimonial .general_h2 {
@@ -1274,6 +1340,78 @@ p {
   100% {
     -webkit-transform: rotateX(0deg);
             transform: rotateX(0deg);
+  }
+}
+
+@-webkit-keyframes liner-object {
+  0% {
+    top: calc(23% + 0px);
+  }
+  50% {
+    top: calc(23% + 50px);
+  }
+  100% {
+    top: calc(23% + 0px);
+  }
+}
+
+@keyframes liner-object {
+  0% {
+    top: calc(23% + 0px);
+  }
+  50% {
+    top: calc(23% + 50px);
+  }
+  100% {
+    top: calc(23% + 0px);
+  }
+}
+
+@-webkit-keyframes liner-object_1 {
+  0% {
+    top: calc(25% + 0px);
+  }
+  50% {
+    top: calc(25% + 50px);
+  }
+  100% {
+    top: calc(25% + 0px);
+  }
+}
+
+@keyframes liner-object_1 {
+  0% {
+    top: calc(25% + 0px);
+  }
+  50% {
+    top: calc(25% + 50px);
+  }
+  100% {
+    top: calc(25% + 0px);
+  }
+}
+
+@-webkit-keyframes liner-object_2 {
+  0% {
+    right: calc(0px + 0px);
+  }
+  50% {
+    right: calc(0px + 30px);
+  }
+  100% {
+    right: calc(0px + 0px);
+  }
+}
+
+@keyframes liner-object_2 {
+  0% {
+    right: calc(0px + 0px);
+  }
+  50% {
+    right: calc(0px + 30px);
+  }
+  100% {
+    right: calc(0px + 0px);
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -4,27 +4,12 @@ $(document).ready(function() {
 	$('.header_page, .home_banner, .home_banner_carousel, .home_banner_content > span, .home_banner_content > h1, .home_banner_content > p').addClass('show');
 
 	$(window).scroll(function(){
-		if ($(window).scrollTop() > 400){
-			$('.home_description_content, .home_description_carousel').addClass('show');
-		}
-	});
-
-	$(window).scroll(function(){
-		if($(window).scrollTop() > 1100){
-			$('.home_services h2').addClass('show');
-		}
-	});
-
-	$(window).scroll(function(){
-		if($(window).scrollTop() > 1400){
-			$('.home_services > .container > p').addClass('show');
-		}
-	});
-
-	$(window).scroll(function(){
-		if($(window).scrollTop() > 1650){
-			$('.home_services .box_item').addClass('show');
-		}
+		$('.panel').each(function(){
+			var top = $(this).offset().top - 900;
+			if ($(window).scrollTop() > top){
+				$(this).addClass('show');
+			}
+		})
 	});
 
 	$(window).scroll(function(){
@@ -34,19 +19,21 @@ $(document).ready(function() {
 	});
 
 	$(window).scroll(function(){
-		if($(window).scrollTop() > 2150){
-			$('.home_about_content, .home_about_video').addClass('show');
-		}
+		let count = $(window).scrollTop();
+		$('.home_main > .object').css({
+			transform: 'translateY('+count/3+'px)'
+		})
+
+		$('.home_main > .object_1').css({
+			transform: 'translateY('+count/3+'px)'
+		})
 	});
 
-	$(window).scroll(function(){
-		if($(window).scrollTop() > 2450){
-			$('.home_testimonial h2, .home_testimonial p, .home_testimonial_carousel').addClass('show');
-		}
-	});
 
 
-	let toggleBlock = $('.nav-icon'),
+	let 
+		count = 0,
+		toggleBlock = $('.nav-icon'),
 		toggleLine = $('.nav-icon_line'),
 		links = $('.navbar_list').find('> li > a'),
 		links_footer = $('.footer_page').find('.footer_list > li > a'),

@@ -1,6 +1,42 @@
-//main sections styles
-.home
+body, html
+    overflow-x: hidden
     
+    //main sections styles
+.home
+    &_main
+        position: relative
+        .object
+            display: block
+            width: 77px
+            height: 77px
+            background-image: url('../img/object_1.svg')
+            background-repeat: no-repeat
+            top: 23%
+            left: 2vw
+            position: absolute
+            animation: 3s liner-object infinite
+        .object_1
+            display: block
+            width: 77px
+            height: 77px
+            background-image: url('../img/object_4.svg')
+            background-repeat: no-repeat
+            top: 25%
+            left: 2vw
+            position: absolute
+            animation: 3s liner-object_1 infinite
+        .object_2
+            display: block
+            width: 100px
+            height: 100px
+            background-image: url('../img/object_1.svg')
+            background-repeat: no-repeat
+            background-size: 100%
+            transform: rotate(-35deg)
+            top: 35%
+            right: 0
+            position: absolute
+            animation: 3s liner-object_2 infinite
     //section banner
     &_banner
         width: 100%
@@ -99,6 +135,7 @@
     //section description
     &_description
         margin-top: 80px
+        position: relative
         &_content
             transform: translateX(-150px)
             opacity: 0
@@ -195,6 +232,7 @@
         &_box
             margin-top: 80px
             .box_item
+                background: #ffffff
                 border-radius: 4px
                 box-shadow: 0px 0px 5px 1px rgba(50, 50, 50, 0.2)
                 transition: 0.2s
@@ -265,6 +303,10 @@
     //section about
     &_about
         margin-top: 40px
+        background-image: url('../img/object_5.svg')
+        background-repeat: no-repeat
+        background-position: 130% center
+        background-size: 40% 100%
         @media screen and (min-width: #{$dw-780})
             margin-top: 80px
         &_content
@@ -301,6 +343,10 @@
     //section testimonial
     &_testimonial
         margin-top: 80px
+        background-image: url('../img/object_3.svg')
+        background-repeat: no-repeat
+        background-position: left bottom
+        background-size: 50% 80%
         .general_h2
             text-align: center
             text-transform: uppercase

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="770" height="770" viewBox="0 0 770 770">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f7f7f7;
+        opacity: 0.7;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        opacity: 0.5;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="385" cy="385" r="385"/>
+  <circle id="Ellipse_2_copy" data-name="Ellipse 2 copy" class="cls-2" cx="423.5" cy="451.5" r="318.5"/>
+</svg>
