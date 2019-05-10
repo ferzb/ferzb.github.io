@@ -13,6 +13,7 @@ $(function() {
 			$('header').removeClass('header-fixed');
 	});
 });
+
 var time = 2, show = 1 ;
 	$(window).scroll(function() {
 		$('#counter').each(function(){
@@ -43,6 +44,7 @@ var time = 2, show = 1 ;
 			}
 		});
 });
+
 $('.portfolio-sliders').owlCarousel({
     items:1,
     lazyLoad:true,

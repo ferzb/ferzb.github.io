@@ -1,0 +1,296 @@
+.popup-box
+    position: fixed
+    display: none
+    width: 100%
+    min-height: 100vh
+    top: 0
+    left: 0
+    z-index: 9999
+    overflow-x: auto
+    background: rgba(0, 0, 0, 0.6)
+    .overlay
+        display: block
+        position: absolute
+        width: 100%
+        height: 100%
+    .close_popup
+        width: 28px
+        height: 28px
+        display: block
+        position: absolute
+        background: $sec-color
+        border-radius: 50%
+        top: 20px
+        right: 20px
+        cursor: pointer
+        transform: translate(0%, -30%)
+        &:after, &:before
+            width: 3px
+            height: 12px
+            background: #ffffff
+            content: ''
+            display: block
+            position: absolute
+            top: 8px
+            left: 13px
+        &:after
+            transform: rotate(40deg)
+        &:before
+            transform: rotate(-40deg)
+    &_inner
+        max-width: 850px
+        padding: 30px 10px
+        width: 100%
+        position: absolute
+        background-image: url('../img/bg.jpg')
+        background-repeat: no-repeat
+        background-position: left top
+        background-size: cover
+        top: 0px
+        left: 50%
+        transform: translateX(-50%)
+        @media screen and (min-width: #{$dw-480})
+            padding: 30px
+        @media screen and (min-width: #{$dw-960})
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background-image: url('../img/bg.png')
+            background-size: 85% 100%
+        article
+            &:nth-child(1)
+                display: flex
+                flex-direction: column
+                img
+                    width: 273px
+                span
+                    display: block
+                    margin: auto 0
+                    font-size: 45px
+                    font-family: 'Avenir Next LT Pro Bold', sans-serif
+                    color: #323232
+                    &:after
+                        content: ''
+                        display: block
+                        width: 90px
+                        height: 4px
+                        background: #323232
+            &:nth-child(2)
+                max-width: 470px
+                width: 100%
+                margin-top: 30px
+                background: #ffffff
+                box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.4)
+                padding: 30px 10px
+                @media screen and (min-width: #{$dw-640})
+                    padding: 30px 45px 30px 45px
+                @media screen and (min-width: #{$dw-960})
+                    margin-top: 0
+                .progress-form
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    .form-step
+                        display: block
+                        width: 20px
+                        height: 20px
+                        border: 2px solid #dddddd
+                        border-radius: 50%
+                        margin: 0px 31px
+                        position: relative
+                        &:after
+                            content: ''
+                            display: block
+                            width: 62px
+                            height: 3px
+                            z-index: 0
+                            background: #dddddd
+                            position: absolute
+                            top: 50%
+                            right: 0
+                            transform: translate(-29%, -50%)
+                        &:before
+                            content: ''
+                            display: none
+                            width: 50%
+                            height: 50%
+                            border-radius: 50%
+                            background: #dddddd
+                            position: absolute
+                            top: 50%
+                            left: 50%
+                            transform: translate(-50%, -50%)
+                        &:first-child
+                            margin-left: 0px
+                            &:after
+                                display: none
+                        &.active
+                            border-color: $first-color
+                            &:after
+                                background: $first-color
+                            &:before
+                                display: block
+                                background: $first-color
+                        &.final
+                            background: $first-color
+                            border-color: $first-color
+                            &:after
+                                background: $first-color
+                            &:before
+                                display: block
+                                width: 4px
+                                height: 8px
+                                border-radius: 0px
+                                border-right: 2px solid #ffffff
+                                border-bottom: 2px solid #ffffff
+                                background: transparent
+                                transform: rotate(40deg)
+                                top: 2px
+                                left: 5px
+                
+                form
+                    margin-top: 20px
+                    fieldset
+                        border: none
+                        padding: 0px!important
+                        max-height: 360px
+                        height: 100%
+                        overflow: hidden
+                        position: relative
+                        & > div
+                            position: relative
+                            top: 0px
+                            transition: 0.4s
+                        input, .dropdown, textarea, .choose-file
+                            display: block
+                            font-size: 16px
+                            width: 100%
+                            padding: 20px 24px
+                            border: 1px solid #dddddd
+                            border-radius: 40px
+                            margin-bottom: 12px
+                        .dropdown
+                            display: block
+                            cursor: pointer
+                            position: relative
+                            &:after
+                                content: ''
+                                display: block
+                                position: absolute
+                                top: calc(50% - 3px)
+                                right: 20px
+                                width: 6px
+                                height: 6px
+                                border-right: 2px solid #dddddd
+                                border-bottom: 2px solid #dddddd
+                                transform: rotate(45deg)
+                            ul
+                                position: absolute
+                                top: 85%
+                                border: 1px solid #dddddd
+                                display: none
+                                left: 0
+                                background: #ffffff
+                                padding: 20px
+                                width: 100%
+                                li
+                                    margin-bottom: 10px
+                        textarea
+                            height: 135px
+                        .choose-file
+                            display: flex
+                            justify-content: space-between
+                            align-items: center
+                            padding: 8px 8px 8px 24px
+                            input
+                                display: none
+                            label
+                                padding: 12px 24px
+                                border-radius: 40px
+                                background: #dddddd
+                                color: #777777
+                                cursor: pointer
+                        .popup-files
+                            width: 100%
+                            margin-top: 20px
+                            &_item
+                                border: 1px solid #dddddd
+                                border-radius: 20px
+                                height: 88px
+                                padding: 10px
+                                margin-bottom: 20px
+                                min-width: 85px
+                                position: relative
+                                img
+                                    width: auto
+                                    margin: auto
+                                    display: block
+                                    height: 100%
+                                .remove_item
+                                    width: 20px
+                                    height: 20px
+                                    display: block
+                                    position: absolute
+                                    background: #ff2222
+                                    border-radius: 50%
+                                    top: 0
+                                    right: 0
+                                    cursor: pointer
+                                    transform: translate(0%, -30%)
+                                    &:after, &:before
+                                        width: 3px
+                                        height: 12px
+                                        background: #ffffff
+                                        content: ''
+                                        display: block
+                                        position: absolute
+                                        top: 4px
+                                        left: 9px
+                                    &:after
+                                        transform: rotate(40deg)
+                                    &:before
+                                        transform: rotate(-40deg)
+                                &:last-child
+                                    .remove_item
+                                        display: none
+                                .overlay
+                                    position: absolute
+                                    width: 100%
+                                    height: 100%
+                                    top: 0
+                                    left: 0
+                                    border-radius: 20px
+                                    cursor: pointer
+                                    background: rgba(0, 0, 0, 0.7)
+                                    display: flex
+                                    align-items: center
+                                    justify-content: center
+                                    color: #ffffff
+                            
+                    .form_btn, button
+                        text-align: center
+                        width: 100%
+                        color: #ffffff
+                        padding: 16px 20px
+                        font-size: 18px
+                        border-radius: 40px
+                        margin-top: 12px
+                        cursor: pointer
+                        font-family: 'Avenir Next LT Pro Demi', sans-serif
+                        transition: 0.2s
+                        text-transform: uppercase
+                        &:hover
+                            background: transparent
+                    .form_btn
+                        background-color: #323232
+                        display: block
+                        border: 2px solid #323232
+                        &:hover
+                            color: #323232
+                    button
+                        background-color: $first-color
+                        display: none
+                        border: 2px solid $first-color
+                        &:hover
+                            color: $first-color
+
