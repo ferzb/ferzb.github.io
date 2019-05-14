@@ -89,11 +89,11 @@ body {
 .page_header .header_logo:after {
   content: "";
   display: block;
-  width: 37px;
-  height: 2px;
+  width: 42px;
+  height: 3px;
   position: absolute;
   left: 22px;
-  bottom: 0px;
+  bottom: -1px;
   background: #e33630;
 }
 

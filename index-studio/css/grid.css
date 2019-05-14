@@ -197,8 +197,8 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
   margin: 0px;
   cursor: pointer;
   display: block;
-  width: 42px;
-  height: 39px;
+  width: 39px;
+  height: 30px;
   position: relative;
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
@@ -208,7 +208,7 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
   width: 80%;
   border-radius: 16px;
   display: block;
-  height: 2px;
+  height: 3px;
   background: #e33630;
   position: absolute;
   left: 3px;
@@ -221,15 +221,15 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
 }
 
 .nav-icon_line:nth-child(1) {
-  top: 5px;
+  top: 2px;
 }
 
 .nav-icon_line:nth-child(2) {
-  top: 17px;
+  top: 12px;
 }
 
 .nav-icon_line:nth-child(3) {
-  top: 29px;
+  top: 22px;
 }
 
 .nav-icon_line.active {
