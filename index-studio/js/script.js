@@ -2,14 +2,13 @@ $(document).ready(function() {
 	var count = 0;
 	var main_length = $('.main_box').length;
 	var main_box_w = $('.main_box').width();
-	var section_why_us_w = $('.section_why-us').width();
 	var section_content_w = $('.section_content').width();
-	$('.main_scroll').css('width', +main_box_w*main_length+section_why_us_w+section_content_w+'px')
+	$('.main_scroll').css('width', +main_box_w*main_length+section_content_w+'px')
 
 	var main_w = $('.main_scroll').width() - main_box_w;
 
 	var count_step = 100;
-	var count_max = (main_w/count_step).toFixed(0);
+	var count_max = (main_w/count_step).toFixed(1);
 
 	console.log(count_max);
 
@@ -39,8 +38,8 @@ $(document).ready(function() {
 				} else if(count < 0){
 					count = 0
 				}
-				else if (count > count_max - 1) {
-					count = count_max - 1;
+				else if (count > count_max - 1.05) {
+					count = count_max - 1.05;
 				}
 				
 				else{
@@ -88,19 +87,34 @@ $(document).ready(function() {
 	};
 
 	
-	/*$(function() {
-		$(window).scroll(function(){
-			var window_offset_top = $(window).scrollTop();
-			if (window_offset_top >= 1480) {
-				$('.header_logo').css('color', '#fff')
-			} else(
-				$('.header_logo').removeAttr('style')
-			)
-			if (window_offset_top >= 2700) {
-				$('.nav-icon_line').css('background', '#fff')
-			} else(
-				$('.nav-icon_line').removeAttr('style')
-			)
+	$(document).mousemove(function(e){
+		var X = e.pageX; // положения по оси X
+		var Y = e.pageY; // положения по оси Y
+		$('.mous-arrow').css('transform', 'translate('+X+'px,'+Y+'px)');
+
+		$('.next-section').mouseenter(function(){
+			$('.mous-arrow').css({
+				'transform': 'translate('+X+'px,'+Y+'px) rotate(180deg)',
+				'display': 'flex',
+				'z-index': 1000
+			})
+			$('.mous-arrow span').css({
+				'transform': 'rotate(0deg)',
+			});
+			if($(this).hasClass('prev')){
+				$('.mous-arrow').css({
+					'transform': 'translate('+X+'px,'+Y+'px)',
+					'display': 'flex',
+					'z-index': 1000
+				});
+				$('.mous-arrow span').css({
+					'transform': 'rotate(180deg)',
+				});
+			}
 		})
-	})*/
+
+		$('.next-section').mouseleave(function(){
+			$('.mous-arrow').removeAttr('style')
+		})
+	});
 });

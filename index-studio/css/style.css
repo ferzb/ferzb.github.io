@@ -269,7 +269,7 @@ body {
 @media screen and (min-width: 640px) {
   .section_content {
     width: auto;
-    padding: 0px 0px 0px 100px;
+    padding: 0px 0px 0px 0px;
   }
 }
 
@@ -313,6 +313,7 @@ body {
   .section_content_inner .inner-box-wrap {
     width: 1366px;
     height: 100%;
+    padding-left: 50px;
   }
 }
 
@@ -410,13 +411,6 @@ body {
 
 .section_why-us {
   background: #e33630;
-  width: 100%;
-}
-
-@media screen and (min-width: 640px) {
-  .section_why-us {
-    min-width: 100vw;
-  }
 }
 
 .section_why-us .container {
@@ -701,11 +695,6 @@ body {
   top: 2px;
 }
 
-.main_scroll.contact-page .section_why-us {
-  width: 0px;
-  min-width: 0px;
-}
-
 .object {
   position: absolute;
   z-index: 10;
@@ -887,15 +876,21 @@ body {
 
 .next-section {
   display: block;
-  cursor: url("../img/cursor.png"), auto;
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 0;
   right: 0px;
-  width: 30vw;
+  width: 15vw;
   background: none;
-  height: 80vh;
+  height: 100vh;
+  z-index: 1001;
+}
+
+.next-section.prev {
+  left: 0;
+}
+
+.next-section:hover {
+  cursor: none;
 }
 
 .next-section:hover span {
@@ -904,7 +899,7 @@ body {
 }
 
 .next-section span {
-  display: block;
+  display: none;
   position: absolute;
   right: 0;
   width: 20px;
@@ -930,6 +925,56 @@ body {
 }
 
 .next-section span:before {
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+  top: 2px;
+}
+
+.mous-arrow {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  display: none;
+  z-index: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.mous-arrow span {
+  display: block;
+  position: relative;
+  right: 0;
+  width: 20px;
+  height: 2px;
+  background: #e33630;
+}
+
+.mous-arrow span:after, .mous-arrow span:before {
+  width: 6px;
+  height: 2px;
+  background: #e33630;
+  content: "";
+  display: block;
+  position: absolute;
+  right: 1px;
+  top: 0;
+}
+
+.mous-arrow span:after {
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+  top: -2px;
+}
+
+.mous-arrow span:before {
   -webkit-transform: rotate(-35deg);
           transform: rotate(-35deg);
   top: 2px;

@@ -92,20 +92,57 @@
 
 .next-section
     display: block
-    cursor:  url("../img/cursor.png"), auto
     position: absolute
-    top: 50%
-    transform: translateY(-50%)
+    top: 0
     right: 0px
-    width: 30vw
+    width: 15vw
     background: none
-    height: 80vh
+    height: 100vh
+    z-index: 1001
+    &.prev
+        left: 0
     &:hover
+        cursor: none
         span
             animation: 1s liner-arrow infinite
     span
-        display: block
+        display: none
         position: absolute
+        right: 0
+        width: 20px
+        height: 2px
+        background: #e33630
+        &:after, &:before
+            width: 6px
+            height: 2px
+            background: #e33630
+            content: ""
+            display: block
+            position: absolute
+            right: 1px
+            top: 0
+        &:after
+            transform: rotate(35deg)
+            top: -2px
+        &:before
+            transform: rotate(-35deg)
+            top: 2px
+
+.mous-arrow
+    position: absolute
+    top: -30px
+    left: -30px
+    display: none
+    z-index: 0
+    align-items: center
+    justify-content: center
+    width: 60px
+    height: 60px
+    background: #000
+    border-radius: 50%
+    span
+        display: block
+        position: relative
         right: 0
         width: 20px
         height: 2px
