@@ -76,8 +76,13 @@ body {
   background: transparent;
 }
 
+.page_header .nav-icon_box {
+  cursor: none;
+}
+
 .page_header .header_logo {
   font-size: 24px;
+  cursor: none;
   position: relative;
 }
 
@@ -185,6 +190,9 @@ body {
           align-items: center;
   margin-top: 12px;
   margin-right: 12px;
+  position: relative;
+  z-index: 1;
+  cursor: none;
 }
 
 .section_home_inner a:hover img {
@@ -928,8 +936,8 @@ body {
 
 .mous-arrow {
   position: absolute;
-  top: -30px;
-  left: -30px;
+  top: -60px;
+  left: -60px;
   display: none;
   z-index: 0;
   -webkit-box-align: center;
@@ -938,9 +946,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 60px;
-  height: 60px;
-  background: #000;
+  width: 120px;
+  height: 120px;
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 50%;
 }
 
@@ -952,7 +960,12 @@ body {
   }
 }
 
-.mous-arrow.prev span {
+.mous-arrow.next.prev span {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.mous-arrow.previus span {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -961,24 +974,20 @@ body {
   display: block;
   position: relative;
   right: 0;
-  width: 20px;
-  height: 2px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  background: #e33630;
+  width: 40px;
+  height: 3px;
+  background-color: #e33630;
 }
 
 .mous-arrow span:after, .mous-arrow span:before {
-  width: 6px;
-  height: 2px;
+  width: 12px;
+  height: 3px;
   background: #e33630;
   content: "";
   display: block;
   position: absolute;
   right: 1px;
   top: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 .mous-arrow span:after {
@@ -991,6 +1000,27 @@ body {
   -webkit-transform: rotate(-35deg);
           transform: rotate(-35deg);
   top: 2px;
+}
+
+.mous-arrow.hand {
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.mous-arrow.hand.rotate span {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.mous-arrow.hand span {
+  width: 39px;
+  height: 52px;
+  background-image: url("../img/hand.png");
+  background-color: transparent;
+}
+
+.mous-arrow.hand span:before, .mous-arrow.hand span:after {
+  display: none;
 }
 
 @-webkit-keyframes liner-arrow {

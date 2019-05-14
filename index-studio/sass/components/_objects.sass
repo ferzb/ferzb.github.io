@@ -130,45 +130,60 @@
 
 .mous-arrow
     position: absolute
-    top: -30px
-    left: -30px
+    top: -60px
+    left: -60px
     display: none
     z-index: 0
     align-items: center
     justify-content: center
-    width: 60px
-    height: 60px
-    background: #000
+    width: 120px
+    height: 120px
+    background: rgba(0, 0, 0, 0.6)
     border-radius: 50%
     @media screen and (min-width: #{$dw-1100})
         display: flex
-    &.prev
+    &.next
+        &.prev
+            span
+                transform: rotate(180deg)
+    &.previus
         span
             transform: rotate(180deg)
     span
         display: block
         position: relative
         right: 0
-        width: 20px
-        height: 2px
-        transition: 0.3s
-        background: #e33630
+        width: 40px
+        height: 3px
+        background-color: #e33630
         &:after, &:before
-            width: 6px
-            height: 2px
+            width: 12px
+            height: 3px
             background: #e33630
             content: ""
             display: block
             position: absolute
             right: 1px
             top: 0
-            transition: 0.3s
         &:after
             transform: rotate(35deg)
             top: -2px
         &:before
             transform: rotate(-35deg)
             top: 2px
+    &.hand
+        z-index: 9999
+        pointer-events: none
+        &.rotate
+            span
+               transform: rotate(0deg) 
+        span
+            width: 39px
+            height: 52px
+            background-image: url('../img/hand.png')
+            background-color: transparent
+            &:before, &:after
+                display: none
 
 @keyframes liner-arrow
     0%

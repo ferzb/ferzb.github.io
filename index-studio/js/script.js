@@ -10,6 +10,8 @@ $(document).ready(function() {
 			scrolling()
 		}else($('.main_scroll').css('width', '100vw'))
 	});
+	
+
 	function scrolling(){
 		$(document).mousemove(function(e){
 			var x_pos = e.pageX, // положения по оси X
@@ -18,7 +20,7 @@ $(document).ready(function() {
 			$('.mous-arrow').css('transform', 'translate('+x_pos+'px,'+y_pos+'px)');
 
 			$(function(){
-				if(x_pos < $(window).width()/2){
+				if(x_pos < $(window).width()/2 && $('.mous-arrow').hasClass('next')){
 					$('.mous-arrow').addClass('prev')
 				}else(
 					$('.mous-arrow').removeClass('prev')
@@ -26,13 +28,30 @@ $(document).ready(function() {
 			})
 			
 		});
+
+		$('.nav-icon, .header_logo, a').mouseenter(function(){
+			$('.mous-arrow').addClass('hand');
+			if($('.mous-arrow').hasClass('prev')){
+				$('.mous-arrow').addClass('rotate')
+			}else($('.mous-arrow').removeClass('rotate'))
+		})
+
+		$('.nav-icon, .header_logo, a').mouseleave(function(){
+			$('.mous-arrow').removeClass('hand').removeClass('rotate');
+		})
+
 		$('.mous-arrow').click(function(){
-			console.log(count)
+
 			if(count < 0){
 				count = 0;
 			}else if($(this).hasClass('prev')){
 				count--;
-			}else if(count >= main_length - 1){
+			}else if($(this).hasClass('previus')){
+				count--;
+			}
+			else if($(this).hasClass('prev') && count > 1 && $(this).hasClass('previus')){
+				count--;
+			}else if(count >= main_length - 2){
 				count = main_length - 1;
 			}else(
 				count++
@@ -53,7 +72,24 @@ $(document).ready(function() {
 					$('.header_logo').removeClass('white')
 					
 				)
-			})	
+			})
+
+			$(function(){
+				if(count >= 1){
+					$('.mous-arrow').addClass('next');
+				}else(
+					$('.mous-arrow').removeClass('next')
+					
+				)
+			})
+			
+			$(function(){
+				if(count >= main_length - 1){
+					$('.mous-arrow').addClass('previus');
+				}else(
+					$('.mous-arrow').removeClass('previus')
+				)
+			})
 			
 		})
 	}	

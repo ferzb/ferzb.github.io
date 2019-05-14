@@ -27,8 +27,11 @@ body
             position: fixed
         div
            background: transparent 
+        .nav-icon_box
+            cursor: none
         .header_logo
             font-size: 24px
+            cursor: none
             position: relative
             &:after
                 content: ""
@@ -95,6 +98,9 @@ body
                 align-items: center
                 margin-top: 12px
                 margin-right: 12px
+                position: relative
+                z-index: 1
+                cursor: none
                 &:hover
                     img
                         transform: scale(1.2)
