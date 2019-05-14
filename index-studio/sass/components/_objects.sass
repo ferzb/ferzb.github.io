@@ -3,7 +3,7 @@
     z-index: 10
     display: none
     transition: 1.2s 0s
-    @media screen and (min-width: #{$dw-640})
+    @media screen and (min-width: #{$dw-1100})
         display: block
     &.ball
         animation: 3s liner-ball infinite
@@ -140,12 +140,18 @@
     height: 60px
     background: #000
     border-radius: 50%
+    @media screen and (min-width: #{$dw-1100})
+        display: flex
+    &.prev
+        span
+            transform: rotate(180deg)
     span
         display: block
         position: relative
         right: 0
         width: 20px
         height: 2px
+        transition: 0.3s
         background: #e33630
         &:after, &:before
             width: 6px
@@ -156,6 +162,7 @@
             position: absolute
             right: 1px
             top: 0
+            transition: 0.3s
         &:after
             transform: rotate(35deg)
             top: -2px

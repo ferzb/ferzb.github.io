@@ -1,7 +1,8 @@
 body
     position: relative
     overflow: auto
-    @media screen and (min-width: #{$dw-640})
+    cursor: none
+    @media screen and (min-width: #{$dw-1100})
         overflow: hidden
 
 .wrapper
@@ -13,7 +14,7 @@ body
         position: relative
         width: 100%
         overflow: auto
-        @media screen and (min-width: #{$dw-640})
+        @media screen and (min-width: #{$dw-1100})
             overflow: hidden
     &_header
         position: static
@@ -22,7 +23,7 @@ body
         z-index: 1000
         width: 100vw
         background: transparent
-        @media screen and (min-width: #{$dw-640})
+        @media screen and (min-width: #{$dw-1100})
             position: fixed
         div
            background: transparent 
@@ -53,7 +54,7 @@ body
         overflow-y: auto
         overflow-x: hidden
         transition: 1.2s 0s
-        @media screen and (min-width: #{$dw-640})
+        @media screen and (min-width: #{$dw-1100})
             flex-wrap: nowrap
             
     &_box
@@ -61,7 +62,7 @@ body
         padding-top: 0px
         min-height: 100vh
         position: relative
-        @media screen and (min-width: #{$dw-640})
+        @media screen and (min-width: #{$dw-1100})
             padding-top: 80px
         .container
             height: 100%
@@ -126,7 +127,6 @@ body
         .general-title
             line-height: 40px
             position: relative
-
             @media screen and (min-width: #{$dw-640})
                 line-height: 75px
         p
@@ -147,84 +147,80 @@ body
 
     &_content
         min-height: 100vh
-        padding: 20px
         width: 100%
         background: #223045
         color: #fff
         position: relative
-        @media screen and (min-width: #{$dw-640})
-            width: auto
+        @media screen and (min-width: #{$dw-1100})
             padding: 0px 0px 0px 0px
-        &_inner
-            display: flex
-            flex-wrap: wrap
-            height: 100%
+        img
             width: 100%
-            @media screen and (min-width: #{$dw-640})
-                flex-wrap: nowrap
+            height: auto
+            max-width: 400px
+            max-height: 400px
+            margin: auto
+            display: block
+            @media screen and (min-width: #{$dw-1100})
+                max-width: none
+                max-height: none
+                display: inline
+                margin: 0
                 width: auto
-            .general-title
-                color: #fff
-                font-size: 30px
-                position: relative
-                @media screen and (min-width: #{$dw-640})
-                    font-size: 50px
-            .inner-box-wrap
-                width: 100%
-                position: relative
-                height: auto
-                @media screen and (min-width: #{$dw-640})
-                    width: 1366px
-                    height: 100%
-                    padding-left: 50px
-                .general-title
-                    font-size: 35px
-                    @media screen and (min-width: #{$dw-640})
-                        font-size: 60px
-                .picture
-                    max-height: 400px
+        .general-title
+            color: #fff
+            font-size: 30px
+            position: relative
+            @media screen and (min-width: #{$dw-640})
+                font-size: 50px
+        &_clients
             .inner-box
-                margin-right: 0px
-                margin-bottom: 50px
-                max-height: 500px
-                width: 100%
-                height: auto
-                @media screen and (min-width: #{$dw-640})
-                    max-width: 600px
-                    width: 100vw
-                    margin-right: 50px
-                    margin-bottom: 0px
-                    height: 100%
-                .general-paragraph
-                    margin-top: 20px
-                    display: block
+                display: flex
+                align-items: center
                 .picture
                     width: 100%
-                    height: 500px
                     overflow: hidden
-                    background: $thr-color
-                    img
-                        height: auto
-                        width: auto
-                .inner-content
-                    margin-top: auto
+                    margin-top: 60px
+                    @media screen and (min-width: #{$dw-1100})
+                        height: 400px
+                        margin-top: 0
+        &_projects
+            .general-title
+                margin: 40px 0px
+                @media screen and (min-width: #{$dw-1100})
+                    margin: 0
+            .inner-box
+                .picture
                     width: 100%
-                    @media screen and (min-width: #{$dw-640})
-                        width: auto
-                    .picture
-                        max-width: 100%
-                        max-height: 220px
-                        margin-top: 40px
-                        @media screen and (min-width: #{$dw-640})
-                            max-width: 370px
-                &.small-img
-                    max-width: 100%
-                    @media screen and (min-width: #{$dw-640})
-                        max-width: 320px
-                &.middle-img
-                    max-width: 100%
-                    @media screen and (min-width: #{$dw-640})
-                        max-width: 520px
+                    overflow: hidden
+                    @media screen and (min-width: #{$dw-1100})
+                        height: 500px
+            .inner-content
+                margin-top: auto
+                .picture
+                    margin-top: 20px
+                    @media screen and (min-width: #{$dw-1100})
+                        max-width: 370px
+                        max-height: 220px   
+
+        &_about-studio
+            .inner-box
+                .picture
+                    width: 100%
+                    overflow: hidden
+                    margin-bottom: 40px
+                    @media screen and (min-width: #{$dw-1100})
+                        height: 500px
+                        margin-bottom: 0
+            .inner-content
+                margin-top: auto
+
+        &_portfolio
+            .picture
+                overflow: hidden
+                margin-bottom: 60px
+                @media screen and (min-width: #{$dw-1100})
+                        height: 500px
+                        margin-bottom: 0
 
     &_why-us
         background: $sec-color
@@ -236,12 +232,21 @@ body
             display: flex
             flex-wrap: wrap
             justify-content: center
-            @media screen and (min-width: #{$dw-640})
+            @media screen and (min-width: #{$dw-1100})
                 justify-content: space-between
         &_logo
             width: 100%
-            @media screen and (min-width: #{$dw-640})
+            margin-bottom: 40px
+            @media screen and (min-width: #{$dw-1100})
+                margin-bottom: 0
                 width: calc(50% - 50px)
+            img
+                min-width: 270px
+                width: 50vw
+                margin: auto
+                display: block
+                @media screen and (min-width: #{$dw-1100})
+                    width: 100%
         span
             margin-top: auto
             a
@@ -264,7 +269,7 @@ body
                         left: 0
         &_text
             width: 100%
-            @media screen and (min-width: #{$dw-640})
+            @media screen and (min-width: #{$dw-1100})
                 width: calc(50% - 50px)
             li
                 margin-top: 22px
