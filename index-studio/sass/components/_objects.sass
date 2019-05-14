@@ -89,3 +89,47 @@
         transform: translateY(30px)
     100%
         transform: translateY(0px)
+
+.next-section
+    display: block
+    cursor:  url("../img/cursor.png"), auto
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: 0px
+    width: 30vw
+    background: none
+    height: 80vh
+    &:hover
+        span
+            animation: 1s liner-arrow infinite
+    span
+        display: block
+        position: absolute
+        right: 0
+        width: 20px
+        height: 2px
+        background: #e33630
+        &:after, &:before
+            width: 6px
+            height: 2px
+            background: #e33630
+            content: ""
+            display: block
+            position: absolute
+            right: 1px
+            top: 0
+        &:after
+            transform: rotate(35deg)
+            top: -2px
+        &:before
+            transform: rotate(-35deg)
+            top: 2px
+
+@keyframes liner-arrow
+    0%
+        transform: translateX(0px)
+    50%
+        transform: translateX(10px)
+    100%
+        transform: translateX(0px)

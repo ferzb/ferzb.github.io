@@ -106,7 +106,7 @@ input, textarea, button {
 }
 
 input::-webkit-input-placeholder, input::-moz-placeholder, input:-moz-placeholder, input:-ms-input-placeholder {
-  color: #000;
+  color: #dc9eb7;
 }
 
 textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-placeholder, textarea:-ms-input-placeholder {

@@ -3,6 +3,11 @@ body
     overflow: auto
     @media screen and (min-width: #{$dw-640})
         overflow: hidden
+
+.wrapper
+    position: relative
+    transition: 0.5s 0s
+
 .page
     &-wrap
         position: relative
@@ -33,7 +38,10 @@ body
                 left: 22px
                 bottom: 0px
                 background: $sec-color
-
+            &.white
+                color: #ffffff
+                &:after 
+                    background: #ffffff
 
 .main
     &_scroll
@@ -47,14 +55,34 @@ body
         transition: 1.2s 0s
         @media screen and (min-width: #{$dw-640})
             flex-wrap: nowrap
+            
     &_box
         min-width: 100vw
+        padding-top: 0px
         min-height: 100vh
+        position: relative
+        @media screen and (min-width: #{$dw-640})
+            padding-top: 80px
         .container
             height: 100%
+            position: relative
 
 .section
     &_home
+        .inner_nav
+            display: flex
+            align-items: center
+            margin-bottom: 30px
+            li
+                display: flex
+                &:after
+                    content: '/'
+                    display: block
+                    margin: 0px 10px
+                &:last-child
+                    &:after
+                        display: none
+                
         &_subtitle
             color: $sec-color
             font-size: 36px
@@ -141,6 +169,19 @@ body
                 position: relative
                 @media screen and (min-width: #{$dw-640})
                     font-size: 50px
+            .inner-box-wrap
+                width: 100%
+                position: relative
+                height: auto
+                @media screen and (min-width: #{$dw-640})
+                    width: 1366px
+                    height: 100%
+                .general-title
+                    font-size: 35px
+                    @media screen and (min-width: #{$dw-640})
+                        font-size: 60px
+                .picture
+                    max-height: 400px
             .inner-box
                 margin-right: 0px
                 margin-bottom: 50px
@@ -153,14 +194,6 @@ body
                     margin-right: 50px
                     margin-bottom: 0px
                     height: 100%
-                &:first-child
-                    .general-title
-                        font-size: 35px
-                        @media screen and (min-width: #{$dw-640})
-                            font-size: 60px
-                &:nth-child(2)
-                    .picture
-                        max-height: 400px
                 .general-paragraph
                     margin-top: 20px
                     display: block
@@ -194,7 +227,9 @@ body
 
     &_why-us
         background: $sec-color
-        width: 100vw
+        width: 100%
+        @media screen and (min-width: #{$dw-640})
+            min-width: 100vw
         .container 
             max-width: 1100px
         &_content
@@ -243,4 +278,138 @@ body
                     color: initial
                     &:after
                         background: #000
-        
+
+
+
+.page-wrap.contact-page
+    .nav-icon
+        .nav-icon_box
+            .nav-icon_line
+                background: #fff
+    .header_logo
+        color: #fff
+        &:after
+            background: #fff
+    .page_header
+        background: #755361
+
+.main_scroll.contact-page
+    background: #755361
+    form
+        width: 100%
+        input, textarea, button
+            display: block
+            width: 100%
+            background: transparent
+            border: 2px solid #dc9eb7
+            padding: 14px 20px
+            margin-bottom: 30px
+            color: #dc9eb7
+            font-weight: normal
+            font-size: 18px
+        textarea
+            height: 30vh
+            min-height: 200px
+        input::-webkit-input-placeholder, 
+        input::-moz-placeholder,
+        input:-moz-placeholder,
+        input:-ms-input-placeholder 
+	        color: #dc9eb7
+
+        textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-placeholder, textarea:-ms-input-placeholder 
+            color: #dc9eb7
+
+        button
+            cursor: pointer
+            max-width: 220px
+            color: #fff
+    .section_home
+        p
+            display: block
+            width: 100%
+            text-align: right
+            margin-top: auto
+            a
+                color: #fff
+                text-decoration: underline
+        .title
+            color: #ffffff
+            font-size: 36px
+            width: 100%
+            margin-bottom: 10px
+        .subtitle
+            color: #ffffff
+            margin-bottom: 30px
+            display: block
+    .section_content
+        background: transparent
+        display: flex
+        align-items: center
+        min-width: 100vw
+        padding: 80px 0px 0px 0px
+        .title
+            font-size: 36px
+            font-weight: bold
+        .subtitle
+            font-size: 18px
+            display: block
+            margin: 25px 0px
+            max-width: 300px
+        &_contact
+            ul
+                li
+                    display: flex
+                    align-items: center
+                    margin-bottom: 40px
+                    img
+                        max-width: 37px
+                        margin-right: 20px
+                    a
+                        display: block
+                        font-weight: bold
+                        font-size: 18px
+                    span
+                        font-weight: normal
+                        font-size: 16px
+        &_info
+            img
+                max-width: 110px
+                display: block
+                margin-bottom: 30px
+
+            .address
+                font-size: 18px
+                margin-top: 40px
+                line-height: 26px
+            .section_content_btn
+                position: relative
+                display: flex
+                align-items: center
+                max-width: 155px
+                margin-top: 30px
+                span
+                    display: block
+                    position: absolute
+                    right: 0
+                    width: 20px
+                    height: 2px
+                    background: #ffffff
+                    &:after, &:before
+                        width: 6px
+                        height: 2px
+                        background: #ffffff
+                        content: ""
+                        display: block
+                        position: absolute
+                        right: 1px
+                        top: 0
+                    &:after
+                        transform: rotate(35deg)
+                        top: -2px
+                    &:before
+                        transform: rotate(-35deg)
+                        top: 2px
+            
+    .section_why-us
+        width: 0px
+        min-width: 0px
