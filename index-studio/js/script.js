@@ -1,7 +1,8 @@
 $(document).ready(function() {
-	var count = 0;
-	var main_length = $('.main_box').length;
-	var main_box_w = $('.main_box').width();
+	var count = 0,
+		main_section = $('.main_box'),
+		main_length = $('.main_box').length,
+		main_box_w = $('.main_box').width();
 
 	$('.main_scroll').css('width', +main_box_w*main_length+'px')
 
@@ -33,6 +34,8 @@ $(document).ready(function() {
 			$('.mous-arrow').addClass('hand');
 			if($('.mous-arrow').hasClass('prev')){
 				$('.mous-arrow').addClass('rotate')
+			}else if($('.mous-arrow').hasClass('previus')){
+				$('.mous-arrow').addClass('rotate')
 			}else($('.mous-arrow').removeClass('rotate'))
 		})
 
@@ -56,6 +59,21 @@ $(document).ready(function() {
 			}else(
 				count++
 			)
+
+			main_section.removeClass('active');
+
+			let this_main_section = main_section.eq(count);
+
+			this_main_section.addClass('active')
+
+			this_main_section.each(function(){
+				let that = $(this),
+					that_color = that.attr('data-color');
+
+					if(that.hasClass('active')){
+						$('.mous-arrow').css('background', that_color)
+					}
+			})
 
 			$('.main_scroll').css('left', '-'+count*main_box_w+"px");
 

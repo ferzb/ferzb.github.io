@@ -130,15 +130,15 @@
 
 .mous-arrow
     position: absolute
-    top: -60px
-    left: -60px
+    top: -3.5vw
+    left: -3.5vw
     display: none
     z-index: 0
     align-items: center
     justify-content: center
-    width: 120px
-    height: 120px
-    background: rgba(0, 0, 0, 0.6)
+    width: 7vw
+    height: 7vw
+    background: rgba(107, 49, 151, 0.6)
     border-radius: 50%
     @media screen and (min-width: #{$dw-1100})
         display: flex
@@ -149,17 +149,20 @@
     &.previus
         span
             transform: rotate(180deg)
+        &.rotate
+            span
+               transform: rotate(0deg) 
     span
         display: block
         position: relative
         right: 0
         width: 40px
         height: 3px
-        background-color: #e33630
+        background-color: #ffffff
         &:after, &:before
             width: 12px
             height: 3px
-            background: #e33630
+            background: #ffffff
             content: ""
             display: block
             position: absolute
@@ -167,10 +170,10 @@
             top: 0
         &:after
             transform: rotate(35deg)
-            top: -2px
+            top: -3px
         &:before
             transform: rotate(-35deg)
-            top: 2px
+            top: 3px
     &.hand
         z-index: 9999
         pointer-events: none

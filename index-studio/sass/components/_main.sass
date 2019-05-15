@@ -130,17 +130,39 @@ body
 
     &_about
         background: #f6f4e8
+        &.active
+            .general-title
+                opacity: 1
+                transform: translateY(0px)
+            p
+                opacity: 1
+                transform: translateX(0px)
+            .section_about_inner
+                opacity: 1
+                transform: translateY(0px)
         .general-title
             line-height: 40px
             position: relative
+            transition: 0.8s 0.5s
             @media screen and (min-width: #{$dw-640})
                 line-height: 75px
+            @media screen and (min-width: #{$dw-1100})
+                opacity: 0
+                transform: translateY(-100px)
         p
             display: block
             margin: 40px 0px 0px
             color: $sec-color
             max-width: 632px
+            transition: 0.8s 0.5s
+            @media screen and (min-width: #{$dw-1100})
+                opacity: 0
+                transform: translateX(-100px)
         &_inner
+            transition: 0.8s 0.5s
+            @media screen and (min-width: #{$dw-1100})
+                opacity: 0
+                transform: translateY(100px)
             img
                 max-height: 76px
                 width: auto
@@ -159,6 +181,13 @@ body
         position: relative
         @media screen and (min-width: #{$dw-1100})
             padding: 0px 0px 0px 0px
+        &.active
+            .general-title, p
+                opacity: 1
+                transform: translateX(0px)
+            .inner-box
+                opacity: 1
+                transform: translateY(0px)
         img
             width: 100%
             height: auto
@@ -172,12 +201,26 @@ body
                 display: inline
                 margin: 0
                 width: auto
+        .inner-box
+            transition: 0.8s 0.5s
+            @media screen and (min-width: #{$dw-1100})
+                opacity: 0
+                transform: translateY(-100px)
+        p
+            transition: 0.8s 0.5s
+            @media screen and (min-width: #{$dw-1100})
+                opacity: 0
+                transform: translateX(100px)
         .general-title
             color: #fff
             font-size: 30px
             position: relative
+            transition: 0.8s 0.5s
             @media screen and (min-width: #{$dw-640})
                 font-size: 50px
+            @media screen and (min-width: #{$dw-1100})
+                opacity: 0
+                transform: translateX(-100px)
         &_clients
             .inner-box
                 display: flex
@@ -221,15 +264,40 @@ body
                 margin-top: auto
 
         &_portfolio
+            &.active
+                .picture
+                    opacity: 1!important
+                    transform: translate(0px)!important
             .picture
                 overflow: hidden
                 margin-bottom: 60px
+                transition: 0.8s 0.5s
                 @media screen and (min-width: #{$dw-1100})
                         height: 500px
                         margin-bottom: 0
+            article
+                &:nth-child(1)
+                    .picture
+                        @media screen and (min-width: #{$dw-1100})
+                            opacity: 0
+                            transform: translateX(-100px)
+                &:nth-child(2)
+                    .picture
+                        @media screen and (min-width: #{$dw-1100})
+                            opacity: 0
+                            transform: translateY(-100px)
+                &:nth-child(3)
+                    .picture
+                        @media screen and (min-width: #{$dw-1100})
+                            opacity: 0
+                            transform: translateX(100px)
 
     &_why-us
         background: $sec-color
+        &.active
+            .section_why-us_logo, span, .section_why-us_text
+                opacity: 1
+                transform: translate(0px)
         .container 
             max-width: 1100px
         &_content
@@ -243,9 +311,12 @@ body
         &_logo
             width: 100%
             margin-bottom: 40px
+            transition: 0.8s 0.5s           
             @media screen and (min-width: #{$dw-1100})
                 margin-bottom: 0
                 width: calc(50% - 50px)
+                opacity: 0
+                transform: translateY(-100px)
             img
                 min-width: 270px
                 width: 50vw
@@ -255,6 +326,10 @@ body
                     width: 100%
         span
             margin-top: auto
+            transition: 0.8s 0.5s 
+            @media screen and (min-width: #{$dw-1100})
+                opacity: 0
+                transform: translateY(100px)
             a
                 color: #fff
                 position: relative
@@ -275,8 +350,11 @@ body
                         left: 0
         &_text
             width: 100%
+            transition: 0.8s 0.5s 
             @media screen and (min-width: #{$dw-1100})
                 width: calc(50% - 50px)
+                opacity: 0
+                transform: translateX(100px)
             li
                 margin-top: 22px
             span
