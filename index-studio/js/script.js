@@ -30,7 +30,7 @@ $(document).ready(function() {
 			
 		});
 
-		$('.nav-icon, .header_logo, a').mouseenter(function(){
+		$('.nav-icon, .header_logo, a, input, textarea, button').mouseenter(function(){
 			$('.mous-arrow').addClass('hand');
 			if($('.mous-arrow').hasClass('prev')){
 				$('.mous-arrow').addClass('rotate')
@@ -39,7 +39,7 @@ $(document).ready(function() {
 			}else($('.mous-arrow').removeClass('rotate'))
 		})
 
-		$('.nav-icon, .header_logo, a').mouseleave(function(){
+		$('.nav-icon, .header_logo, a, input, textarea, button').mouseleave(function(){
 			$('.mous-arrow').removeClass('hand').removeClass('rotate');
 		})
 

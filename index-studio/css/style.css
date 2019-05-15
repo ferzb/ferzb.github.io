@@ -528,16 +528,14 @@ body {
   background: #fff;
 }
 
-.page-wrap.contact-page .page_header {
-  background: #755361;
-}
-
 .main_scroll.contact-page {
   background: #755361;
 }
 
 .main_scroll.contact-page form {
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .main_scroll.contact-page form input, .main_scroll.contact-page form textarea, .main_scroll.contact-page form button {
@@ -550,6 +548,7 @@ body {
   color: #dc9eb7;
   font-weight: normal;
   font-size: 18px;
+  cursor: none;
 }
 
 .main_scroll.contact-page form textarea {
@@ -557,19 +556,39 @@ body {
   min-height: 200px;
 }
 
-.main_scroll.contact-page form input::-webkit-input-placeholder,
-.main_scroll.contact-page form input::-moz-placeholder,
-.main_scroll.contact-page form input:-moz-placeholder,
+.main_scroll.contact-page form input::-webkit-input-placeholder {
+  color: #dc9eb7;
+}
+
 .main_scroll.contact-page form input:-ms-input-placeholder {
   color: #dc9eb7;
 }
 
-.main_scroll.contact-page form textarea::-webkit-input-placeholder, .main_scroll.contact-page form textarea::-moz-placeholder, .main_scroll.contact-page form textarea:-moz-placeholder, .main_scroll.contact-page form textarea:-ms-input-placeholder {
+.main_scroll.contact-page form input::-ms-input-placeholder {
+  color: #dc9eb7;
+}
+
+.main_scroll.contact-page form input::placeholder {
+  color: #dc9eb7;
+}
+
+.main_scroll.contact-page form textarea::-webkit-input-placeholder {
+  color: #dc9eb7;
+}
+
+.main_scroll.contact-page form textarea:-ms-input-placeholder {
+  color: #dc9eb7;
+}
+
+.main_scroll.contact-page form textarea::-ms-input-placeholder {
+  color: #dc9eb7;
+}
+
+.main_scroll.contact-page form textarea::placeholder {
   color: #dc9eb7;
 }
 
 .main_scroll.contact-page form button {
-  cursor: pointer;
   max-width: 220px;
   color: #fff;
 }
@@ -608,7 +627,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   min-width: 100vw;
-  padding: 80px 0px 0px 0px;
+}
+
+.main_scroll.contact-page .section_content .section_box {
+  width: 100%;
 }
 
 .main_scroll.contact-page .section_content .title {
@@ -621,6 +643,13 @@ body {
   display: block;
   margin: 25px 0px;
   max-width: 300px;
+}
+
+.main_scroll.contact-page .section_content_contact ul {
+  cursor: none;
+  position: relative;
+  z-index: 1;
+  max-width: 320px;
 }
 
 .main_scroll.contact-page .section_content_contact ul li {
@@ -642,6 +671,7 @@ body {
   display: block;
   font-weight: bold;
   font-size: 18px;
+  cursor: none;
 }
 
 .main_scroll.contact-page .section_content_contact ul li span {
@@ -655,6 +685,18 @@ body {
   margin-bottom: 30px;
 }
 
+.main_scroll.contact-page .section_content_info .soc-link {
+  position: relative;
+  z-index: 1;
+  cursor: none;
+}
+
+.main_scroll.contact-page .section_content_info .soc-link li a {
+  position: relative;
+  z-index: 1;
+  cursor: none;
+}
+
 .main_scroll.contact-page .section_content_info .address {
   font-size: 18px;
   margin-top: 40px;
@@ -663,6 +705,8 @@ body {
 
 .main_scroll.contact-page .section_content_info .section_content_btn {
   position: relative;
+  z-index: 1;
+  cursor: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

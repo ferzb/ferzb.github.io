@@ -303,13 +303,16 @@ body
         color: #fff
         &:after
             background: #fff
-    .page_header
-        background: #755361
+
+.contact-page
 
 .main_scroll.contact-page
     background: #755361
+    
     form
         width: 100%
+        position: relative
+        z-index: 1
         input, textarea, button
             display: block
             width: 100%
@@ -320,20 +323,25 @@ body
             color: #dc9eb7
             font-weight: normal
             font-size: 18px
+            cursor: none
         textarea
             height: 30vh
             min-height: 200px
         input::-webkit-input-placeholder, 
         input::-moz-placeholder,
-        input:-moz-placeholder,
-        input:-ms-input-placeholder 
+        input::-moz-placeholder,
+        input::-ms-input-placeholder
+        input::placeholder 
 	        color: #dc9eb7
 
-        textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-placeholder, textarea:-ms-input-placeholder 
+        textarea::-webkit-input-placeholder, 
+        textarea::-moz-placeholder,
+        textarea:-moz-placeholder,
+        textarea:-ms-input-placeholder
+        textarea::placeholder 
             color: #dc9eb7
 
         button
-            cursor: pointer
             max-width: 220px
             color: #fff
     .section_home
@@ -359,7 +367,8 @@ body
         display: flex
         align-items: center
         min-width: 100vw
-        padding: 80px 0px 0px 0px
+        .section_box
+            width: 100%
         .title
             font-size: 36px
             font-weight: bold
@@ -370,6 +379,10 @@ body
             max-width: 300px
         &_contact
             ul
+                cursor: none
+                position: relative
+                z-index: 1
+                max-width: 320px
                 li
                     display: flex
                     align-items: center
@@ -381,6 +394,7 @@ body
                         display: block
                         font-weight: bold
                         font-size: 18px
+                        cursor: none
                     span
                         font-weight: normal
                         font-size: 16px
@@ -390,12 +404,24 @@ body
                 display: block
                 margin-bottom: 30px
 
+            .soc-link 
+                position: relative
+                z-index: 1
+                cursor: none
+                li a
+                    position: relative
+                    z-index: 1
+                    cursor: none
+
             .address
                 font-size: 18px
                 margin-top: 40px
                 line-height: 26px
+
             .section_content_btn
                 position: relative
+                z-index: 1
+                cursor: none
                 display: flex
                 align-items: center
                 max-width: 155px
