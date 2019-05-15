@@ -43,6 +43,14 @@ $(document).ready(function() {
 			$('.mous-arrow').removeClass('hand').removeClass('rotate');
 		})
 
+		$('input, textarea').mouseenter(function(){
+			$('.mous-arrow').css('display', 'none')
+		})
+
+		$('input, textarea').mouseleave(function(){
+			$('.mous-arrow').removeAttr('style');
+		})
+
 		$('.mous-arrow').click(function(){
 
 			if(count < 0){

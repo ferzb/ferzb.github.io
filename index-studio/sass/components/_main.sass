@@ -311,10 +311,10 @@ body
     
     form
         width: 100%
-        position: relative
-        z-index: 1
         input, textarea, button
             display: block
+            position: relative
+            z-index: 1
             width: 100%
             background: transparent
             border: 2px solid #dc9eb7
@@ -323,7 +323,6 @@ body
             color: #dc9eb7
             font-weight: normal
             font-size: 18px
-            cursor: none
         textarea
             height: 30vh
             min-height: 200px
@@ -342,6 +341,7 @@ body
             color: #dc9eb7
 
         button
+            cursor: none
             max-width: 220px
             color: #fff
     .section_home
@@ -380,8 +380,6 @@ body
         &_contact
             ul
                 cursor: none
-                position: relative
-                z-index: 1
                 max-width: 320px
                 li
                     display: flex
@@ -395,6 +393,8 @@ body
                         font-weight: bold
                         font-size: 18px
                         cursor: none
+                        position: relative
+                        z-index: 1
                     span
                         font-weight: normal
                         font-size: 16px
@@ -405,13 +405,14 @@ body
                 margin-bottom: 30px
 
             .soc-link 
-                position: relative
-                z-index: 1
-                cursor: none
-                li a
+                li
                     position: relative
                     z-index: 1
                     cursor: none
+                    a
+                        position: relative
+                        z-index: 1
+                        cursor: none
 
             .address
                 font-size: 18px

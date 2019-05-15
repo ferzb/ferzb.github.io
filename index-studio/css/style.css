@@ -534,12 +534,12 @@ body {
 
 .main_scroll.contact-page form {
   width: 100%;
-  position: relative;
-  z-index: 1;
 }
 
 .main_scroll.contact-page form input, .main_scroll.contact-page form textarea, .main_scroll.contact-page form button {
   display: block;
+  position: relative;
+  z-index: 1;
   width: 100%;
   background: transparent;
   border: 2px solid #dc9eb7;
@@ -548,7 +548,6 @@ body {
   color: #dc9eb7;
   font-weight: normal;
   font-size: 18px;
-  cursor: none;
 }
 
 .main_scroll.contact-page form textarea {
@@ -589,6 +588,7 @@ body {
 }
 
 .main_scroll.contact-page form button {
+  cursor: none;
   max-width: 220px;
   color: #fff;
 }
@@ -647,8 +647,6 @@ body {
 
 .main_scroll.contact-page .section_content_contact ul {
   cursor: none;
-  position: relative;
-  z-index: 1;
   max-width: 320px;
 }
 
@@ -672,6 +670,8 @@ body {
   font-weight: bold;
   font-size: 18px;
   cursor: none;
+  position: relative;
+  z-index: 1;
 }
 
 .main_scroll.contact-page .section_content_contact ul li span {
@@ -685,7 +685,7 @@ body {
   margin-bottom: 30px;
 }
 
-.main_scroll.contact-page .section_content_info .soc-link {
+.main_scroll.contact-page .section_content_info .soc-link li {
   position: relative;
   z-index: 1;
   cursor: none;
