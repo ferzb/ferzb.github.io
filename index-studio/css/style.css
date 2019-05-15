@@ -236,24 +236,6 @@ body {
   background: #f6f4e8;
 }
 
-.section_about.active .general-title {
-  opacity: 1;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-}
-
-.section_about.active p {
-  opacity: 1;
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-}
-
-.section_about.active .section_about_inner {
-  opacity: 1;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-}
-
 .section_about .general-title {
   line-height: 40px;
   position: relative;
@@ -267,45 +249,14 @@ body {
   }
 }
 
-@media screen and (min-width: 1100px) {
-  .section_about .general-title {
-    opacity: 0;
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
-  }
-}
-
 .section_about p {
   display: block;
   margin: 40px 0px 0px;
   color: #e33630;
   max-width: 632px;
-  -webkit-transition: 0.8s 0.5s;
-  transition: 0.8s 0.5s;
 }
 
-@media screen and (min-width: 1100px) {
-  .section_about p {
-    opacity: 0;
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-  }
-}
-
-.section_about_inner {
-  -webkit-transition: 0.8s 0.5s;
-  transition: 0.8s 0.5s;
-}
-
-@media screen and (min-width: 1100px) {
-  .section_about_inner {
-    opacity: 0;
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
-}
-
-.section_about_inner img {
+.section_about img {
   max-height: 76px;
   width: auto;
   height: 100%;
@@ -313,7 +264,7 @@ body {
   margin-right: 60px;
 }
 
-.section_about_inner img:last-child {
+.section_about img:last-child {
   margin-right: 0px;
 }
 
@@ -329,18 +280,6 @@ body {
   .section_content {
     padding: 0px 0px 0px 0px;
   }
-}
-
-.section_content.active .general-title, .section_content.active p {
-  opacity: 1;
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-}
-
-.section_content.active .inner-box {
-  opacity: 1;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
 }
 
 .section_content img {
@@ -362,51 +301,15 @@ body {
   }
 }
 
-.section_content .inner-box {
-  -webkit-transition: 0.8s 0.5s;
-  transition: 0.8s 0.5s;
-}
-
-@media screen and (min-width: 1100px) {
-  .section_content .inner-box {
-    opacity: 0;
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
-  }
-}
-
-.section_content p {
-  -webkit-transition: 0.8s 0.5s;
-  transition: 0.8s 0.5s;
-}
-
-@media screen and (min-width: 1100px) {
-  .section_content p {
-    opacity: 0;
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
-  }
-}
-
 .section_content .general-title {
   color: #fff;
   font-size: 30px;
   position: relative;
-  -webkit-transition: 0.8s 0.5s;
-  transition: 0.8s 0.5s;
 }
 
 @media screen and (min-width: 640px) {
   .section_content .general-title {
     font-size: 50px;
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  .section_content .general-title {
-    opacity: 0;
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
   }
 }
 
@@ -485,12 +388,6 @@ body {
   margin-top: auto;
 }
 
-.section_content_portfolio.active .picture {
-  opacity: 1 !important;
-  -webkit-transform: translate(0px) !important;
-          transform: translate(0px) !important;
-}
-
 .section_content_portfolio .picture {
   overflow: hidden;
   margin-bottom: 60px;
@@ -505,38 +402,8 @@ body {
   }
 }
 
-@media screen and (min-width: 1100px) {
-  .section_content_portfolio article:nth-child(1) .picture {
-    opacity: 0;
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  .section_content_portfolio article:nth-child(2) .picture {
-    opacity: 0;
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  .section_content_portfolio article:nth-child(3) .picture {
-    opacity: 0;
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
-  }
-}
-
 .section_why-us {
   background: #e33630;
-}
-
-.section_why-us.active .section_why-us_logo, .section_why-us.active span, .section_why-us.active .section_why-us_text {
-  opacity: 1;
-  -webkit-transform: translate(0px);
-          transform: translate(0px);
 }
 
 .section_why-us .container {
@@ -567,17 +434,12 @@ body {
 .section_why-us_logo {
   width: 100%;
   margin-bottom: 40px;
-  -webkit-transition: 0.8s 0.5s;
-  transition: 0.8s 0.5s;
 }
 
 @media screen and (min-width: 1100px) {
   .section_why-us_logo {
     margin-bottom: 0;
     width: calc(50% - 50px);
-    opacity: 0;
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
   }
 }
 
@@ -596,16 +458,6 @@ body {
 
 .section_why-us span {
   margin-top: auto;
-  -webkit-transition: 0.8s 0.5s;
-  transition: 0.8s 0.5s;
-}
-
-@media screen and (min-width: 1100px) {
-  .section_why-us span {
-    opacity: 0;
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
 }
 
 .section_why-us span a {
@@ -636,16 +488,11 @@ body {
 
 .section_why-us_text {
   width: 100%;
-  -webkit-transition: 0.8s 0.5s;
-  transition: 0.8s 0.5s;
 }
 
 @media screen and (min-width: 1100px) {
   .section_why-us_text {
     width: calc(50% - 50px);
-    opacity: 0;
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
   }
 }
 
@@ -1135,33 +982,12 @@ body {
 .mous-arrow span {
   display: block;
   position: relative;
-  right: 0;
   width: 40px;
-  height: 3px;
-  background-color: #ffffff;
-}
-
-.mous-arrow span:after, .mous-arrow span:before {
-  width: 12px;
-  height: 3px;
-  background: #ffffff;
-  content: "";
-  display: block;
-  position: absolute;
-  right: 1px;
-  top: 0;
-}
-
-.mous-arrow span:after {
-  -webkit-transform: rotate(35deg);
-          transform: rotate(35deg);
-  top: -3px;
-}
-
-.mous-arrow span:before {
-  -webkit-transform: rotate(-35deg);
-          transform: rotate(-35deg);
-  top: 3px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("../img/arrow.png");
+  background-color: transparent;
 }
 
 .mous-arrow.hand {
@@ -1179,10 +1005,6 @@ body {
   height: 52px;
   background-image: url("../img/hand.png");
   background-color: transparent;
-}
-
-.mous-arrow.hand span:before, .mous-arrow.hand span:after {
-  display: none;
 }
 
 @-webkit-keyframes liner-arrow {
