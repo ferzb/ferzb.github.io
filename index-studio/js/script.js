@@ -59,6 +59,8 @@ $(document).ready(function() {
 			}else(
 				count++
 			)
+			
+			$('.page_header').css('left', '-'+count*main_box_w+"px")
 
 			main_section.removeClass('active');
 
