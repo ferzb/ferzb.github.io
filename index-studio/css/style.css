@@ -528,6 +528,16 @@ body {
   background: #fff;
 }
 
+.page-wrap.contact-page .page_header {
+  background: #755361;
+}
+
+@media screen and (min-width: 1100px) {
+  .page-wrap.contact-page .page_header {
+    background: transparent;
+  }
+}
+
 .main_scroll.contact-page {
   background: #755361;
 }
@@ -551,8 +561,8 @@ body {
 }
 
 .main_scroll.contact-page form textarea {
-  height: 30vh;
-  min-height: 200px;
+  height: 25vh;
+  min-height: 120px;
 }
 
 .main_scroll.contact-page form input::-webkit-input-placeholder {

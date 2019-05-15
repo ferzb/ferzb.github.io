@@ -303,8 +303,10 @@ body
         color: #fff
         &:after
             background: #fff
-
-.contact-page
+    .page_header
+        background: #755361
+        @media screen and (min-width: #{$dw-1100})
+            background: transparent
 
 .main_scroll.contact-page
     background: #755361
@@ -324,8 +326,8 @@ body
             font-weight: normal
             font-size: 18px
         textarea
-            height: 30vh
-            min-height: 200px
+            height: 25vh
+            min-height: 120px
         input::-webkit-input-placeholder, 
         input::-moz-placeholder,
         input::-moz-placeholder,
