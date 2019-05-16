@@ -143,6 +143,8 @@ body {
 .main_box {
   padding-top: 0px;
   min-height: 100vh;
+  width: 100vw;
+  min-width: 100vw;
   position: relative;
 }
 
@@ -660,6 +662,10 @@ body {
   color: #f3cc65;
 }
 
+.main_scroll.contact-page .section_home {
+  width: 100vw;
+}
+
 .main_scroll.contact-page .section_home p {
   display: block;
   width: 100%;
@@ -695,12 +701,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-width: 100vw;
+  width: 100vw;
 }
 
 .main_scroll.contact-page .section_content .section_box {
   width: 100%;
   position: relative;
-  z-index: 0;
   top: 2.4vw;
 }
 
@@ -767,6 +774,7 @@ body {
 .main_scroll.contact-page .section_content_info .soc-link li a {
   position: relative;
   z-index: 1;
+  display: block;
   cursor: none;
 }
 
@@ -836,36 +844,37 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 1;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: #000000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .preloader.close {
-  display: none;
+  opacity: 0;
+  z-index: -2;
 }
 
 .preloader .lds-hourglass {
-  display: inline-block;
+  display: block;
+  width: 10vw;
+  height: 10px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
   position: relative;
-  width: 64px;
-  height: 64px;
 }
 
-.preloader .lds-hourglass:after {
-  content: " ";
+.preloader .lds-hourglass span {
   display: block;
-  border-radius: 50%;
-  width: 0;
-  height: 0;
-  margin: 6px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 26px solid #fff;
-  border-color: #fff transparent #fff transparent;
-  -webkit-animation: lds-hourglass 1.2s infinite;
-          animation: lds-hourglass 1.2s infinite;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: #e33630;
 }
 
 .object {

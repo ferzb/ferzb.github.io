@@ -64,6 +64,8 @@ body
     &_box
         padding-top: 0px
         min-height: 100vh
+        width: 100vw
+        min-width: 100vw
         position: relative
         @media screen and (min-width: #{$dw-1100})
             padding-top: 80px
@@ -373,6 +375,7 @@ body
                 color: #f3cc65
 
     .section_home
+        width: 100vw
         p
             display: block
             width: 100%
@@ -396,10 +399,11 @@ body
         background: transparent
         display: flex
         align-items: center
+        min-width: 100vw
+        width: 100vw
         .section_box
             width: 100%
             position: relative
-            z-index: 0
             top: 2.4vw
         .title
             font-size: 33px
@@ -446,6 +450,7 @@ body
                     a
                         position: relative
                         z-index: 1
+                        display: block
                         cursor: none
 
             .address

@@ -2,14 +2,24 @@
 
 $(document).ready(function() {
 
+	let loader = 0;
+	
+	var	preloader = setInterval(function(){
+		if(loader < 101){
+			$('.lds-hourglass > span').css('width', loader+'%')
+			loader++;
+		}else(
+			clearInterval(preloader)
+		)}, 20);
+
 	setTimeout(function(){
 		$('.preloader').addClass('close');
-	  }, 2000);
+	  }, 2100);
 
 	let count = 0,
-	  	screen_width = $(window).width(),
 		main_section = $('.main_box'),
 		main_length = $('.main_box').length,
+		main_box_w = $('.main_box').width(),
 		arrow = $('.mous-arrow');
 
 	function scrolling(){
@@ -79,7 +89,7 @@ $(document).ready(function() {
 			})
 
 			// scroll webpage
-			$('.main_scroll').css('left', '-'+count*screen_width+"px");
+			$('.main_scroll').css('left', '-'+count*main_box_w+"px");
 
 			// animate ojects
 			let object_ball = $('.ball'),
@@ -120,16 +130,15 @@ $(document).ready(function() {
 		})
 	}
 
+	$('.main_scroll').css('width', +main_box_w*main_length+'px')
 
 	$(function(){
 		if ($(window).width() > 1100) {
 			scrolling();
-			main_section.css('width', screen_width + 'px')
 		}else(
-			$('.main_scroll').css('width', '100vw'),
-			main_section.css('width', '100%')
+			$('.main_scroll').css('width', '100vw')
 		)
 	});
 	
-	$('.main_scroll').css('width', +main_length*screen_width+'px')
+	
 });
