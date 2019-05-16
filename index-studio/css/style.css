@@ -165,12 +165,17 @@ body {
 
 .section_home .inner_nav li:after {
   content: '/';
+  color: #ffffff;
   display: block;
   margin: 0px 10px;
 }
 
 .section_home .inner_nav li:last-child:after {
   display: none;
+}
+
+.section_home .inner_nav li a {
+  color: #ffffff;
 }
 
 .section_home_subtitle {
@@ -529,7 +534,7 @@ body {
 }
 
 .page-wrap.contact-page .page_header {
-  background: #755361;
+  background: #41316b;
 }
 
 @media screen and (min-width: 1100px) {
@@ -539,11 +544,12 @@ body {
 }
 
 .main_scroll.contact-page {
-  background: #755361;
+  background: #41316b;
 }
 
 .main_scroll.contact-page form {
   width: 100%;
+  margin-bottom: auto;
 }
 
 .main_scroll.contact-page form input, .main_scroll.contact-page form textarea, .main_scroll.contact-page form button {
@@ -551,8 +557,6 @@ body {
   position: relative;
   z-index: 1;
   width: 100%;
-  background: transparent;
-  border: 2px solid #dc9eb7;
   padding: 14px 20px;
   margin-bottom: 30px;
   color: #dc9eb7;
@@ -560,47 +564,54 @@ body {
   font-size: 18px;
 }
 
+.main_scroll.contact-page form input {
+  background: #503f7b;
+}
+
 .main_scroll.contact-page form textarea {
+  background: #503f7b;
   height: 25vh;
   min-height: 120px;
+  max-height: 165px;
 }
 
 .main_scroll.contact-page form input::-webkit-input-placeholder {
-  color: #dc9eb7;
+  color: #fff;
 }
 
 .main_scroll.contact-page form input:-ms-input-placeholder {
-  color: #dc9eb7;
+  color: #fff;
 }
 
 .main_scroll.contact-page form input::-ms-input-placeholder {
-  color: #dc9eb7;
+  color: #fff;
 }
 
 .main_scroll.contact-page form input::placeholder {
-  color: #dc9eb7;
+  color: #fff;
 }
 
 .main_scroll.contact-page form textarea::-webkit-input-placeholder {
-  color: #dc9eb7;
+  color: #fff;
 }
 
 .main_scroll.contact-page form textarea:-ms-input-placeholder {
-  color: #dc9eb7;
+  color: #fff;
 }
 
 .main_scroll.contact-page form textarea::-ms-input-placeholder {
-  color: #dc9eb7;
+  color: #fff;
 }
 
 .main_scroll.contact-page form textarea::placeholder {
-  color: #dc9eb7;
+  color: #fff;
 }
 
 .main_scroll.contact-page form button {
   cursor: none;
   max-width: 220px;
-  color: #fff;
+  color: #503f7b;
+  background: #f3cc65;
 }
 
 .main_scroll.contact-page .section_home p {
@@ -619,6 +630,7 @@ body {
   color: #ffffff;
   font-size: 36px;
   width: 100%;
+  margin-top: 10vh;
   margin-bottom: 10px;
 }
 

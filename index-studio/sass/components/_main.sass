@@ -82,11 +82,14 @@ body
                 display: flex
                 &:after
                     content: '/'
+                    color: #ffffff
                     display: block
                     margin: 0px 10px
                 &:last-child
                     &:after
                         display: none
+                a
+                    color: #ffffff
                 
         &_subtitle
             color: $sec-color
@@ -304,48 +307,52 @@ body
         &:after
             background: #fff
     .page_header
-        background: #755361
+        background: #41316b
         @media screen and (min-width: #{$dw-1100})
             background: transparent
 
 .main_scroll.contact-page
-    background: #755361
+    background: #41316b
     
     form
         width: 100%
+        margin-bottom: auto
         input, textarea, button
             display: block
             position: relative
             z-index: 1
             width: 100%
-            background: transparent
-            border: 2px solid #dc9eb7
             padding: 14px 20px
             margin-bottom: 30px
             color: #dc9eb7
             font-weight: normal
             font-size: 18px
+        input
+            background: #503f7b
         textarea
+            background: #503f7b
             height: 25vh
             min-height: 120px
+            max-height: 165px
         input::-webkit-input-placeholder, 
         input::-moz-placeholder,
         input::-moz-placeholder,
         input::-ms-input-placeholder
         input::placeholder 
-	        color: #dc9eb7
+	        color: #fff
 
         textarea::-webkit-input-placeholder, 
         textarea::-moz-placeholder,
         textarea:-moz-placeholder,
         textarea:-ms-input-placeholder
         textarea::placeholder 
-            color: #dc9eb7
+            color: #fff
 
         button
             cursor: none
             max-width: 220px
-            color: #fff
+            color: #503f7b
+            background: #f3cc65
     .section_home
         p
             display: block
@@ -359,6 +366,7 @@ body
             color: #ffffff
             font-size: 36px
             width: 100%
+            margin-top: 10vh
             margin-bottom: 10px
         .subtitle
             color: #ffffff
