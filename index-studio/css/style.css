@@ -175,6 +175,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: 'Poppins Regular';
 }
 
 .section_home .inner_nav li:after {
@@ -196,6 +197,7 @@ body {
 .section_home .inner_nav li a {
   color: #ffffff;
   position: relative;
+  font-size: 16px;
   z-index: 1;
   cursor: none;
 }
@@ -678,6 +680,7 @@ body {
   color: #ffffff;
   margin-bottom: 30px;
   display: block;
+  font-family: 'Poppins Regular';
 }
 
 .main_scroll.contact-page .section_content {
