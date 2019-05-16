@@ -7,19 +7,10 @@ $(document).ready(function() {
 	  }, 2000);
 
 	let count = 0,
+	  	screen_width = $(window).width(),
 		main_section = $('.main_box'),
 		main_length = $('.main_box').length,
-		main_box_w = $('.main_box').width(),
 		arrow = $('.mous-arrow');
-
-	$('.main_scroll').css('width', +main_box_w*main_length+'px')
-
-	$(function(){
-		if ($(window).width() > 1100) {
-			scrolling()
-		}else($('.main_scroll').css('width', '100vw'))
-	});
-	
 
 	function scrolling(){
 		$(document).mousemove(function(e){
@@ -88,7 +79,7 @@ $(document).ready(function() {
 			})
 
 			// scroll webpage
-			$('.main_scroll').css('left', '-'+count*main_box_w+"px");
+			$('.main_scroll').css('left', '-'+count*screen_width+"px");
 
 			// animate ojects
 			let object_ball = $('.ball'),
@@ -127,5 +118,18 @@ $(document).ready(function() {
 			})
 			
 		})
-	}	
+	}
+
+
+	$(function(){
+		if ($(window).width() > 1100) {
+			scrolling();
+			main_section.css('width', screen_width + 'px')
+		}else(
+			$('.main_scroll').css('width', '100vw'),
+			main_section.css('width', '100%')
+		)
+	});
+	
+	$('.main_scroll').css('width', +main_length*screen_width+'px')
 });
