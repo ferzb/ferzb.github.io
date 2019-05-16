@@ -597,7 +597,7 @@ body {
   background: #503f7b;
   height: 25vh;
   min-height: 120px;
-  max-height: 165px;
+  max-height: 145px;
 }
 
 .main_scroll.contact-page form input::-webkit-input-placeholder {
