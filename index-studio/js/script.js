@@ -1,4 +1,9 @@
 $(document).ready(function() {
+
+	setTimeout(function(){
+		$('.preloader').addClass('close');
+	  }, 2000);
+
 	var count = 0,
 		main_section = $('.main_box'),
 		main_length = $('.main_box').length,
