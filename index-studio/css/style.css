@@ -695,7 +695,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 100vw;
 }
 
 .main_scroll.contact-page .section_content .section_box {
