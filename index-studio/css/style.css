@@ -698,7 +698,7 @@ body {
   width: 100%;
   position: relative;
   z-index: 0;
-  top: -20px;
+  top: 2.4vw;
 }
 
 .main_scroll.contact-page .section_content .title {
