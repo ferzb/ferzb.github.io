@@ -739,11 +739,13 @@ body {
   cursor: none;
   position: relative;
   z-index: 1;
+  color: #ffffff;
 }
 
 .main_scroll.contact-page .section_content_contact ul li span {
   font-weight: normal;
   font-size: 12px;
+  color: #999999;
 }
 
 .main_scroll.contact-page .section_content_info img {
