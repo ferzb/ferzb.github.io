@@ -188,6 +188,11 @@ body {
   display: none;
 }
 
+.section_home .inner_nav li:last-child a {
+  position: static !important;
+  z-index: 0;
+}
+
 .section_home .inner_nav li a {
   color: #ffffff;
   position: relative;
@@ -576,10 +581,10 @@ body {
   width: 100%;
   padding: 14px 20px;
   margin-bottom: 30px;
-  color: #ffffff;
+  color: #999999;
   font-weight: normal;
   font-family: "Poppins Regular" !important;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .main_scroll.contact-page form input {
@@ -594,49 +599,49 @@ body {
 }
 
 .main_scroll.contact-page form input::-webkit-input-placeholder {
-  color: #fff;
+  color: #999999;
   color-font-family: 'Poppins Regular';
   color-font-weight: normal;
 }
 
 .main_scroll.contact-page form input:-ms-input-placeholder {
-  color: #fff;
+  color: #999999;
   color-font-family: 'Poppins Regular';
   color-font-weight: normal;
 }
 
 .main_scroll.contact-page form input::-ms-input-placeholder {
-  color: #fff;
+  color: #999999;
   color-font-family: 'Poppins Regular';
   color-font-weight: normal;
 }
 
 .main_scroll.contact-page form input::placeholder {
-  color: #fff;
+  color: #999999;
   color-font-family: 'Poppins Regular';
   color-font-weight: normal;
 }
 
 .main_scroll.contact-page form textarea::-webkit-input-placeholder {
-  color: #fff;
+  color: #999999;
   font-family: 'Poppins Regular';
   font-weight: normal;
 }
 
 .main_scroll.contact-page form textarea:-ms-input-placeholder {
-  color: #fff;
+  color: #999999;
   font-family: 'Poppins Regular';
   font-weight: normal;
 }
 
 .main_scroll.contact-page form textarea::-ms-input-placeholder {
-  color: #fff;
+  color: #999999;
   font-family: 'Poppins Regular';
   font-weight: normal;
 }
 
 .main_scroll.contact-page form textarea::placeholder {
-  color: #fff;
+  color: #999999;
   font-family: 'Poppins Regular';
   font-weight: normal;
 }

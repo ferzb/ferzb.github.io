@@ -89,6 +89,9 @@ body
                 &:last-child
                     &:after
                         display: none
+                    a
+                        position: static!important
+                        z-index: 0
                 a
                     color: #ffffff
                     position: relative
@@ -328,10 +331,10 @@ body
             width: 100%
             padding: 14px 20px
             margin-bottom: 30px
-            color: #ffffff
+            color: #999999
             font-weight: normal
             font-family: 'Poppins Regular'!important
-            font-size: 18px
+            font-size: 16px
         input
             background: #503f7b
         textarea
@@ -344,7 +347,7 @@ body
         input::-moz-placeholder,
         input::-ms-input-placeholder
         input::placeholder 
-	        color: #fff
+	        color: #999999
             font-family: 'Poppins Regular'
             font-weight: normal
 
@@ -353,7 +356,7 @@ body
         textarea:-moz-placeholder,
         textarea:-ms-input-placeholder
         textarea::placeholder 
-            color: #fff
+            color: #999999
             font-family: 'Poppins Regular'
             font-weight: normal
 
