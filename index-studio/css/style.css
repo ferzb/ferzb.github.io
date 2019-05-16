@@ -707,7 +707,7 @@ body {
   font-size: 18px;
   display: block;
   font-family: 'Poppins Regular';
-  margin: 25px 0px;
+  margin: 10px 0px 25px;
   max-width: 300px;
 }
 
@@ -758,6 +758,7 @@ body {
   position: relative;
   z-index: 1;
   cursor: none;
+  margin-right: 2vw;
 }
 
 .main_scroll.contact-page .section_content_info .soc-link li a {
@@ -767,8 +768,9 @@ body {
 }
 
 .main_scroll.contact-page .section_content_info .address {
-  font-size: 18px;
-  margin-top: 40px;
+  font-size: 16px;
+  font-family: 'Poppins Regular';
+  margin-top: 20px;
   line-height: 26px;
 }
 
