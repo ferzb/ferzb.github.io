@@ -699,13 +699,14 @@ body {
 }
 
 .main_scroll.contact-page .section_content .title {
-  font-size: 36px;
+  font-size: 33px;
   font-weight: bold;
 }
 
 .main_scroll.contact-page .section_content .subtitle {
   font-size: 18px;
   display: block;
+  font-family: 'Poppins Regular';
   margin: 25px 0px;
   max-width: 300px;
 }
@@ -723,6 +724,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 40px;
+  line-height: 18px;
+  font-family: 'Poppins Regular';
 }
 
 .main_scroll.contact-page .section_content_contact ul li img {
@@ -732,8 +735,7 @@ body {
 
 .main_scroll.contact-page .section_content_contact ul li a {
   display: block;
-  font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   cursor: none;
   position: relative;
   z-index: 1;
@@ -741,7 +743,7 @@ body {
 
 .main_scroll.contact-page .section_content_contact ul li span {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .main_scroll.contact-page .section_content_info img {
