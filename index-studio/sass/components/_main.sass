@@ -34,6 +34,7 @@ body
             font-size: 24px
             cursor: none
             position: relative
+            transition: 0s
             &:after
                 content: ""
                 display: block
@@ -90,6 +91,9 @@ body
                         display: none
                 a
                     color: #ffffff
+                    position: relative
+                    z-index: 1
+                    cursor: none
                 
         &_subtitle
             color: $sec-color
@@ -324,8 +328,9 @@ body
             width: 100%
             padding: 14px 20px
             margin-bottom: 30px
-            color: #dc9eb7
+            color: #ffffff
             font-weight: normal
+            font-family: 'Poppins Regular'!important
             font-size: 18px
         input
             background: #503f7b
@@ -340,6 +345,8 @@ body
         input::-ms-input-placeholder
         input::placeholder 
 	        color: #fff
+            font-family: 'Poppins Regular'
+            font-weight: normal
 
         textarea::-webkit-input-placeholder, 
         textarea::-moz-placeholder,
@@ -347,12 +354,15 @@ body
         textarea:-ms-input-placeholder
         textarea::placeholder 
             color: #fff
+            font-family: 'Poppins Regular'
+            font-weight: normal
 
         button
             cursor: none
             max-width: 220px
             color: #503f7b
             background: #f3cc65
+            font-family: 'Poppins Bold'!important
     .section_home
         p
             display: block

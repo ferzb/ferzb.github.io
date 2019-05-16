@@ -1,8 +1,20 @@
 @import url("grid.css");
 @font-face {
-  font-family: 'Product Sans';
-  src: url("../fonts/Product-Sans-Bold.ttf");
+  font-family: 'Poppins Bold';
+  src: url("../fonts/Poppins-Bold.ttf");
   font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Poppins Regular';
+  src: url("../fonts/Poppins-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Poppins Light';
+  src: url("../fonts/Poppins-Light.ttf");
+  font-weight: lighter;
 }
 
 /****Grid layout settings****/
@@ -86,6 +98,8 @@ body {
   font-size: 24px;
   cursor: none;
   position: relative;
+  -webkit-transition: 0s;
+  transition: 0s;
 }
 
 .page_header .header_logo:after {
@@ -176,6 +190,9 @@ body {
 
 .section_home .inner_nav li a {
   color: #ffffff;
+  position: relative;
+  z-index: 1;
+  cursor: none;
 }
 
 .section_home_subtitle {
@@ -559,8 +576,9 @@ body {
   width: 100%;
   padding: 14px 20px;
   margin-bottom: 30px;
-  color: #dc9eb7;
+  color: #ffffff;
   font-weight: normal;
+  font-family: "Poppins Regular" !important;
   font-size: 18px;
 }
 
@@ -577,34 +595,50 @@ body {
 
 .main_scroll.contact-page form input::-webkit-input-placeholder {
   color: #fff;
+  color-font-family: 'Poppins Regular';
+  color-font-weight: normal;
 }
 
 .main_scroll.contact-page form input:-ms-input-placeholder {
   color: #fff;
+  color-font-family: 'Poppins Regular';
+  color-font-weight: normal;
 }
 
 .main_scroll.contact-page form input::-ms-input-placeholder {
   color: #fff;
+  color-font-family: 'Poppins Regular';
+  color-font-weight: normal;
 }
 
 .main_scroll.contact-page form input::placeholder {
   color: #fff;
+  color-font-family: 'Poppins Regular';
+  color-font-weight: normal;
 }
 
 .main_scroll.contact-page form textarea::-webkit-input-placeholder {
   color: #fff;
+  font-family: 'Poppins Regular';
+  font-weight: normal;
 }
 
 .main_scroll.contact-page form textarea:-ms-input-placeholder {
   color: #fff;
+  font-family: 'Poppins Regular';
+  font-weight: normal;
 }
 
 .main_scroll.contact-page form textarea::-ms-input-placeholder {
   color: #fff;
+  font-family: 'Poppins Regular';
+  font-weight: normal;
 }
 
 .main_scroll.contact-page form textarea::placeholder {
   color: #fff;
+  font-family: 'Poppins Regular';
+  font-weight: normal;
 }
 
 .main_scroll.contact-page form button {
@@ -612,6 +646,7 @@ body {
   max-width: 220px;
   color: #503f7b;
   background: #f3cc65;
+  font-family: "Poppins Bold" !important;
 }
 
 .main_scroll.contact-page .section_home p {

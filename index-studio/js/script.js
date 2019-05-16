@@ -68,7 +68,7 @@ $(document).ready(function() {
 				count++
 			)
 			
-			$('.page_header').css('left', '-'+count*main_box_w+"px")
+			$('.page_header .header_logo').css('left', '-'+count*main_box_w+"px")
 
 			main_section.removeClass('active');
 
