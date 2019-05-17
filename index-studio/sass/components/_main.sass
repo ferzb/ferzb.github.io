@@ -68,7 +68,7 @@ body
         min-width: 100vw
         position: relative
         @media screen and (min-width: #{$dw-1100})
-            padding-top: 80px
+            padding: 80px 0px
         .container
             height: 100%
             position: relative
@@ -305,6 +305,7 @@ body
                         background: #000
 
 
+//contact page
 
 .page-wrap.contact-page
     .nav-icon
@@ -326,7 +327,7 @@ body
     form
         width: 100%
         margin-bottom: auto
-        input, textarea, button
+        input, textarea
             display: block
             position: relative
             z-index: 1
@@ -362,17 +363,9 @@ body
             font-family: 'Poppins Regular'
             font-weight: normal
 
-        button
-            cursor: none
+        .general-btn
             max-width: 220px
-            color: #503f7b
-            background: #f3cc65
-            border: 1px solid #f3cc65
-            transition: 0.2s
-            font-family: 'Poppins Bold'!important
-            &:hover
-                background: transparent
-                color: #f3cc65
+            width: 100%
 
     .section_home
         width: 100vw
@@ -489,4 +482,219 @@ body
                     &:before
                         transform: rotate(-35deg)
                         top: 2px
-            
+
+
+//about page
+.page-wrap.about-page
+    .nav-icon
+        .nav-icon_box
+            .nav-icon_line
+                background: #fff
+    .header_logo
+        color: #fff
+        &:after
+            background: #fff
+    .page_header
+        background: #003a5f
+        @media screen and (min-width: #{$dw-1100})
+            background: transparent
+
+.main_scroll.about-page
+    background: #003a5f
+    .main_box
+        background: transparent
+    .general-paragraph
+        color: #ffffff
+        font-size: 16px
+        font-family: 'Poppins Regular'
+    .section
+        &_home
+            .wrapper
+                margin: auto
+                max-width: 890px
+            .general-title
+                color: #9cff00
+            .general-paragraph
+                font-size: 18px
+        &_about
+            .general-title
+                color: #ffffff
+            .general-btn
+                margin-top: 3vw
+                background: #9cff00
+                border-color: #9cff00
+                color: #003a5f
+                &:hover
+                    color: #9cff00
+        &_team
+            .general-title
+                font-size: 32px
+                color: #ffffff
+                margin-right: auto
+                @media screen and (min-width: #{$dw-640})
+                    font-size: 60px
+            .general-paragraph
+                font-family: 'Poppins Light'
+                color: #ffffff
+            article
+                width: 100%
+                margin: 4vw auto 2vw
+            &_item
+                background: #ffffff
+                width: 100%
+                margin-bottom: 26px
+                @media screen and (min-width: #{$dw-480})
+                    width: calc(100% / 2 - 25px)
+                @media screen and (min-width: #{$dw-780})
+                    width: calc(100% / 3 - 25px)
+                @media screen and (min-width: #{$dw-1100})
+                    width: calc(100% / 6 - 25px)
+                &:last-child
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    .title
+                        text-align: center
+                        span
+                            font-size: 24px
+                            display: flex
+                            justify-content: center
+                            margin: 6px 0px
+                            &:before
+                                content: ''
+                                display: block
+                                width: 23px
+                                height: 21px
+                                margin-right: 6px
+                                background: url('../img/User.svg') no-repeat
+                        .general-btn
+                            background: #9cff00
+                            border-color: #9cff00
+                            color: #003a5f
+                            &:hover
+                                color: #9cff00
+                .photo
+                    overflow: hidden
+                    width: 100%
+                    max-height: 290px
+                    img
+                        width: 100%
+                        height: auto
+                .title
+                    padding: 20px 18px
+                    h4, span
+                        color: #003a5f
+                        font-size: 16px
+                    span
+                        font-family: 'Poppins Regular'
+        
+        &_inner-box
+            .general-title
+                font-size: 36px
+                color: #ffffff
+
+            .general-paragraph
+                padding: 20px 0px
+                font-size: 12px
+            .pic-box
+                background: #000000
+                padding: 15px
+                .pic
+                    overflow: hidden
+                    img
+                        width: auto
+                        height: 100%
+            article.pic-box
+                margin: 20px 0px
+                @media screen and (min-width: #{$dw-1100})
+                    margin: 0
+                .pic
+                    max-height: 480px
+            div.pic-box
+                margin-bottom: 10px
+                .pic
+                    max-height: 270px
+                &:nth-child(2)
+                    max-height: 200px
+                    height: 100%
+                    .pic-box-wrapper
+                        height: 100%
+                        background: url('https://source.unsplash.com/random') center no-repeat
+                        background-size: cover
+                        display: flex
+                        align-items: center
+                        p
+                            max-width: 100px
+                            text-align: left
+                            line-height: normal
+                            padding: 0px 4px
+
+        &_inner-pictures
+            .pic-box
+                background: #000000
+                padding: 15px
+                .pic
+                    overflow: hidden
+                    max-height: 500px
+                    img
+                        width: auto
+                        height: 100%
+                &_wrapper
+                    .pic-box
+                        .pic
+                            max-height: 163px
+                        &:nth-child(1)
+                            margin-bottom: 20px
+                            .pic
+                                max-height: 220px   
+            .general-paragraph
+                padding: 20px 0px 0px
+                font-size: 12px 
+        &_mentions
+            .wrapper
+                max-width: 800px
+            .general-title
+                font-size: 28px
+                margin-bottom: 20px
+                color: #ffffff
+                @media screen and (min-width: #{$dw-640})
+                    font-size: 48px
+            &_item
+                width: 165px
+                height: 165px
+                display: flex
+                align-items: center
+                justify-content: center
+                background: #ffffff
+                margin: 20px auto 
+        &_happy-text
+            .general-title
+                font-size: 32px
+                margin-bottom: 20px
+                color: #ffffff
+                @media screen and (min-width: #{$dw-640})
+                    font-size: 60px
+        &_action
+            .wrapper
+                max-width: 800px
+            .general-title, .subtitle
+                color: #ffffff
+                font-size: 24px
+                @media screen and (min-width: #{$dw-640})
+                    font-size: 36px
+            .subtitle
+                margin: 3.5vw 0px
+            &_item
+                background: #9cff00
+                display: block
+                color: #003a5f
+                padding: 40px 10px
+                text-align: center
+                position: relative
+                z-index: 1
+                margin-top: 20px
+                cursor: none
+                img
+                    display: block
+                    margin: auto auto 20px
+                    width: auto
