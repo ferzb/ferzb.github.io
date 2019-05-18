@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="42" viewBox="0 0 30 42">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="0" y="0" width="30" height="42" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="iphone" class="cls-1" d="M26.47,42H3.529A3.515,3.515,0,0,1,0,38.5V3.5A3.515,3.515,0,0,1,3.529,0H26.47A3.515,3.515,0,0,1,30,3.5v35A3.515,3.515,0,0,1,26.47,42Zm0-38.5H3.529v35H26.47V3.5ZM8.824,7H21.176a1.758,1.758,0,0,1,1.765,1.75V28a1.758,1.758,0,0,1-1.765,1.75H8.824A1.757,1.757,0,0,1,7.059,28V8.75A1.757,1.757,0,0,1,8.824,7Zm1.765,19.25h8.823V10.5H10.588V26.25ZM15,31.5a2.625,2.625,0,1,1-2.647,2.625A2.636,2.636,0,0,1,15,31.5Z"/>
+</svg>
