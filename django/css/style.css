@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap");
+/****Grid layout settings****/
+/*General for documetn settings*/
+/*Color*/
+/*Typography*/
+/*h1*/
+/*navbar*/
+/*navigation icon*/
+/*container*/
+/*wrapper*/
+/*section wrapper*/
+/*container wrapper*/
+/*btn up*/
+@import url("grid.css");
+.logo {
+  color: #ffffff;
+  font-size: 36px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.general_btn {
+  display: block;
+  cursor: pointer;
+  background: transparent;
+  overflow: hidden;
+  padding: 12px 50px;
+  -webkit-box-shadow: 0px 0px 1px 1px #ffffff;
+          box-shadow: 0px 0px 1px 1px #ffffff;
+  color: #ffffff;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.general_btn:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.inner-wrap {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.inner-wrap video {
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+
+.inner-wrap .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #121c2b;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.inner-wrap .form-box {
+  position: relative;
+  z-index: 2;
+  width: 40%;
+  min-width: 320px;
+  padding: 20px;
+  height: 100vh;
+  background: rgba(18, 28, 43, 0.95);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.inner-wrap .form-box .title {
+  color: #ffffff;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.inner-wrap .form-box form {
+  width: 100%;
+}
+
+@media screen and (min-width: 1100px) {
+  .inner-wrap .form-box form {
+    width: 55%;
+    min-width: 400px;
+  }
+}
+
+.inner-wrap .form-box form a {
+  color: #ffffff;
+  margin-bottom: 40px;
+  display: block;
+  width: 100%;
+  text-align: right;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.inner-wrap .form-box .input_box {
+  position: relative;
+  height: 70px;
+  margin-bottom: 50px;
+}
+
+.inner-wrap .form-box .input_box:before, .inner-wrap .form-box .input_box:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: calc(50% - 50px);
+  height: 100%;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.inner-wrap .form-box .input_box:before {
+  left: 0;
+  border-left: 1px solid #ffffff;
+}
+
+.inner-wrap .form-box .input_box:after {
+  right: 0;
+  border-right: 1px solid #ffffff;
+}
+
+.inner-wrap .form-box .input_box.focus:before, .inner-wrap .form-box .input_box.focus:after {
+  width: 50%;
+}
+
+.inner-wrap .form-box .input_box.focus label {
+  -webkit-transform: translateY(-80%);
+          transform: translateY(-80%);
+}
+
+.inner-wrap .form-box .general_btn {
+  margin-left: auto;
+  font-size: 22px;
+}
+
+.inner-wrap .form-box .general_btn:hover span:nth-child(1) {
+  -webkit-animation: 1.5s btn_hover_1 infinite;
+          animation: 1.5s btn_hover_1 infinite;
+}
+
+.inner-wrap .form-box .general_btn:hover span:nth-child(2) {
+  -webkit-animation: 1.5s btn_hover_2 infinite;
+          animation: 1.5s btn_hover_2 infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.inner-wrap .form-box .general_btn:hover span:nth-child(3) {
+  -webkit-animation: 1.5s btn_hover_3 infinite;
+          animation: 1.5s btn_hover_3 infinite;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.inner-wrap .form-box .general_btn:hover span:nth-child(4) {
+  -webkit-animation: 1.5s btn_hover_4 infinite;
+          animation: 1.5s btn_hover_4 infinite;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.inner-wrap .form-box .general_btn span {
+  position: absolute;
+  background: #ffffff;
+  display: block;
+}
+
+.inner-wrap .form-box .general_btn span:nth-child(2n+1) {
+  width: 100%;
+  height: 1px;
+}
+
+.inner-wrap .form-box .general_btn span:nth-child(2n) {
+  height: 100%;
+  width: 1px;
+}
+
+.inner-wrap .form-box .general_btn span:nth-child(1) {
+  top: 0;
+  left: -100%;
+}
+
+.inner-wrap .form-box .general_btn span:nth-child(2) {
+  top: 100%;
+  left: 0;
+}
+
+.inner-wrap .form-box .general_btn span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+}
+
+.inner-wrap .form-box .general_btn span:nth-child(4) {
+  right: 0;
+  top: -100%;
+}
+
+.inner-wrap .form-box label {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  padding: 10px 20px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.inner-wrap .form-box input {
+  display: block;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 10px 20px;
+  background: transparent;
+}
+
+@-webkit-keyframes btn_hover_1 {
+  0% {
+    left: -100%;
+  }
+  70% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes btn_hover_1 {
+  0% {
+    left: -100%;
+  }
+  70% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes btn_hover_2 {
+  0% {
+    top: 100%;
+  }
+  80% {
+    top: -100%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
+@keyframes btn_hover_2 {
+  0% {
+    top: 100%;
+  }
+  80% {
+    top: -100%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
+@-webkit-keyframes btn_hover_3 {
+  0% {
+    right: -100%;
+  }
+  70% {
+    right: 100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes btn_hover_3 {
+  0% {
+    right: -100%;
+  }
+  70% {
+    right: 100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@-webkit-keyframes btn_hover_4 {
+  0% {
+    top: -100%;
+  }
+  70% {
+    top: 100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes btn_hover_4 {
+  0% {
+    top: -100%;
+  }
+  70% {
+    top: 100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
