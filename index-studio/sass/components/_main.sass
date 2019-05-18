@@ -510,10 +510,11 @@ body
     .section
         &_home
             .wrapper
-                margin: auto
+                margin-top: 2vw
                 max-width: 890px
             .general-title
                 color: #9cff00
+                margin-bottom: 10px
                 font-size: 32px
                 @media screen and (min-width: #{$dw-640})
                     font-size: 48px
@@ -596,6 +597,8 @@ body
                         font-family: 'Poppins Regular'
         
         &_inner-box
+            .container
+                max-width: 750px
             .general-title
                 font-size: 20px
                 color: #ffffff
@@ -607,6 +610,9 @@ body
             .pic-box
                 background: #000000
                 padding: 15px
+                .general-paragraph
+                    color: #666
+                    line-height: 20px
                 .pic
                     overflow: hidden
                     img
@@ -614,24 +620,37 @@ body
                         height: auto
                 .pic
                     max-height: 480px
+                    @media screen and (max-height: 760px)
+                        max-height: 300px
+                    
 
         &_inner-pictures
             .container
                 max-height: 100%
+                max-width: 925px
                 @media screen and (min-width: #{$dw-960})
                     max-height: 656px
             &.second-box
+                .container
+                    max-width: 1000px
                 .pic-box
                     &:nth-child(1)
                         .pic
                             max-height: 400px
+                            @media screen and (max-height: 760px)
+                                max-height: 300px
             .pic-box
                 background: #000000
                 padding: 15px
+                .general-paragraph
+                    color: #666
+                    line-height: 20px
                 .pic
                     overflow: hidden
                     height: 100%
                     max-height: 500px
+                    @media screen and (max-height: 760px)
+                        max-height: 300px
                     img
                         width: auto
                         height: 100%

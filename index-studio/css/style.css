@@ -877,12 +877,13 @@ body {
 }
 
 .main_scroll.about-page .section_home .wrapper {
-  margin: auto;
+  margin-top: 2vw;
   max-width: 890px;
 }
 
 .main_scroll.about-page .section_home .general-title {
   color: #9cff00;
+  margin-bottom: 10px;
   font-size: 32px;
 }
 
@@ -1035,6 +1036,10 @@ body {
   font-family: 'Poppins Regular';
 }
 
+.main_scroll.about-page .section_inner-box .container {
+  max-width: 750px;
+}
+
 .main_scroll.about-page .section_inner-box .general-title {
   font-size: 20px;
   color: #ffffff;
@@ -1056,6 +1061,11 @@ body {
   padding: 15px;
 }
 
+.main_scroll.about-page .section_inner-box .pic-box .general-paragraph {
+  color: #666;
+  line-height: 20px;
+}
+
 .main_scroll.about-page .section_inner-box .pic-box .pic {
   overflow: hidden;
 }
@@ -1069,8 +1079,15 @@ body {
   max-height: 480px;
 }
 
+@media screen and (max-height: 760px) {
+  .main_scroll.about-page .section_inner-box .pic-box .pic {
+    max-height: 300px;
+  }
+}
+
 .main_scroll.about-page .section_inner-pictures .container {
   max-height: 100%;
+  max-width: 925px;
 }
 
 @media screen and (min-width: 960px) {
@@ -1079,8 +1096,18 @@ body {
   }
 }
 
+.main_scroll.about-page .section_inner-pictures.second-box .container {
+  max-width: 1000px;
+}
+
 .main_scroll.about-page .section_inner-pictures.second-box .pic-box:nth-child(1) .pic {
   max-height: 400px;
+}
+
+@media screen and (max-height: 760px) {
+  .main_scroll.about-page .section_inner-pictures.second-box .pic-box:nth-child(1) .pic {
+    max-height: 300px;
+  }
 }
 
 .main_scroll.about-page .section_inner-pictures .pic-box {
@@ -1088,10 +1115,21 @@ body {
   padding: 15px;
 }
 
+.main_scroll.about-page .section_inner-pictures .pic-box .general-paragraph {
+  color: #666;
+  line-height: 20px;
+}
+
 .main_scroll.about-page .section_inner-pictures .pic-box .pic {
   overflow: hidden;
   height: 100%;
   max-height: 500px;
+}
+
+@media screen and (max-height: 760px) {
+  .main_scroll.about-page .section_inner-pictures .pic-box .pic {
+    max-height: 300px;
+  }
 }
 
 .main_scroll.about-page .section_inner-pictures .pic-box .pic img {
