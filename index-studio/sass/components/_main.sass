@@ -616,6 +616,10 @@ body
                     max-height: 480px
 
         &_inner-pictures
+            .container
+                max-height: 100%
+                @media screen and (min-width: #{$dw-960})
+                    max-height: 656px
             &.second-box
                 .pic-box
                     &:nth-child(1)

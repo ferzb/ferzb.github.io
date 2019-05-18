@@ -1069,6 +1069,16 @@ body {
   max-height: 480px;
 }
 
+.main_scroll.about-page .section_inner-pictures .container {
+  max-height: 100%;
+}
+
+@media screen and (min-width: 960px) {
+  .main_scroll.about-page .section_inner-pictures .container {
+    max-height: 656px;
+  }
+}
+
 .main_scroll.about-page .section_inner-pictures.second-box .pic-box:nth-child(1) .pic {
   max-height: 400px;
 }
