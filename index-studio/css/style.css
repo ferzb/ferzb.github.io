@@ -897,16 +897,25 @@ body {
   font-size: 18px;
 }
 
+.main_scroll.about-page .section_about .wrapper {
+  margin-top: 2.5vw;
+}
+
 .main_scroll.about-page .section_about .general-title {
   color: #ffffff;
   font-size: 26px;
   line-height: 40px;
+  margin-bottom: 10px;
 }
 
 @media screen and (min-width: 640px) {
   .main_scroll.about-page .section_about .general-title {
     font-size: 36px;
   }
+}
+
+.main_scroll.about-page .section_about .general-paragraph {
+  margin-top: 0px;
 }
 
 .main_scroll.about-page .section_about .general-btn {
