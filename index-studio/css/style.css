@@ -862,12 +862,14 @@ body {
   }
 }
 
-.main_scroll.about-page {
-  background: #003a5f;
+.page-wrap.about-page .page_main {
+  background-image: url("https://source.unsplash.com/random");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .main_scroll.about-page .main_box {
-  background: transparent;
+  background: #003a5f;
 }
 
 .main_scroll.about-page .general-paragraph {
@@ -895,6 +897,10 @@ body {
 
 .main_scroll.about-page .section_home .general-paragraph {
   font-size: 18px;
+}
+
+.main_scroll.about-page .section_about {
+  background: transparent;
 }
 
 .main_scroll.about-page .section_about .wrapper {
