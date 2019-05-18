@@ -883,6 +883,13 @@ body {
 
 .main_scroll.about-page .section_home .general-title {
   color: #9cff00;
+  font-size: 32px;
+}
+
+@media screen and (min-width: 640px) {
+  .main_scroll.about-page .section_home .general-title {
+    font-size: 48px;
+  }
 }
 
 .main_scroll.about-page .section_home .general-paragraph {
@@ -891,6 +898,14 @@ body {
 
 .main_scroll.about-page .section_about .general-title {
   color: #ffffff;
+  font-size: 26px;
+  line-height: 40px;
+}
+
+@media screen and (min-width: 640px) {
+  .main_scroll.about-page .section_about .general-title {
+    font-size: 36px;
+  }
 }
 
 .main_scroll.about-page .section_about .general-btn {
@@ -905,14 +920,14 @@ body {
 }
 
 .main_scroll.about-page .section_team .general-title {
-  font-size: 32px;
   color: #ffffff;
   margin-right: auto;
+  font-size: 32px;
 }
 
 @media screen and (min-width: 640px) {
   .main_scroll.about-page .section_team .general-title {
-    font-size: 60px;
+    font-size: 48px;
   }
 }
 
@@ -1021,8 +1036,14 @@ body {
 }
 
 .main_scroll.about-page .section_inner-box .general-title {
-  font-size: 36px;
+  font-size: 20px;
   color: #ffffff;
+}
+
+@media screen and (min-width: 640px) {
+  .main_scroll.about-page .section_inner-box .general-title {
+    font-size: 30px;
+  }
 }
 
 .main_scroll.about-page .section_inner-box .general-paragraph {
@@ -1040,54 +1061,16 @@ body {
 }
 
 .main_scroll.about-page .section_inner-box .pic-box .pic img {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 
-.main_scroll.about-page .section_inner-box article.pic-box {
-  margin: 20px 0px;
-}
-
-@media screen and (min-width: 1100px) {
-  .main_scroll.about-page .section_inner-box article.pic-box {
-    margin: 0;
-  }
-}
-
-.main_scroll.about-page .section_inner-box article.pic-box .pic {
+.main_scroll.about-page .section_inner-box .pic-box .pic {
   max-height: 480px;
 }
 
-.main_scroll.about-page .section_inner-box div.pic-box {
-  margin-bottom: 10px;
-}
-
-.main_scroll.about-page .section_inner-box div.pic-box .pic {
-  max-height: 270px;
-}
-
-.main_scroll.about-page .section_inner-box div.pic-box:nth-child(2) {
-  max-height: 200px;
-  height: 100%;
-}
-
-.main_scroll.about-page .section_inner-box div.pic-box:nth-child(2) .pic-box-wrapper {
-  height: 100%;
-  background: url("https://source.unsplash.com/random") center no-repeat;
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.main_scroll.about-page .section_inner-box div.pic-box:nth-child(2) .pic-box-wrapper p {
-  max-width: 100px;
-  text-align: left;
-  line-height: normal;
-  padding: 0px 4px;
+.main_scroll.about-page .section_inner-pictures.second-box .pic-box:nth-child(1) .pic {
+  max-height: 400px;
 }
 
 .main_scroll.about-page .section_inner-pictures .pic-box {
@@ -1105,16 +1088,12 @@ body {
   height: 100%;
 }
 
-.main_scroll.about-page .section_inner-pictures .pic-box_wrapper .pic-box .pic {
-  max-height: 163px;
+.main_scroll.about-page .section_inner-pictures .pic-box:nth-child(1) {
+  margin-top: auto;
 }
 
-.main_scroll.about-page .section_inner-pictures .pic-box_wrapper .pic-box:nth-child(1) {
-  margin-bottom: 20px;
-}
-
-.main_scroll.about-page .section_inner-pictures .pic-box_wrapper .pic-box:nth-child(1) .pic {
-  max-height: 220px;
+.main_scroll.about-page .section_inner-pictures .pic-box:nth-child(1) .pic {
+  max-height: 300px;
 }
 
 .main_scroll.about-page .section_inner-pictures .general-paragraph {
@@ -1127,7 +1106,7 @@ body {
 }
 
 .main_scroll.about-page .section_mentions .general-title {
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 20px;
   color: #ffffff;
 }
@@ -1139,8 +1118,8 @@ body {
 }
 
 .main_scroll.about-page .section_mentions_item {
-  width: 165px;
-  height: 165px;
+  width: 115px;
+  height: 115px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1151,7 +1130,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background: #ffffff;
-  margin: 20px auto;
+  margin: 8px auto;
 }
 
 .main_scroll.about-page .section_happy-text .general-title {
@@ -1162,7 +1141,7 @@ body {
 
 @media screen and (min-width: 640px) {
   .main_scroll.about-page .section_happy-text .general-title {
-    font-size: 60px;
+    font-size: 48px;
   }
 }
 

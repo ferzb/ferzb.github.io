@@ -514,11 +514,18 @@ body
                 max-width: 890px
             .general-title
                 color: #9cff00
+                font-size: 32px
+                @media screen and (min-width: #{$dw-640})
+                    font-size: 48px
             .general-paragraph
                 font-size: 18px
         &_about
             .general-title
                 color: #ffffff
+                font-size: 26px
+                line-height: 40px
+                @media screen and (min-width: #{$dw-640})
+                    font-size: 36px
             .general-btn
                 margin-top: 3vw
                 background: #9cff00
@@ -528,11 +535,11 @@ body
                     color: #9cff00
         &_team
             .general-title
-                font-size: 32px
                 color: #ffffff
                 margin-right: auto
+                font-size: 32px
                 @media screen and (min-width: #{$dw-640})
-                    font-size: 60px
+                    font-size: 48px
             .general-paragraph
                 font-family: 'Poppins Light'
                 color: #ffffff
@@ -590,9 +597,10 @@ body
         
         &_inner-box
             .general-title
-                font-size: 36px
+                font-size: 20px
                 color: #ffffff
-
+                @media screen and (min-width: #{$dw-640})
+                    font-size: 30px
             .general-paragraph
                 padding: 20px 0px
                 font-size: 12px
@@ -602,34 +610,17 @@ body
                 .pic
                     overflow: hidden
                     img
-                        width: auto
-                        height: 100%
-            article.pic-box
-                margin: 20px 0px
-                @media screen and (min-width: #{$dw-1100})
-                    margin: 0
+                        width: 100%
+                        height: auto
                 .pic
                     max-height: 480px
-            div.pic-box
-                margin-bottom: 10px
-                .pic
-                    max-height: 270px
-                &:nth-child(2)
-                    max-height: 200px
-                    height: 100%
-                    .pic-box-wrapper
-                        height: 100%
-                        background: url('https://source.unsplash.com/random') center no-repeat
-                        background-size: cover
-                        display: flex
-                        align-items: center
-                        p
-                            max-width: 100px
-                            text-align: left
-                            line-height: normal
-                            padding: 0px 4px
 
         &_inner-pictures
+            &.second-box
+                .pic-box
+                    &:nth-child(1)
+                        .pic
+                            max-height: 400px
             .pic-box
                 background: #000000
                 padding: 15px
@@ -639,41 +630,38 @@ body
                     img
                         width: auto
                         height: 100%
-                &_wrapper
-                    .pic-box
-                        .pic
-                            max-height: 163px
-                        &:nth-child(1)
-                            margin-bottom: 20px
-                            .pic
-                                max-height: 220px   
+                &:nth-child(1)
+                    margin-top: auto
+                    .pic
+                        max-height: 300px
             .general-paragraph
                 padding: 20px 0px 0px
                 font-size: 12px 
+        
         &_mentions
             .wrapper
                 max-width: 800px
             .general-title
-                font-size: 28px
+                font-size: 32px
                 margin-bottom: 20px
                 color: #ffffff
                 @media screen and (min-width: #{$dw-640})
                     font-size: 48px
             &_item
-                width: 165px
-                height: 165px
+                width: 115px
+                height: 115px
                 display: flex
                 align-items: center
                 justify-content: center
                 background: #ffffff
-                margin: 20px auto 
+                margin: 8px auto 
         &_happy-text
             .general-title
                 font-size: 32px
                 margin-bottom: 20px
                 color: #ffffff
                 @media screen and (min-width: #{$dw-640})
-                    font-size: 60px
+                    font-size: 48px
         &_action
             .wrapper
                 max-width: 800px
