@@ -1090,6 +1090,7 @@ body {
 
 .main_scroll.about-page .section_inner-pictures .pic-box .pic {
   overflow: hidden;
+  height: 100%;
   max-height: 500px;
 }
 
