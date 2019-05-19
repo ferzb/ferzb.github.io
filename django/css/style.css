@@ -559,17 +559,17 @@
   font-size: 20px;
 }
 
-.transaction-page .inner-wrap {
+.transaction-page .inner-wrap, .cycle-page .inner-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.transaction-page .overlay {
+.transaction-page .overlay, .cycle-page .overlay {
   opacity: 0.5;
 }
 
-.transaction-page .general_form {
+.transaction-page .general_form, .cycle-page .general_form {
   min-height: 100vh;
   width: 100%;
   -webkit-box-align: center;
@@ -580,76 +580,86 @@
           justify-content: center;
 }
 
-.transaction-page .general_form.show {
+.transaction-page .general_form.show, .cycle-page .general_form.show {
   -webkit-transform: translateX(320px);
           transform: translateX(320px);
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-.transaction-page .general_form form {
+.transaction-page .general_form form, .cycle-page .general_form form {
   width: 100%;
 }
 
 @media screen and (min-width: 480px) {
-  .transaction-page .general_form form {
+  .transaction-page .general_form form, .cycle-page .general_form form {
     width: 80%;
     margin: auto;
   }
 }
 
 @media screen and (min-width: 960px) {
-  .transaction-page .general_form form {
+  .transaction-page .general_form form, .cycle-page .general_form form {
     width: 70%;
   }
 }
 
-.transaction-page .general_form form .input_box {
+.transaction-page .general_form form .input_box, .cycle-page .general_form form .input_box {
   height: 50px;
 }
 
-.transaction-page .general_form .general_dropdown-list {
+.transaction-page .general_form .general_dropdown-list, .cycle-page .general_form .general_dropdown-list {
   padding: 6px 20px;
 }
 
-.transaction-page .general_form .btn-box {
+.transaction-page .general_form .btn-box, .cycle-page .general_form .btn-box {
   width: 100%;
 }
 
-.transaction-page .general_form .btn-box .general_btn {
+.transaction-page .general_form .btn-box .general_btn, .cycle-page .general_form .btn-box .general_btn {
   margin-left: 0;
   margin-right: 30px;
 }
 
-.transaction-page .general_form .general_btn.add {
+.transaction-page .general_form .general_btn.add, .cycle-page .general_form .general_btn.add {
   margin-right: 20px;
   margin-bottom: 2vw;
 }
 
 @media screen and (min-width: 640px) {
-  .transaction-page .general_form .general_btn.add {
+  .transaction-page .general_form .general_btn.add, .cycle-page .general_form .general_btn.add {
     margin-right: 40px;
   }
 }
 
-.transaction-page .general_form .general_btn.add:hover {
+.transaction-page .general_form .general_btn.add:hover, .cycle-page .general_form .general_btn.add:hover {
   color: green;
 }
 
-.transaction-page .general_form .general_btn.add span {
+.transaction-page .general_form .general_btn.add span, .cycle-page .general_form .general_btn.add span {
   background: green;
 }
 
-.transaction-page .general_form .general_btn.remove {
+.transaction-page .general_form .general_btn.remove, .cycle-page .general_form .general_btn.remove {
   margin-left: 0;
 }
 
-.transaction-page .general_form .general_btn.remove:hover {
+.transaction-page .general_form .general_btn.remove:hover, .cycle-page .general_form .general_btn.remove:hover {
   color: red;
 }
 
-.transaction-page .general_form .general_btn.remove span {
+.transaction-page .general_form .general_btn.remove span, .cycle-page .general_form .general_btn.remove span {
   background: red;
+}
+
+.cycle-page .general_form {
+  padding-top: 80px;
+}
+
+@media screen and (min-width: 640px) {
+  .cycle-page .general_form {
+    padding-top: 20px;
+  }
 }
 
 @-webkit-keyframes btn_hover_1 {
