@@ -373,16 +373,11 @@
 
 .inner-wrap video {
   position: absolute;
-  height: 100%;
-}
-
-@media screen and (min-height: 740px) {
-  .inner-wrap video {
-    width: auto;
-    height: auto;
-    min-width: 100vw;
-    min-height: 100vh;
-  }
+  width: auto;
+  height: auto;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .inner-wrap .overlay {
