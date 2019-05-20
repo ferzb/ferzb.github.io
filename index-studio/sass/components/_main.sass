@@ -65,6 +65,11 @@ body
         padding-top: 0px
         min-height: 100vh
         width: 100vw
+        height: 100%
+        display: flex
+        align-items: center
+        flex-direction: column
+        justify-content: center
         min-width: 100vw
         position: relative
         @media screen and (min-width: #{$dw-1100})
@@ -78,7 +83,8 @@ body
         .inner_nav
             display: flex
             align-items: center
-            margin-bottom: 30px
+            margin-bottom: auto
+            margin-right: auto
             li
                 display: flex
                 font-family: 'Poppins Regular'
@@ -499,9 +505,9 @@ body
         @media screen and (min-width: #{$dw-1100})
             background: transparent
     .page_main
-        background-image: url('https://source.unsplash.com/random')
+        background-image: url('../img/bg.jpg')
         background-repeat: no-repeat
-        background-size: cover
+        background-size: 100% 100%
 .main_scroll.about-page
     
     .main_box
@@ -512,8 +518,10 @@ body
         font-family: 'Poppins Regular'
     .section
         &_home
+            .container
+                margin-bottom: auto
             .wrapper
-                margin-top: 2.5vw
+                margin: auto
                 max-width: 890px
             .general-title
                 color: #9cff00
@@ -524,20 +532,22 @@ body
             .general-paragraph
                 font-size: 18px
         &_about
-            background: transparent
+            background: rgba(0, 0, 0, 0.5)
             .wrapper
-                margin-top: 2.5vw
+                max-width: 900px
             .general-title
                 color: #ffffff
-                font-size: 26px
-                line-height: 40px
+                font-size: 32px
+                line-height: 45px
                 margin-bottom: 10px
                 @media screen and (min-width: #{$dw-640})
-                    font-size: 36px
+                    font-size: 48px
             .general-paragraph
                 margin-top: 0px
             .general-btn
-                margin-top: 3vw
+                margin-top: 1vw
+                max-width: none
+                margin-right: 20px
                 background: #9cff00
                 border-color: #9cff00
                 color: #003a5f
@@ -607,7 +617,13 @@ body
         
         &_inner-box
             .container
-                max-width: 750px
+                max-width: 1100px
+            .wrapper
+                width: 100%
+                max-width: none
+                height: 100%
+                @media screen and (min-width: #{$dw-960})
+                    max-height: 480px
             .general-title
                 font-size: 20px
                 color: #ffffff
@@ -631,23 +647,20 @@ body
                     max-height: 480px
                     @media screen and (max-height: 760px)
                         max-height: 300px
-                    
+                &.pic-box-t
+                    margin-top: auto
+                    .pic
+                        max-height: 300px
+                        @media screen and (max-height: 760px)
+                            max-height: 200px
 
         &_inner-pictures
             .container
-                max-height: 100%
-                max-width: 925px
-                @media screen and (min-width: #{$dw-960})
-                    max-height: 656px
-            &.second-box
-                .container
-                    max-width: 1000px
-                .pic-box
-                    &:nth-child(1)
-                        .pic
-                            max-height: 400px
-                            @media screen and (max-height: 760px)
-                                max-height: 300px
+                max-width: 1200px
+            .general-title
+                font-size: 24px
+                color: #ffffff
+                margin-top: 20px
             .pic-box
                 background: #000000
                 padding: 15px
@@ -661,19 +674,18 @@ body
                     @media screen and (max-height: 760px)
                         max-height: 300px
                     img
-                        width: auto
+                        min-width: 100%
                         height: 100%
-                &:nth-child(1)
-                    margin-top: auto
-                    .pic
+            article.pic-box
+                .pic
+                    max-height: 500px
+                    @media screen and (max-height: 760px)
                         max-height: 300px
             .general-paragraph
                 padding: 20px 0px 0px
                 font-size: 12px 
         
         &_mentions
-            .wrapper
-                max-width: 800px
             .general-title
                 font-size: 32px
                 margin-bottom: 20px
@@ -681,30 +693,39 @@ body
                 @media screen and (min-width: #{$dw-640})
                     font-size: 48px
             &_item
-                width: 115px
-                height: 115px
+                width: 125px
+                height: 125px
                 display: flex
                 align-items: center
                 justify-content: center
                 background: #ffffff
                 margin: 8px auto 
         &_happy-text
+            .container
+                max-width: 1030px
             .general-title
                 font-size: 32px
                 margin-bottom: 20px
+                max-width: 715px
                 color: #ffffff
                 @media screen and (min-width: #{$dw-640})
                     font-size: 48px
+
         &_action
             .wrapper
                 max-width: 800px
-            .general-title, .subtitle
+            .general-title
                 color: #ffffff
                 font-size: 24px
                 @media screen and (min-width: #{$dw-640})
                     font-size: 36px
             .subtitle
-                margin: 3.5vw 0px
+                margin: 1.5vw 0px
+                color: #ffffff
+                font-size: 22px
+                font-family: 'Poppins Regular'
+                @media screen and (min-width: #{$dw-640})
+                    font-size: 30px
             &_item
                 background: #9cff00
                 display: block
