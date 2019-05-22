@@ -89,7 +89,8 @@
 
     .dropdown-box
         width: 80%
-        margin-bottom: 50px
+        margin-top: 25px
+        margin-bottom: 20px
         .general_dropdown-list
             margin-bottom: 30px
 
@@ -104,8 +105,8 @@
         width: 100%
         background: rgba(18, 28, 43, 0.95)
         @media screen and (min-width: #{$dw-640})
-            width: 40%
-            min-width: 640px
+            width: 30%
+            min-width: 420px
         form
             a
                 color: #ffffff
@@ -148,10 +149,9 @@
         form
             width: 100%
             @media screen and (min-width: #{$dw-480})
-                width: 80%
                 margin: auto
             @media screen and (min-width: #{$dw-960})
-                width: 70%
+                width: 85%
         
             .input_box
                 height: 50px
@@ -182,7 +182,29 @@
                 background: red
 
 .cycle-page
+    .overlay
+        background: #eeeeee
+        opacity: 0.8
     .general_form
         padding-top: 80px
         @media screen and (min-width: #{$dw-640})
             padding-top: 20px
+    .general_title
+        color: #000000
+    .general_dropdown-list
+        border: 1px solid #000000
+        color: #000000
+        span
+            &:after
+                border-top-color: #000000
+            &.show
+                &:after
+                    border-bottom-color: #000000
+    .input_box
+        label, input
+            color: #000000
+        &:before, &:after
+            border-color: #000000
+    .general_btn
+        color: #000000
+        box-shadow: 0px 0px 1px 1px #000000
