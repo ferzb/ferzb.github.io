@@ -136,8 +136,13 @@
 .transaction-page, .cycle-page
     .inner-wrap
         display: flex
+    .video
+        display: none
     .overlay
-        opacity: 0.5
+        opacity: 1
+        background: #ffffff
+    .general_title
+        color: #000000
     .general_form
         min-height: 100vh
         width: 100%
@@ -155,15 +160,33 @@
         
             .input_box
                 height: 50px
+                label, input
+                    color: #000000
+                &:before, &:after
+                    border-color: #000000
 
         .general_dropdown-list
             padding: 6px 20px
+            border: 1px solid #000000
+            color: #000000
+            span
+                &:after
+                    border-top-color: #000000
+                &.show
+                    &:after
+                        border-bottom-color: #000000
 
         .btn-box 
             width: 100%
             .general_btn
                 margin-left: 0
                 margin-right: 30px
+
+        .general_btn
+            color: #000000
+            box-shadow: 0px 0px 1px 1px #000000
+            span
+                background: #000000
 
         .general_btn.add
             margin-right: 20px
@@ -182,29 +205,7 @@
                 background: red
 
 .cycle-page
-    .overlay
-        background: #eeeeee
-        opacity: 0.8
     .general_form
         padding-top: 80px
         @media screen and (min-width: #{$dw-640})
             padding-top: 20px
-    .general_title
-        color: #000000
-    .general_dropdown-list
-        border: 1px solid #000000
-        color: #000000
-        span
-            &:after
-                border-top-color: #000000
-            &.show
-                &:after
-                    border-bottom-color: #000000
-    .input_box
-        label, input
-            color: #000000
-        &:before, &:after
-            border-color: #000000
-    .general_btn
-        color: #000000
-        box-shadow: 0px 0px 1px 1px #000000

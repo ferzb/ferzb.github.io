@@ -561,8 +561,17 @@
   display: flex;
 }
 
+.transaction-page .video, .cycle-page .video {
+  display: none;
+}
+
 .transaction-page .overlay, .cycle-page .overlay {
-  opacity: 0.5;
+  opacity: 1;
+  background: #ffffff;
+}
+
+.transaction-page .general_title, .cycle-page .general_title {
+  color: #000000;
 }
 
 .transaction-page .general_form, .cycle-page .general_form {
@@ -603,8 +612,26 @@
   height: 50px;
 }
 
+.transaction-page .general_form form .input_box label, .transaction-page .general_form form .input_box input, .cycle-page .general_form form .input_box label, .cycle-page .general_form form .input_box input {
+  color: #000000;
+}
+
+.transaction-page .general_form form .input_box:before, .transaction-page .general_form form .input_box:after, .cycle-page .general_form form .input_box:before, .cycle-page .general_form form .input_box:after {
+  border-color: #000000;
+}
+
 .transaction-page .general_form .general_dropdown-list, .cycle-page .general_form .general_dropdown-list {
   padding: 6px 20px;
+  border: 1px solid #000000;
+  color: #000000;
+}
+
+.transaction-page .general_form .general_dropdown-list span:after, .cycle-page .general_form .general_dropdown-list span:after {
+  border-top-color: #000000;
+}
+
+.transaction-page .general_form .general_dropdown-list span.show:after, .cycle-page .general_form .general_dropdown-list span.show:after {
+  border-bottom-color: #000000;
 }
 
 .transaction-page .general_form .btn-box, .cycle-page .general_form .btn-box {
@@ -614,6 +641,16 @@
 .transaction-page .general_form .btn-box .general_btn, .cycle-page .general_form .btn-box .general_btn {
   margin-left: 0;
   margin-right: 30px;
+}
+
+.transaction-page .general_form .general_btn, .cycle-page .general_form .general_btn {
+  color: #000000;
+  -webkit-box-shadow: 0px 0px 1px 1px #000000;
+          box-shadow: 0px 0px 1px 1px #000000;
+}
+
+.transaction-page .general_form .general_btn span, .cycle-page .general_form .general_btn span {
+  background: #000000;
 }
 
 .transaction-page .general_form .general_btn.add, .cycle-page .general_form .general_btn.add {
@@ -647,11 +684,6 @@
   background: red;
 }
 
-.cycle-page .overlay {
-  background: #eeeeee;
-  opacity: 0.8;
-}
-
 .cycle-page .general_form {
   padding-top: 80px;
 }
@@ -660,37 +692,6 @@
   .cycle-page .general_form {
     padding-top: 20px;
   }
-}
-
-.cycle-page .general_title {
-  color: #000000;
-}
-
-.cycle-page .general_dropdown-list {
-  border: 1px solid #000000;
-  color: #000000;
-}
-
-.cycle-page .general_dropdown-list span:after {
-  border-top-color: #000000;
-}
-
-.cycle-page .general_dropdown-list span.show:after {
-  border-bottom-color: #000000;
-}
-
-.cycle-page .input_box label, .cycle-page .input_box input {
-  color: #000000;
-}
-
-.cycle-page .input_box:before, .cycle-page .input_box:after {
-  border-color: #000000;
-}
-
-.cycle-page .general_btn {
-  color: #000000;
-  -webkit-box-shadow: 0px 0px 1px 1px #000000;
-          box-shadow: 0px 0px 1px 1px #000000;
 }
 
 @-webkit-keyframes btn_hover_1 {
