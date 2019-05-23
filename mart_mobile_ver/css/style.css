@@ -166,7 +166,9 @@
 .dropdown span:after {
   content: '';
   display: block;
-  top: 7px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   right: 0px;
   position: absolute;
   -webkit-transition: 0.2s;
@@ -191,7 +193,7 @@
   background-image: url("../img/bitmap_eng.png");
 }
 
-.dropdown span[data-leng="arabian"]:before {
+.dropdown span[data-leng="arabic"]:before {
   background-image: url("../img/KSA_Flag.png");
 }
 
@@ -231,7 +233,7 @@
   background-image: url("../img/bitmap_eng.png");
 }
 
-.dropdown ul a[data-leng="arabian"]:before {
+.dropdown ul a[data-leng="arabic"]:before {
   background-image: url("../img/KSA_Flag.png");
 }
 
@@ -282,11 +284,11 @@ header {
 }
 
 .content_box .main_bg img {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 
-.content_box .main_bg.arabian_ver img {
+.content_box .main_bg.arabic_ver img {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
@@ -305,16 +307,17 @@ header {
 .content_box .box-title:before {
   content: '';
   width: 11px;
-  height: 100%;
+  height: 55%;
   background: #EB3929;
   position: absolute;
   top: 0;
   left: -20px;
 }
 
-.content_box .box-title.arabian_ver:before {
+.content_box .box-title.arabic_ver:before {
   left: auto;
   right: -20px;
+  height: 100%;
 }
 
 .content_box .circle {
@@ -373,7 +376,7 @@ header {
 }
 
 .content_box form {
-  margin-top: 160px;
+  margin-top: 60px;
 }
 
 .content_box form h4 {
@@ -402,7 +405,8 @@ header {
   background-color: #FFFFFF;
   color: #848484;
   font-size: 14px;
-  padding: 13px 192px 13px 24px;
+  text-align: left;
+  padding: 13px 162px 13px 24px;
 }
 
 .content_box form .input_box button {
@@ -429,15 +433,16 @@ header {
   text-transform: uppercase;
 }
 
-.content_box form.arabian_ver h4, .content_box form.arabian_ver .general_paragraph {
+.content_box form.arabic_ver h4, .content_box form.arabic_ver .general_paragraph {
   text-align: right;
 }
 
-.content_box form.arabian_ver input {
-  padding: 13px 24px 13px 192px;
+.content_box form.arabic_ver input {
+  padding: 13px 24px 13px 162px;
+  text-align: right;
 }
 
-.content_box form.arabian_ver button {
+.content_box form.arabic_ver button {
   left: 0;
 }
 

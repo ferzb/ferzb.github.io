@@ -166,7 +166,9 @@
 .dropdown span:after {
   content: '';
   display: block;
-  top: 7px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   right: 0px;
   position: absolute;
   -webkit-transition: 0.2s;
@@ -191,7 +193,7 @@
   background-image: url("../img/bitmap_eng.png");
 }
 
-.dropdown span[data-leng="arabian"]:before {
+.dropdown span[data-leng="arabic"]:before {
   background-image: url("../img/KSA_Flag.png");
 }
 
@@ -231,7 +233,7 @@
   background-image: url("../img/bitmap_eng.png");
 }
 
-.dropdown ul a[data-leng="arabian"]:before {
+.dropdown ul a[data-leng="arabic"]:before {
   background-image: url("../img/KSA_Flag.png");
 }
 
@@ -283,23 +285,26 @@ body {
 
 .desctop_ver {
   max-width: 800px;
+  width: 100%;
 }
 
 .bg_img {
   width: 45%;
+  -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
   background: url("../img/Red_background.svg");
   background-repeat: no-repeat;
   background-position: top right;
-  background-size: 100%;
+  background-size: cover;
 }
 
-.bg_img.arabian_ver {
+.bg_img.arabic_ver {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
 .content_box .inner-wrap {
-  padding: 64px 20px 32px;
+  padding: 64px 28px 32px;
   z-index: 1;
 }
 
@@ -315,20 +320,26 @@ body {
   left: 0;
 }
 
-.content_box .inner-wrap.arabian_ver:before {
+.content_box .inner-wrap.arabic_ver:before {
   left: auto;
   right: 0;
 }
 
+.content_box .inner-wrap.arabic_ver .general_title, .content_box .inner-wrap.arabic_ver .general_paragraph {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .content_box .circle {
-  height: 255px;
+  height: 340px;
   margin-top: 50px;
   position: relative;
 }
 
 .content_box .circle svg {
-  width: 280px;
-  height: 280px;
+  width: 340px;
+  height: 340px;
   margin: auto;
   display: block;
   position: relative;
@@ -376,7 +387,7 @@ body {
 }
 
 .content_box form {
-  margin-top: 160px;
+  margin-top: 40px;
 }
 
 .content_box form span {
@@ -433,20 +444,20 @@ body {
   text-transform: uppercase;
 }
 
-.content_box form.arabian_ver {
+.content_box form.arabic_ver {
   text-align: right;
 }
 
-.content_box form.arabian_ver span, .content_box form.arabian_ver .general_paragraph {
+.content_box form.arabic_ver span, .content_box form.arabic_ver .general_paragraph {
   text-align: right;
 }
 
-.content_box form.arabian_ver input {
+.content_box form.arabic_ver input {
   padding: 23px 24px 23px 244px;
   text-align: right;
 }
 
-.content_box form.arabian_ver button {
+.content_box form.arabic_ver button {
   left: 0;
 }
 
@@ -473,23 +484,5 @@ footer > div a {
 
 footer span {
   font-size: 16px;
-}
-
-@-webkit-keyframes hai_progress_key {
-  from {
-    stroke-dashoffset: 146.69905;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes hai_progress_key {
-  from {
-    stroke-dashoffset: 146.69905;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,27 +2,30 @@ body
     background: linear-gradient(135deg, #FFFFFF 0%, #E7E7E7 100%)
     display: flex
 
-
 .general_wrap
     width: 65%
     display: flex
     justify-content: center
     position: relative
+    
 .desctop_ver
     max-width: 800px
+    width: 100%
 
 .bg_img
     width: 45%
+    -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%)
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%)
     background: url('../img/Red_background.svg')
     background-repeat: no-repeat
     background-position: top right
-    background-size: 100%
-    &.arabian_ver
+    background-size: cover
+    &.arabic_ver
         transform: rotateY(180deg)
 
 .content_box
     .inner-wrap
-        padding: 64px 20px 32px
+        padding: 64px 28px 32px
         z-index: 1
         &:before
             content: ''
@@ -33,19 +36,24 @@ body
             top: 50%
             transform: translateY(-50%)
             left: 0
-        &.arabian_ver
+        &.arabic_ver
             &:before
                 left: auto
                 right: 0
+            .general_title, .general_paragraph
+                text-align: center
+                margin-left: auto
+                margin-right: auto
+            
 
 
     .circle
-        height: 255px
+        height: 340px
         margin-top: 50px
         position: relative
         svg
-            width: 280px
-            height: 280px
+            width: 340px
+            height: 340px
             margin: auto
             display: block
             position: relative
@@ -76,7 +84,7 @@ body
                     font-size: 24px
 
     form
-        margin-top: 160px
+        margin-top: 40px
         span
             color: #EB3929
             font-size: 16px
@@ -115,7 +123,7 @@ body
                 font-size: 16px 
                 color: #ffffff
                 text-transform: uppercase
-        &.arabian_ver
+        &.arabic_ver
             text-align: right
             span, .general_paragraph
                 text-align: right
