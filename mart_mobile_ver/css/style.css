@@ -145,6 +145,7 @@
 .dropdown span {
   cursor: pointer;
   position: relative;
+  width: 120px;
   font-size: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,7 +153,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 16px;
   font-family: 'Gotham Light';
 }
 
@@ -284,8 +284,8 @@ header {
 }
 
 .content_box .main_bg img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 
 .content_box .main_bg.arabic_ver img {
