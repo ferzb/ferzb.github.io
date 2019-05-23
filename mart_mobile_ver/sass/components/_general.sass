@@ -1,0 +1,89 @@
+.dropdown
+    padding: 4px
+    position: relative
+    span
+        cursor: pointer
+        position: relative
+        font-size: 16px
+        display: flex
+        align-items: center
+        padding-right: 16px
+        font-family: 'Gotham Light'
+        &.active
+            &:after
+                border-top: 0px solid transparent
+                border-bottom: 6px solid #EB3929
+                border-left: 4px solid transparent
+                border-right: 4px solid transparent
+        &:after
+            content: ''
+            display: block
+            top: 7px
+            right: 0px
+            position: absolute
+            transition: 0.2s
+            border-top: 6px solid #EB3929
+            border-bottom: 0px solid transparent
+            border-left: 4px solid transparent
+            border-right: 4px solid transparent
+        &:before
+            content: ''
+            display: block
+            width: 28px
+            height: 20px
+            margin-right: 10px
+            background-size: 100% 100%
+            background-repeat: no-repeat
+        &[data-leng="english"]
+            &:before
+                background-image: url('../img/bitmap_eng.png')
+        &[data-leng="arabian"]
+            &:before
+                background-image: url('../img/KSA_Flag.png')
+    
+    ul
+        display: none
+        padding: 10px 4px
+        position: absolute
+        line-height: 29px
+        left: 0
+        width: 100%
+        top: 100%
+        background: #ffffff
+        a
+            font-size: 16px
+            display: flex
+            align-items: center
+            font-family: 'Gotham Light'
+            &:before
+                content: ''
+                display: block
+                width: 28px
+                height: 20px
+                margin-right: 10px
+                background-size: 100% 100%
+                background-repeat: no-repeat
+            &[data-leng="english"]
+                &:before
+                    background-image: url('../img/bitmap_eng.png')
+            &[data-leng="arabian"]
+                &:before
+                    background-image: url('../img/KSA_Flag.png')
+
+.general
+    &_title
+        position: relative
+        font-size: 32px
+        text-align: center
+        line-height: 46px
+        margin: auto
+        margin-bottom: 16px
+        b
+            color: #EB3929
+            font-family: 'Gotham Bold'
+    &_paragraph
+        line-height: 29px
+        font-size: 16px
+        font-family: 'Gotham Light'
+        font-weight: lighter
+        text-align: center
