@@ -153,7 +153,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Gotham Light';
+  font-family: 'Gotham Light', Arial, sans-serif;
 }
 
 .dropdown span.active:after {
@@ -216,7 +216,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Gotham Light';
+  font-family: 'Gotham Light', Arial, sans-serif;
 }
 
 .dropdown ul a:before {
@@ -248,13 +248,13 @@
 
 .general_title b {
   color: #EB3929;
-  font-family: 'Gotham Bold';
+  font-family: 'Gotham Bold', Arial, sans-serif;
 }
 
 .general_paragraph {
   line-height: 29px;
   font-size: 16px;
-  font-family: 'Gotham Light';
+  font-family: 'Gotham Light', Arial, sans-serif;
   font-weight: lighter;
   text-align: center;
 }
@@ -367,7 +367,7 @@ header {
   color: #FF170F;
   font-size: 18px;
   font-weight: bold;
-  font-family: 'Gotham Bold';
+  font-family: 'Gotham Bold', Arial, sans-serif;
   text-shadow: 0px 0px 0px #ffffff, 0 0 1em #FF170F;
 }
 
@@ -382,7 +382,7 @@ header {
 .content_box form h4 {
   color: #EB3929;
   font-size: 16px;
-  font-family: 'Gotham Bold';
+  font-family: 'Gotham Bold', Arial, sans-serif;
   margin-bottom: 4px;
 }
 

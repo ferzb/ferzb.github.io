@@ -146,7 +146,7 @@
 
 html, body {
   min-width: 320px;
-  font-family: "Gotham Book", sans-serif;
+  font-family: "Gotham Book", Arial, sans-serif;
   color: #343538;
   font-size: 16px;
   position: relative;
@@ -221,7 +221,7 @@ img {
 
 input, textarea, button {
   outline: none;
-  font-family: "Gotham Book", sans-serif;
+  font-family: "Gotham Book", Arial, sans-serif;
   border: none;
 }
 
@@ -230,7 +230,7 @@ input::-webkit-input-placeholder, input::-moz-placeholder, input:-moz-placeholde
 }
 
 textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-placeholder, textarea:-ms-input-placeholder {
-  font-family: "Gotham Book", sans-serif;
+  font-family: "Gotham Book", Arial, sans-serif;
 }
 
 /*container-block*/
@@ -283,7 +283,7 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
 
 /*navbar*/
 .navbar {
-  font-family: "Gotham Book", sans-serif;
+  font-family: "Gotham Book", Arial, sans-serif;
 }
 
 .navbar_list li {
