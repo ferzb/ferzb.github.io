@@ -95,6 +95,55 @@ $(document).ready(function() {
 		});
 	});
 
+	$('.profile_items').each(function(){
+		let that = $(this),
+			item = that.find('.profile_item');
+
+			item.each(function(){
+				let that_item = $(this),
+					item_status = that_item.find('.item_status'),
+					item_v = that_item.data('status'),
+					item_btn = that_item.find('.item_actions .details'),
+					item_details = that_item.find('.item_details'),
+					item_close = that_item.find('.close');
+
+				if(item_v == 'draft' || item_v == 'Under Review'){
+					item_status.attr('data-status', item_v).html(item_v);
+					//$('.support, .details').css('display', 'none');
+					
+				}else if(item_v == 'awaiting'){
+					item_status.attr('data-status', item_v).html('Awaiting approval from paper');
+					//$('.delete').css('display', 'none');
+					
+
+				}else if (item_v == 'approved'){
+					item_status.attr('data-status', item_v).html(item_v);
+					//$('.support, .edit, .delete').css('display', 'none');
+					
+				}else if (item_v == 'rejected'){
+					item_status.attr('data-status', item_v).html(item_v);
+					//$('.support, .edit, .delete').css('display', 'none');
+					
+				}
+
+				item_close.click(function(){
+					item_details.slideUp();
+					item_btn.removeClass('show').text('Show Details');
+				})
+
+				item_btn.click(function(){
+					$(this).toggleClass('show');
+					item_details.slideToggle();
+
+					if($(this).hasClass('show')){
+						item_btn.text('Hide Details');
+					}else{
+						item_btn.text('Show Details');
+					}
+				})
+			})
+	})
+
 	$('.popular-block-carousel').owlCarousel({
 		lazyLoad:true,
 		nav:true,
