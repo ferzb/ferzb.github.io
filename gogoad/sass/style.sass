@@ -1346,7 +1346,7 @@ footer
 			&:first-child
 				padding-left: 0px!important
 				cursor: pointer
-				&:hover
+				&:hover, &.active
 					svg
 						color: #ff3333 
 		svg
@@ -3610,7 +3610,7 @@ footer
 //***	profile   ***//
 
 .profile
-
+	margin-bottom: 40px
 	&_details
 		position: relative
 		background: #ffffff
@@ -3863,5 +3863,190 @@ footer
 						&:nth-child(2)
 							width: auto
 							text-align: left
-				
+
+	&.profile_messages
+		.user_messages
+			&_chats
+				max-height: 570px
+				max-width: 310px
+				width: 100%
+				height: 100vh
+				overflow-y: auto
+				overflow-x: hidden
+				background: #fff
+				padding: 5px 0px 5px 5px
+				border-right: 1px solid #cccccc
+				@media screen and (min-width: #{$dw-960})
+					max-width: 390px
+				.item
+					&_chat
+						padding: 15px 12px
+						display: flex
+						margin-bottom: 5px
+						transition: 0.2s
+						cursor: pointer
+						&:hover, &.active
+							background: #fbf7e4
+						&:last-child
+							.item_info
+								&:after
+									display: none
+					&_photo
+						overflow: hidden
+						width: 64px
+						height: 55px
+						margin-right: 13px
+					&_info
+						flex-grow: 1
+						line-height: 20px
+						position: relative	
+						&:after
+							content: ''
+							display: block
+							position: absolute
+							width: calc(100% + 25px)
+							height: 1px
+							background: #cccccc
+							bottom: -16px
+							left: -12px
+						.title-h4
+							font-size: 14px
+							margin-bottom: 0
+						.item_id
+							font-size: 12px
+							display: block
+							color: #999999
+						.user_status
+							font-size: 14px
+							color: #2b0f00
+							display: flex
+							align-items: center
+							&:before
+								content: ''
+								display: block
+								border-radius: 50%
+								width: 12px
+								height: 12px	
+								margin-right: 6px
+							&[data-status='online']
+								&:before
+									background: #2ca503
+							&[data-status='offline']
+								&:before
+									background: #c23611
+
+			&_story
+				flex-grow: 1
+				background: #fff
+				padding-right: 21px
+				.story
+					&_header
+						position: static
+						padding: 12px 20px
+						border-top-right-radius: 6px
+						background: #f4c900
+						display: flex
+						align-items: center
+					&_photo
+						display: block
+						width: 40px
+						height: 40px
+						overflow: hidden
+						border-radius: 50%
+						background: #666666
+						margin-right: 8px
+					&_user
+						line-height: 18px
+						.user
+							&_name
+								font-size: 18px
+								color: #2b2a29
+								font-weight: bold
+								display: block
+							&_status
+								font-size: 12px
+								display: block
+								color: #2b2a29
+					&_remove
+						display: block
+						margin-left: auto
+						width: 20px
+						height: 22px
+						background-repeat: no-repeat
+						background-size: 100% 100%
+						background-image: url('../img/basket.png')
+						cursor: pointer
+					
+					&_body
+						max-height: 430px
+						max-width: 669px
+						height: 100vh
+						overflow: hidden
+						padding: 21px 17px
+						background-repeat: no-repeat
+						background-size: cover
+						background-image: url('../img/bg_story.jpg')
+						.story_wrapper
+							display: flex
+							flex-direction: column
+							justify-content: flex-end
+							align-items: flex-start
+						.story_message
+							padding: 10px 15px
+							font-size: 15px
+							border-radius: 6px
+							max-width: 50%
+							margin-bottom: 13px
+							display: flex
+							flex-direction: column
+							min-width: 110px
+							&_time
+								font-size: 10px
+								margin-left: auto
+								display: block
+								margin-top: 4px
+							&[data-message='interlocutor']
+								background: #ffffff
+								margin-right: auto
+								color: #282828
+								.story_message_time
+									color: #999999
+							&[data-message='my']
+								background: #003a5f
+								margin-left: auto
+								color: #ffffff
+								.story_message_time
+									color: #ffffff
+					
+					&_type
+						display: flex
+						align-items: center
+						margin-top: 18px
+						padding: 0px 15px
+
+						textarea
+							display: flex
+							align-items: center
+							border-top-left-radius: 6px
+							border-bottom-left-radius: 6px
+							flex-grow: 1
+							border: none
+							background-color: #f1f1f1
+							padding: 2px 17px
+							font-size: 16px
+							color: #999999
+						
+						.send_message
+							width: 42px
+							height: 42px
+							display: block
+							cursor: pointer
+							border-top-right-radius: 6px
+							border-bottom-right-radius: 6px
+							background-color: #003a5f
+							background-repeat: no-repeat
+							background-position: center
+							background-image: url('../icons/send.svg')
+							border: none
+
 
