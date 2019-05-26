@@ -95,6 +95,36 @@ $(document).ready(function() {
 		});
 	});
 
+	$('.profile_details').each(function(){
+		let that = $(this),
+			edit_btn = that.find('.profile_edit'),
+			prof_info = that.find('.profile_info input'),
+			input_box = that.find('.input_box');
+
+		edit_btn.click(function(){
+			let username = that.find('#username')
+				username_val = username.val(),
+				userphone = that.find('#userphone'),
+				userphone_val = userphone.val(),
+				useremail =  that.find('#useremail')
+				useremail_val = useremail.val();
+
+			if($(this).hasClass('active')){
+				$(this).removeClass('active');
+				prof_info.css('z-index', '-1')
+				username.parent().find('span').text(username_val);
+				userphone.parent().find('span').text(userphone_val);
+				useremail.parent().find('span').text(useremail_val);
+
+			}else{
+				$(this).addClass('active'),
+				prof_info.css('z-index', '1'),
+				prof_info.focus()
+			}
+		})
+
+	})
+
 	$('.profile_items').each(function(){
 		let that = $(this),
 			item = that.find('.profile_item');

@@ -3656,11 +3656,21 @@ footer
 		td
 			color: #666666
 			font-size: 18px
+			position: relative
 			&:nth-child(2)
 				width: 80px
 				text-align: center
 			&:last-child
 				color: #000
+			input
+				display: block
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				z-index: -1
+				color: #000
+				font-size: 18px
 	
 	&_edit
 		display: flex
@@ -3675,6 +3685,21 @@ footer
 		top: 10px
 		right: 10px
 		cursor: pointer
+		&.active
+			background: green
+			img
+				display: none
+			&:after
+				content: ''
+				display: block
+				height: 24px
+				width: 15px
+				border-right: 3px solid #ffffff
+				border-bottom: 3px solid #ffffff
+				border-radius: 3px
+				position: relative
+				top: -5px
+				transform: rotate(40deg)
 		img
 			width: auto
 			height: auto
