@@ -558,6 +558,13 @@ body .container, html .container {
           align-items: center;
   cursor: pointer;
   font-size: 12px;
+  margin: 0px 6px 16px;
+}
+
+@media screen and (min-width: 560px) {
+  .modal.new_build .input_box[data-name="type"] div label {
+    margin-bottom: 0px;
+  }
 }
 
 .modal.new_build .input_box[data-name="type"] div label:before {
