@@ -27,6 +27,8 @@ $(document).ready(function() {
 		
 	})
 
+
+
 	//dropdown functional
 
 	let dropdown_list = $('.dropdown_list');
@@ -56,7 +58,41 @@ $(document).ready(function() {
 
 	})
 
-    
+	
+	
+	//modal functional
+
+	let modal_window = $('.modal'),
+		open_btn = $('.create_new_building'),
+		close_btn = $('.close_modal');
+
+	open_btn.click(function(){
+		modal_window.css('display', 'block')
+	})
+
+	close_btn.click(function(){
+		modal_window.css('display', 'none')
+	})
+	
+	modal_window.each(function(){
+
+		let that = $(this),
+			btn_dropdown = that.find('.dropdown_form'),
+			box_dropdown = that.find('.dropdown_form-box');
+
+		btn_dropdown.click(function(){
+			$(this).toggleClass('active');
+			box_dropdown.slideToggle();
+
+			if($(this).hasClass('active')){
+				$(this).text('Hide Advance Settings')
+			}else{
+				$(this).text('Show Advance Settings')
+			}
+		})
+	})
+
+
     //input focus function
     let input_box = $('.input_box input');
     
