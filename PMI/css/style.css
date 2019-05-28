@@ -13,14 +13,15 @@
 /*btn up*/
 @import url("grid.css");
 .general_title_h3 {
-  font-size: 18px;
+  font-size: 16px;
   color: #656565;
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 @media screen and (min-width: 640px) {
   .general_title_h3 {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 
@@ -410,6 +411,7 @@ body .container, html .container {
           justify-content: center;
   max-width: 130px;
   width: 100%;
+  font-size: 12px;
   text-align: center;
   margin: auto;
 }
@@ -555,6 +557,7 @@ body .container, html .container {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  font-size: 12px;
 }
 
 .modal.new_build .input_box[data-name="type"] div label:before {
@@ -569,6 +572,7 @@ body .container, html .container {
 
 .modal.new_build .input_box span {
   min-width: 120px;
+  font-size: 12px;
   text-transform: capitalize;
 }
 
