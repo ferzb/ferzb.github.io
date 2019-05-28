@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+HK:300,400,700&display=swap");
+/****Grid layout settings****/
+/*General for documetn settings*/
+/*Color*/
+/*Typography*/
+/*h1*/
+/*navbar*/
+/*navigation icon*/
+/*container*/
+/*wrapper*/
+/*section wrapper*/
+/*container wrapper*/
+/*btn up*/
+@import url("grid.css");
+.general_search_form {
+  width: 100%;
+  position: relative;
+}
+
+@media screen and (min-width: 480px) {
+  .general_search_form {
+    width: 40%;
+  }
+}
+
+.general_search_form input {
+  display: block;
+  width: 100%;
+  border: 1px solid #000;
+  padding: 8px 12px;
+}
+
+.general_search_form button {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+  right: 0;
+  background: transparent;
+}
+
+.general_filter {
+  border: 1px solid #000000;
+  padding: 8px 12px;
+  width: 200px;
+}
+
+.general_filter span {
+  display: block;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.general_filter span:after {
+  content: '';
+  display: block;
+  height: 8px;
+  width: 8px;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: 3px;
+  right: 0;
+}
+
+.general_filter ul {
+  display: none;
+  padding: 6px 0px;
+  line-height: 24px;
+}
+
+.general_filter ul li {
+  cursor: pointer;
+}
+
+.general_dashboard {
+  width: 100%;
+  min-width: 1000px;
+  border-spacing: 0px;
+}
+
+.general_dashboard thead td {
+  font-weight: bold;
+}
+
+.general_dashboard td {
+  padding: 8px 12px;
+}
+
+.general_dashboard td:first-child {
+  border: none;
+}
+
+.general_dashboard td:nth-child(2) {
+  width: 15vw;
+  min-width: 130px;
+}
+
+.general_dashboard tbody td {
+  font-size: 12px;
+}
+
+.general_dashboard tbody tr:nth-child(2n+1) {
+  background: #eeeeee;
+}
+
+.general_dashboard tbody tr:nth-child(2n+1) td {
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+
+.general_dashboard tbody tr:nth-child(2n+1) td:first-child {
+  border-left: 1px solid #000000;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.general_dashboard tbody tr:nth-child(2n+1) td:last-child {
+  border-right: 1px solid #000000;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.general_checkbox {
+  width: 20px;
+}
+
+.general_checkbox span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #444444;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.general_checkbox.checked span {
+  background: #444444;
+}
+
+body, html {
+  background: #dddddd;
+}
+
+body .container, html .container {
+  background: #ffffff;
+}
+
+.main {
+  padding: 50px 0px;
+}
+
+.main_header {
+  margin-bottom: 40px;
+}
+
+.main_header .general_search_form {
+  margin-right: 0px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 480px) {
+  .main_header .general_search_form {
+    margin-right: 10px;
+  }
+}
+
+.main_header .general_search_form input {
+  padding: 8px 46px 8px 12px;
+}
+
+.main_header .general_search_form button {
+  font-size: 20px;
+  right: 16px;
+}
+
+.main_header .general_filter {
+  margin-right: auto;
+}
+
+.main_header .create_new_building {
+  cursor: pointer;
+  border-radius: 50%;
+  background: #2da4dc;
+  font-size: 24px;
+  font-weight: bold;
+  width: 33px;
+  height: 33px;
+  padding: 2px 10px 4px;
+  color: #ffffff;
+}
+
+.main_inner {
+  overflow-x: auto;
+}
+/*# sourceMappingURL=style.css.map */

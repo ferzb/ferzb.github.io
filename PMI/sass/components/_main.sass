@@ -1,0 +1,36 @@
+body, html
+    background: #dddddd
+    .container
+        background: #ffffff
+
+
+.main
+    padding: 50px 0px
+    &_header
+        margin-bottom: 40px
+        .general_search_form
+            margin-right: 0px
+            margin-bottom: 20px
+            @media screen and (min-width: #{$dw-480})
+                margin-right: 10px
+            input
+                padding: 8px 46px 8px 12px
+            button
+                font-size: 20px
+                right: 16px
+        .general_filter
+            margin-right: auto
+        
+        .create_new_building
+            cursor: pointer
+            border-radius: 50%
+            background: #2da4dc
+            font-size: 24px
+            font-weight: bold
+            width: 33px
+            height: 33px
+            padding: 2px 10px 4px
+            color: #ffffff
+
+    &_inner
+        overflow-x: auto
