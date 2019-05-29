@@ -58,9 +58,27 @@
             display: flex
             align-items: center
             margin-left: auto
-            ul
+            padding: 7px 0px 7px 10px
+            @media screen and (min-width: #{$dw-960})
+                padding: 0
+            .menu_toggle
+                text-align: center
                 display: flex
+                flex-direction: column
+                color: #c7d1d8
+                transition: 0.3s
+                font-size: 12px
+                cursor: pointer
+                @media screen and (min-width: #{$dw-960})
+                    display: none
+                .fas
+                    margin-bottom: 4px
+                    font-size: 18px
+            ul
+                display: none
                 align-items: center
+                @media screen and (min-width: #{$dw-960})
+                    display: flex
                 li
                     padding: 4px 20px
                     margin: 0

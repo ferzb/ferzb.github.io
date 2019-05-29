@@ -1,14 +1,63 @@
+.general_dropdown
+    cursor: pointer
+    position: relative
+    .dropdown_box
+        display: none
+        z-index: 999
+        position: absolute
+        background: #ffffff
+        width: 100%
+        left: 0
+        box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 6px 9px rgba(0,0,0,.2)
+        border-radius: 2px
+        &.open
+            display: block
+
+input[type="checkbox"]
+    display: none
+    &:checked + label
+        &:before
+            box-shadow: 0 0 0 11px #0073b1 inset
+    & + label
+        font-size: 16px
+        color: rgba(0, 0, 0, 0.9)
+        display: flex
+        align-items: center
+        cursor: pointer
+        &:before
+            content: ''
+            height: 22px
+            width: 22px
+            max-height: 22px
+            max-width: 22px
+            border-radius: 4px
+            margin-right: 10px
+            transition: 0.2s
+            box-shadow: 0 0 0 1px rgba(0,0,0,.6) inset
+            background-clip: padding-box
+    
 .paginator
     display: flex
     align-items: center
     justify-content: space-between
     padding: 10px 20px
+    flex-wrap: wrap
+    @media screen and (min-width: #{$dw-640})
+        flex-wrap: nowrap
 
     .pages
+        width: 100%
+        order: 1
+        margin-top: 20px
+        @media screen and (min-width: #{$dw-640})
+            width: auto
+            order: 0
+            margin-top: 0px
         &_list
             display: flex
             align-items: center
             font-size: 14px
+            justify-content: center
             li
                 margin-left: 8px
                 padding: 0px 2px
