@@ -50,9 +50,18 @@ $(document).ready(function() {
 					let this_val = $(this).text(),
 						this_attr = $(this).attr('data-name');
 
-					that_span.html(this_val).attr('data-name', this_attr);
+					that_span.html(this_val).attr('data-name', this_attr).removeClass('active');
 
 					that_list.slideUp();
+
+					if($(this).attr('data-name') == 'new-user'){
+						
+						that_span.html('New User').attr('data-name', this_attr).removeClass('active');
+
+						$('.dropdown_new-user').slideDown();
+					}else{
+						$('.dropdown_new-user').slideUp();
+					}
 				})
 			})
 
@@ -66,10 +75,11 @@ $(document).ready(function() {
 		open_btn = $('.create_new_building'),
 		close_btn = $('.close_modal');
 
+	//open modal window
 	open_btn.click(function(){
 		modal_window.css('display', 'block')
 	})
-
+	//close modal window
 	close_btn.click(function(){
 		modal_window.css('display', 'none')
 	})
@@ -90,6 +100,46 @@ $(document).ready(function() {
 				$(this).text('Show Advance Settings')
 			}
 		})
+
+		let count = 0,
+			inner_box = that.find('.inner_wrap'),
+			inner_box_l = inner_box.length,
+			g_btn_action = that.find('.modal_footer .general_btn'),
+			progress = that.find('.progerss span');
+		
+		inner_box.eq(count).addClass('active')
+
+		g_btn_action.click(function(){
+
+			box_dropdown.css('display', 'none');
+			btn_dropdown.removeClass('active').text('Show Advance Settings');
+
+			if($(this).hasClass('back')){
+				count--;
+				progress.eq(count).removeClass('active');
+				$('.modal_footer .general_btn.next').css('display', 'block');
+				$('.modal_footer .general_btn.publish').css('display', 'none');
+			}else if(count >= inner_box_l - 1){
+				count = inner_box_l - 1;
+				$('.modal_footer .general_btn.next').css('display', 'none');
+				$('.modal_footer .general_btn.publish').css('display', 'block');
+			}else {
+				count++,
+				progress.eq(count - 1).addClass('active')
+			}
+			
+			if(count <= 0){
+				$('.modal_footer .general_btn.back').addClass('disable');
+				progress.removeClass('active')
+			}else if(count > 0){
+				$('.modal_footer .general_btn.back	').removeClass('disable');
+			}
+
+			inner_box.removeClass('active')
+			inner_box.eq(count).addClass('active');
+
+		})
+
 	})
 
 

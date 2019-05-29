@@ -139,7 +139,7 @@
 
 	<!--	modal window	-->
 
-		<div class="modal new_build">
+		<div class="modal new_build" style="display: block;">
 
 			<button class="close_modal">esc</button>
 
@@ -148,85 +148,276 @@
 				<div class="modal_inner">
 
 					<!--	new build box	-->
-					<article class="inner_wrap new_build_wrap">
+					<article class="new_build_wrap">
+						
+						<div class="inner_wrap">
+							<h3 class="general_title_h3">Add new Building</h3>
 
-						<h3 class="general_title_h3">Add new Building</h3>
+							<!--	condo url	-->
+							<div class="input_box" data-name="condo_url">
+								<span>Condo url</span>
 
-						<!--	condo url	-->
-						<div class="input_box" data-name="condo_url">
-							<span>Condo url</span>
+								<div>
+									<input type="text">
+									<input id="condo_url_import" type="file">
+									<label for="condo_url_import">import</label>
+								</div>
+								
 
-							<div>
+							</div>
+
+							<!--	building name	-->
+							<div class="input_box" data-name="building_name">
+								<span>Building name</span>
+
 								<input type="text">
-								<input id="condo_url_import" type="file">
-								<label for="condo_url_import">import</label>
+
+							</div>
+
+							<!--	email	-->
+							<div class="input_box" data-name="email">
+								<span>Email</span>
+
+								<input type="email">
+
+							</div>
+
+							<!--	phone	-->
+							<div class="input_box" data-name="phone">
+								<span>Phone</span>
+
+								<input type="tel">
+							</div>
+
+							<!--	type	-->
+							<div class="input_box" data-name="type">
+								<span>type</span>
+
+								<div class="flex flex-sb flex-vertival-center">
+
+									<input id="type_screens" type="checkbox">
+									<label for="type_screens">Screens</label>
+
+									<input id="type_advertising" type="checkbox">
+									<label for="type_advertising">advertising</label>
+
+									<input id="type_banners" type="checkbox">
+									<label for="type_banners">banners</label>
+
+									<input id="type_software" type="checkbox">
+									<label for="type_software">software</label>
+
+								</div>
+
+							</div>
+
+							<!--	date	-->
+							<div class="input_box" data-name="date">
+								<span>installation date</span>
+
+								<input type="date">
+							</div>
+
+							<div class="form_btn flex flex-vertical-center">
+								<span class="dropdown_form">show advance settings</span>
+							</div>
+						</div>
+						
+
+					</article>
+
+					<!--	building screens	-->
+					<article class="building_screens">
+
+						<div class="inner_wrap">
+							<h3 class="general_title_h3">Building Screens</h3>
+
+							<!--	building name	-->
+							<div class="input_box" data-name="building_name">
+								<span>Name</span>
+	
+								<input type="name">
+	
+							</div>
+	
+							<!--	building type	-->
+							<div class="input_box" data-name="building_type">
+								<span>type</span>
+	
+								<select name="type">
+									<option value="0">Select</option>
+									<option value="1">Select 1</option>
+									<option value="2">Select 2</option>
+									<option value="3">Select 3</option>
+								</select>
+	
+							</div>
+	
+							<!--	building size	-->
+							<div class="input_box" data-name="building_size">
+								<span>size</span>
+	
+								<select name="size">
+									<option value="0">Select</option>
+									<option value="1">Select 1</option>
+									<option value="2">Select 2</option>
+									<option value="3">Select 3</option>
+								</select>
+	
+							</div>
+	
+							<!--	building size	-->
+							<div class="input_box" data-name="building_elevator">
+								<span>in elevator</span>
+	
+								<div class="flex">
+	
+									<input id="elevator_yes" type="radio" name="elevator">
+									<label for="elevator_yes">yes</label>
+									<input id="elevator_no" type="radio" name="elevator">
+									<label for="elevator_no">no</label>
+	
+								</div>
+							</div>
+	
+							<!--	building orientation	-->
+							<div class="input_box" data-name="building_orientation">
+								<span>orientation</span>
+	
+								<select name="orientation">
+									<option value="0">Select</option>
+									<option value="1">Select 1</option>
+									<option value="2">Select 2</option>
+									<option value="3">Select 3</option>
+								</select>
+	
+							</div>
+	
+							<div class="form_btn flex flex-vertical-center">
+								<span class="dropdown_form">show advance settings</span>
+								<span class="add_display">add another display</span>
+							</div>
+
+						</div>
+
+						
+						
+					</article>
+
+					<!--	Assing Users	-->
+					<article class="assing_users">
+
+						<div class="inner_wrap">
+							<h3 class="general_title_h3">Invite or Assing Users</h3>
+
+							<!--	Select user	-->
+							<div class="input_box" data-name="select_user">
+								<span>Select user</span>
+
+								<div class="general_filter dropdown_list">
+
+									<span>First</span>
+			
+									<ul>
+										<li data-name="filter1">Filter 1</li>
+										<li data-name="filter2">Filter 2</li>
+										<li data-name="filter3">Filter 3</li>
+										<li data-name="filter4">Filter 4</li>
+										<li data-name="filter5">Filter 5</li>
+										<li data-name="new-user">Create a new user</li>
+									</ul>
+			
+								</div>
+
+							</div>
+						</div>
+
+						<!--	dropdown new user box	-->
+						<div class="dropdown_new-user">
+
+							<!--	access level	-->
+							<div class="input_box" data-name="access_level">
+								<span>access level</span>
+
+								<select name="access">
+									<option value="0">Admin</option>
+									<option value="1">Admin 1</option>
+									<option value="2">Admin 2</option>
+									<option value="3">Admin 3</option>
+								</select>
+
+							</div>
+
+							<!--	login user	-->
+							<div class="input_box" data-name="login_user">
+								<span>login</span>
+
+								<input type="text">
+
+							</div>
+
+							<!--	login user	-->
+							<div class="input_box" data-name="active_user">
+								<span>active</span>
+
+								<input id="active_user" type="checkbox">
+								<label for="active_user"></label>
+
+							</div>
+
+							<!--	first name	-->
+							<div class="input_box" data-name="first_user_name">
+								<span>first name</span>
+
+								<input type="name">
+
+							</div>
+
+							<!--	last name	-->
+							<div class="input_box" data-name="last_user_name">
+								<span>last name</span>
+
+								<input type="name">
+
+							</div>
+
+							<!--	email address	-->
+							<div class="input_box" data-name="email_address_user">
+								<span>email address</span>
+
+								<input type="mail">
+
+							</div>
+
+							<!--	password	-->
+							<div class="input_box" data-name="password_user">
+								<span>password</span>
+
+								<input type="password">
+
+							</div>
+
+							<!--	repeat password	-->
+							<div class="input_box" data-name="repeat_password_user">
+								<span>repeat password</span>
+
+								<input type="password">
+
 							</div>
 							
 
 						</div>
-
-						<!--	building name	-->
-						<div class="input_box" data-name="building_name">
-							<span>Building name</span>
-
-							<input type="text">
-
-						</div>
-
-						<!--	email	-->
-						<div class="input_box" data-name="email">
-							<span>Email</span>
-
-							<input type="email">
-
-						</div>
-
-						<!--	phone	-->
-						<div class="input_box" data-name="phone">
-							<span>Phone</span>
-
-							<input type="tel">
-						</div>
-
-						<!--	type	-->
-						<div class="input_box" data-name="type">
-							<span>type</span>
-
-							<div class="flex flex-sb flex-vertival-center">
-
-								<input id="type_screens" type="checkbox">
-								<label for="type_screens">Screens</label>
-
-								<input id="type_advertising" type="checkbox">
-								<label for="type_advertising">advertising</label>
-
-								<input id="type_banners" type="checkbox">
-								<label for="type_banners">banners</label>
-
-								<input id="type_software" type="checkbox">
-								<label for="type_software">software</label>
-
-							</div>
-
-						</div>
-
-						<!--	date	-->
-						<div class="input_box" data-name="date">
-							<span>installation date</span>
-
-							<input type="date">
-						</div>
-
-						<div class="form_btn flex flex-vertical-center">
-							<span class="dropdown_form">show advance settings</span>
-						</div>
-
+						
+						
 					</article>
+
+					
+					
 
 
 
 					<!--	dropdown box	-->
-					<article class="inner_wrap dropdown_form-box">
+					<article class="dropdown_form-box">
 
 						<h3 class="general_title_h3">advanced settings</h3>
 
@@ -257,10 +448,12 @@
 
 					</article>
 
+					
+
 				</div>
 
 				<footer class="modal_footer">
-					<button class="general_btn back">Back</button>
+					<span class="general_btn back disable">Back</span>
 
 					<div class="progerss">
 						<span>General Info</span>
@@ -269,7 +462,8 @@
 						<span>Rates</span>
 					</div>
 
-					<button class="general_btn next">Save & Continue</button>
+					<span class="general_btn next">Save & Continue</span>
+					<button class="general_btn publish">Publish</button>
 				</footer>
 
 			</form>
