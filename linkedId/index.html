@@ -151,15 +151,91 @@
 										<label class="checkbox" for="network-O">3st</label>
 									</li>
 								</ul>
+								<div class="box_btn">
+									<button class="close" type="button">Cancle</button>
+									<button class="apply" type="button">Apply</button>
+								</div>
 							</div>
 						</form>
 
 						<form action="" class="general_dropdown">
 							<button class="drop_btn" type="button">Locations</button>
+
+							<div class="dropdown_box">
+								<ul>
+									<li>
+										<input type="text" placeholder="Add a location">
+									</li>
+									<li>
+										<input id="geoRegion-ua:0" type="checkbox">
+										<label class="checkbox" for="geoRegion-ua:0">Ukraine</label>
+									</li>
+
+									<li>
+										<input id="geoRegion-ru:0" type="checkbox">
+										<label class="checkbox" for="geoRegion-ru:0">Russian Federation</label>
+									</li>
+
+									<li>
+										<input id="geoRegion-ru:7487" type="checkbox">
+										<label class="checkbox" for="geoRegion-ru:7487">Moscow, Russian Federation</label>
+									</li>
+
+									<li>
+										<input id="geoRegion-tn:0" type="checkbox">
+										<label class="checkbox" for="geoRegion-tn:0">Tunisia</label>
+									</li>
+
+									<li>
+										<input id="geoRegion-fr:0" type="checkbox">
+										<label class="checkbox" for="geoRegion-fr:0">France</label>
+									</li>
+								</ul>
+								<div class="box_btn">
+									<button class="close" type="button">Cancle</button>
+									<button class="apply" type="button">Apply</button>
+								</div>
+							</div>
 						</form>
 						
 						<form action="" class="general_dropdown">
 							<button class="drop_btn" type="button">Current companies</button>
+
+							<div class="dropdown_box">
+								<ul>
+									<li>
+										<input type="text" placeholder="Add a current company">
+									</li>
+									<li>
+										<input id="currentCompany-4972" type="checkbox">
+										<label class="checkbox" for="currentCompany-4972">EPAM Systems</label>
+									</li>
+
+									<li>
+										<input id="currentCompany-6549" type="checkbox">
+										<label class="checkbox" for="currentCompany-6549">SoftServe</label>
+									</li>
+
+									<li>
+										<input id="currentCompany-9183" type="checkbox">
+										<label class="checkbox" for="currentCompany-9183">Ciklum</label>
+									</li>
+
+									<li>
+										<input id="currentCompany-164008" type="checkbox">
+										<label class="checkbox" for="currentCompany-164008">GlobalLogic</label>
+									</li>
+
+									<li>
+										<input id="currentCompany-4827017" type="checkbox">
+										<label class="checkbox" for="currentCompany-4827017">Upwork</label>
+									</li>
+								</ul>
+								<div class="box_btn">
+									<button class="close" type="button">Cancle</button>
+									<button class="apply" type="button">Apply</button>
+								</div>
+							</div>
 						</form>
 
 						<button class="toggle_all_filters" type="button">All Filters</button>
@@ -460,6 +536,271 @@
 
 		</footer>
 	<!-- end footer page -->
+
+	<!--	modal filter	-->
+	<div class="overaly"></div>
+	<div class="all_filters_box">
+		<header class="header_all_filters">
+			<div class="container">
+				<div class="box_btn">
+					<button class="close" type="button">Cancle</button>
+					<button class="apply" type="button">Apply</button>
+				</div>
+			</div>
+		</header>
+
+		<div class="inner_all_filters">
+			<div class="container">
+				<!--	item 1	-->
+				<ul>
+					<li>Connections</li>
+					<li>
+						<input id="sf-network-F" type="checkbox">
+						<label class="checkbox" for="sf-network-F">1st</label>
+					</li>
+
+					<li>
+						<input id="sf-network-S" type="checkbox">
+						<label class="checkbox" for="sf-network-S">2st</label>
+					</li>
+
+					<li>
+						<input id="sf-network-O" type="checkbox">
+						<label class="checkbox" for="sf-network-O">3st</label>
+					</li>
+				</ul>
+
+				<!--	item 2	-->
+				<ul>
+					<li>Connections of</li>
+					<li>
+						<input type="text" placeholder="Add connection of">
+					</li>
+				</ul>
+
+				<!--	item 3	-->
+				<ul>
+					<li>Locations</li>
+					<li>
+						<input type="text" placeholder="Add a location">
+					</li>
+					<li>
+						<input id="sf-geoRegion-ua:0" type="checkbox">
+						<label class="checkbox" for="sf-geoRegion-ua:0">Ukraine</label>
+					</li>
+
+					<li>
+						<input id="sf-geoRegion-ru:0" type="checkbox">
+						<label class="checkbox" for="sf-geoRegion-ru:0">Russian Federation</label>
+					</li>
+
+					<li>
+						<input id="sf-geoRegion-ru:7487" type="checkbox">
+						<label class="checkbox" for="sf-geoRegion-ru:7487">Moscow, Russian Federation</label>
+					</li>
+
+					<li>
+						<input id="sf-geoRegion-tn:0" type="checkbox">
+						<label class="checkbox" for="sf-geoRegion-tn:0">Tunisia</label>
+					</li>
+
+					<li>
+						<input id="sf-geoRegion-fr:0" type="checkbox">
+						<label class="checkbox" for="sf-geoRegion-fr:0">France</label>
+					</li>
+				</ul>
+
+				<!--	item 4	-->
+				<ul>
+					<li>Current companies</li>
+					<li>
+						<input type="text" placeholder="Add a current company">
+					</li>
+					<li>
+						<input id="sf-currentCompany-4972" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-4972">EPAM Systems</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-6549" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-6549">SoftServe</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-9183" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-9183">Ciklum</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-164008" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-164008">GlobalLogic</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-4827017" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-4827017">Upwork</label>
+					</li>
+				</ul>
+
+				<!--	item 5	-->
+				<ul>
+					<li>Past companies</li>
+					<li>
+						<input type="text" placeholder="Add a current company">
+					</li>
+					<li>
+						<input id="sf-currentCompany-4972" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-4972">EPAM Systems</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-6549" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-6549">SoftServe</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-9183" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-9183">Ciklum</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-164008" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-164008">GlobalLogic</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-4827017" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-4827017">Upwork</label>
+					</li>
+				</ul>
+
+				<!--	item 6	-->
+				<ul>
+					<li>Industries</li>
+					<li>
+						<input type="text" placeholder="Add a current company">
+					</li>
+					<li>
+						<input id="sf-currentCompany-4972" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-4972">EPAM Systems</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-6549" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-6549">SoftServe</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-9183" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-9183">Ciklum</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-164008" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-164008">GlobalLogic</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-4827017" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-4827017">Upwork</label>
+					</li>
+				</ul>
+
+				<!--	item 7	-->
+				<ul>
+					<li>Profile language</li>
+					<li>
+						<input id="sf-currentCompany-4972" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-4972">EPAM Systems</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-6549" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-6549">SoftServe</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-9183" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-9183">Ciklum</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-164008" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-164008">GlobalLogic</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-4827017" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-4827017">Upwork</label>
+					</li>
+				</ul>
+
+				<!--	item 8	-->
+				<ul>
+					<li>Schools</li>
+					<li>
+						<input type="text" placeholder="Add a current company">
+					</li>
+					<li>
+						<input id="sf-currentCompany-4972" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-4972">EPAM Systems</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-6549" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-6549">SoftServe</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-9183" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-9183">Ciklum</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-164008" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-164008">GlobalLogic</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-4827017" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-4827017">Upwork</label>
+					</li>
+				</ul>
+
+				<!--	item 8	-->
+				<ul>
+					<li>Contact interests</li>
+					<li>
+						<input id="sf-currentCompany-4972" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-4972">EPAM Systems</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-6549" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-6549">SoftServe</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-9183" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-9183">Ciklum</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-164008" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-164008">GlobalLogic</label>
+					</li>
+
+					<li>
+						<input id="sf-currentCompany-4827017" type="checkbox">
+						<label class="checkbox" for="sf-currentCompany-4827017">Upwork</label>
+					</li>
+				</ul>
+
+			
+			</div>
+		</div>
+
+	</div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="js/script.js"></script>
