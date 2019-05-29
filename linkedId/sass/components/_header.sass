@@ -1,0 +1,113 @@
+.general_header
+    background: #283e4a
+    position: fixed
+    z-index: 99999
+    top: 0
+    left: 0
+    width: 100%
+    .container
+        padding: 0px 10px
+    .header_inner
+        display: flex
+        align-items: center
+        .logo
+            background: #0077b5
+            color: #ffffff
+            font-size: 26px
+            padding: 4px 6px 0px
+            border-radius: 1px
+            margin-right: 12px
+        form
+            display: block
+            height: 33px
+            max-width: 280px
+            width: 100%
+            .input_box
+                height: 100%
+                position: relative
+                &.focus
+                    input
+                        background: #ffffff
+                        padding: 0 48px 0 8px
+                        color: rgba(0, 0, 0, .9)
+                    button
+                        display: block
+            input
+                height: 100%
+                display: block
+                width: 100%
+                font-size: 14px
+                border-radius: 2px
+                color: rgba(40,62,74,.75)
+                background-color: #e1e9ee
+                padding: 0 8px 0 28px
+                line-height: 1.75
+                font-weight: 400
+            button
+                position: absolute
+                top: 0 
+                right: 0
+                height: 100%
+                padding: 0px 11px
+                cursor: pointer
+                display: none
+                background-color: #e1e9ee
+                border-radius: 0 2px 2px 0
+                color: #0084bf
+        .navbar
+            display: flex
+            align-items: center
+            margin-left: auto
+            ul
+                display: flex
+                align-items: center
+                li
+                    padding: 4px 20px
+                    margin: 0
+                a
+                    color: #c7d1d8
+                    display: block
+                    text-align: center
+                    &:hover
+                        color: #ffffff
+                .nav_icon
+                    display: block!important
+                    width: 24px
+                    height: 24px
+                    margin: auto
+                    margin-bottom: 4px
+                    svg
+                        fill: none
+                        color: #c7d1d8
+                .dropdown_menu, .menu_list
+                    cursor: pointer
+                    display: block
+                    height: 100%
+                    border-right: 1px solid #5c6f7c
+                    .user_photo
+                        width: 24px
+                        height: 24px
+                        border-radius: 50%
+                        overflow: hidden
+                        background: #ffffff
+                        margin-bottom: 4px
+                    span
+                        color: #c7d1d8
+                        transition: 0.3s
+                        font-size: 12px
+                        display: flex
+                        align-items: center
+                        text-align: center
+                        &:after
+                            content: ''
+                            display: block
+                            position: relative
+                            top: -1px
+                            margin-left: 5px
+                            border-top: 4px solid #ffffff
+                            border-bottom: 0px solid $none
+                            border-right: 3px solid $none
+                            border-left: 3px solid $none
+                .menu_list
+                    border: none
+
