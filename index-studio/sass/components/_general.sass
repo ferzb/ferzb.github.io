@@ -1,23 +1,29 @@
-.general-title
-    color: #000
-    text-transform: uppercase
+.general
+    //main
+    &_main
+        min-height: 100vh
+        max-height: 100vh
+        position: relative
+        overflow: hidden
 
-.general-paragraph
-    text-align: justify
-    line-height: 25px
-
-.general-btn
-    cursor: none
-    padding: 14px 20px
-    display: inline-block
-    position: relative
-    z-index: 1
-    font-size: 16px
-    color: #503f7b
-    background: #f3cc65
-    border: 1px solid #f3cc65
-    transition: 0.2s
-    font-family: 'Poppins Bold'!important
-    &:hover
-        background: transparent!important
-        color: #f3cc65
+    //title
+    &_title
+        font-weight: bold    
+        text-transform: uppercase
+        &_h1
+            line-height: 40px
+            @media screen and (min-width: #{$dw-640})
+                line-height: 65px
+        &_h2
+            line-height: 30px
+            margin-bottom: 20px
+            @media screen and (min-width: #{$dw-640})
+                line-height: 50px
+    //button
+    &_btn
+    
+    //text
+    &_text
+        text-align: justify
+        color: #ffffff
+        line-height: 28px
