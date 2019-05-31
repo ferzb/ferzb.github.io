@@ -9,8 +9,9 @@ $(document).ready(function() {
 			global_section = $('.global_section');
 
 		
-		global_section.css('right', '-'+$(window).width()+'px')
-
+		global_section.css('right', '-100%');
+		
+		global_section.eq(0).css('right', '0%');
 
 		$(document).mousemove(function(e){
 			let x_pos = e.pageX,
@@ -40,12 +41,12 @@ $(document).ready(function() {
 				count++
 			)
 
-			global_section.removeClass('active');
+			global_section.css('right', '-100%');
 
 			// add main section class active
 			let this_global_section = global_section.eq(count);
 			
-			this_global_section.addClass('active');
+			this_global_section.css('right', '0%');
 
 			$(function(){
 				if(count >= 1){

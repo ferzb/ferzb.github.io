@@ -29,10 +29,178 @@ body, html
                 background: $thr-color
                 .general_title
                     color: #9cff00
+                    font-size: 28px
+                    line-height: 30px
+                    @media screen and (min-width: #{$dw-640})
+                        font-size: 48px
+                        line-height: 55px
+            
+            //team description section styles
             &_teamdesc
                 background: url('../img/bg.jpg')
                 background-size: cover
                 background-repeat: no-repeat
 
+                .general_text
+                    font-size: 16px
+                    line-height: 22px
+
+                .general_btn
+                    margin-top: 20px
+                    margin-right: 22px
+                    color: $thr-color
+                    border-color: #9cff00
+                    background: #9cff00
+                    padding: 17px 63px
+
                 .general_title
                     color: #ffffff
+            
+            //core Squade section styles
+            &_coreSquade
+                background: $thr-color
+                
+                .general_text
+                    font-size: 14px
+                    line-height: 18px
+
+                .general_title
+                    color: #ffffff
+
+                .box_item
+                    flex-grow: 1
+                    max-height: 340px
+                    margin-bottom: 20px
+                &_item
+                    width: calc(100%/6 - 26px)
+
+                    .item
+                        &_pic
+                            display: block
+                            background: #ffffff
+                            overflow: hidden
+
+                        &_desc
+                            background: #ffffff
+                            padding: 17px
+                            color: $thr-color
+                            h4
+                                font-size: 16px
+                                font-weight: bold
+                            span
+                                font-size: 16px
+            
+            //happy Clients section styles
+            &_happyClients
+                background: $thr-color
+                .general_title
+                    color: #ffffff
+                
+                .general_text
+                    font-size: 16px
+                    line-height: 22px
+
+            //index Mission section styles
+            &_indexMission
+                background: $thr-color
+                .box_wrap 
+                    .general_title
+                        color: #ffffff
+                        max-width: 190px
+                        font-size: 30px
+                        line-height: 36px
+                        margin: auto 40px auto 0px
+
+                    .item
+                        background: #000000
+                        padding: 15px
+                        &_pic
+                            overflow: hidden
+                            img
+                                height: 100%
+                                width: auto
+                        &_desc
+                            color: #666666
+                            font-size: 12px
+                            display: block
+                            padding: 10px 0px
+
+                        &.item_1
+                            max-width: 392px
+                            .item_pic
+                                max-height: 360px
+                        
+                        &.item_2
+                            max-width: 392px
+                            margin-top: auto
+                            .item_pic
+                                max-height: 200px
+
+            &_indexExp
+                background: $thr-color
+                .box_wrap 
+                    .general_title
+                        color: #ffffff
+                        font-size: 24px
+                        line-height: 30px
+                        margin-top: auto
+                        margin-bottom: 0
+
+                    .item
+                        background: #000000
+                        padding: 15px
+                        &_pic
+                            overflow: hidden
+                            img
+                                height: 100%
+                                width: auto
+                        &_desc
+                            color: #666666
+                            font-size: 12px
+                            display: block
+                            padding: 10px 0px
+
+                        &.item_1
+                            max-width: 520px
+                            .item_pic
+                                max-height: 360px
+                        
+                        &.item_2
+                            max-width: 100%
+                            margin-bottom: auto
+                            .item_pic
+                                max-height: 220px
+                    .box_item
+                        max-width: 550px
+                        display: flex
+                        flex-direction: column
+
+            &_mentions
+                background: $thr-color
+                .general_title
+                    color: #ffffff
+                    line-height: 50px
+                    margin-bottom: 20px
+                .general_text
+                    font-size: 14px
+                    line-height: 18px
+                .box
+                    &_desc
+                        max-width: 256px
+                        margin: auto 0
+                    &_mentions
+                        flex-grow: 1
+                        max-width: 746px
+                        max-height: 365px
+                        display: flex
+                        flex-wrap: wrap
+                        justify-content: space-between
+
+                        &_item
+                            width: 110px
+                            height: 110px
+                            margin-bottom: 17px
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            background: #ffffff

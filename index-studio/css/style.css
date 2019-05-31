@@ -50,6 +50,17 @@
   }
 }
 
+.general_btn {
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #000000;
+  position: relative;
+  z-index: 10;
+  cursor: none;
+  display: inline-block;
+}
+
 .general_text {
   text-align: justify;
   color: #ffffff;
@@ -99,6 +110,15 @@ body, html {
 
 .page_about .section_banner .general_title {
   color: #9cff00;
+  font-size: 28px;
+  line-height: 30px;
+}
+
+@media screen and (min-width: 640px) {
+  .page_about .section_banner .general_title {
+    font-size: 48px;
+    line-height: 55px;
+  }
 }
 
 .page_about .section_teamdesc {
@@ -107,8 +127,244 @@ body, html {
   background-repeat: no-repeat;
 }
 
+.page_about .section_teamdesc .general_text {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.page_about .section_teamdesc .general_btn {
+  margin-top: 20px;
+  margin-right: 22px;
+  color: #003a5f;
+  border-color: #9cff00;
+  background: #9cff00;
+  padding: 17px 63px;
+}
+
 .page_about .section_teamdesc .general_title {
   color: #ffffff;
+}
+
+.page_about .section_coreSquade {
+  background: #003a5f;
+}
+
+.page_about .section_coreSquade .general_text {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.page_about .section_coreSquade .general_title {
+  color: #ffffff;
+}
+
+.page_about .section_coreSquade .box_item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-height: 340px;
+  margin-bottom: 20px;
+}
+
+.page_about .section_coreSquade_item {
+  width: calc(100%/6 - 26px);
+}
+
+.page_about .section_coreSquade_item .item_pic {
+  display: block;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.page_about .section_coreSquade_item .item_desc {
+  background: #ffffff;
+  padding: 17px;
+  color: #003a5f;
+}
+
+.page_about .section_coreSquade_item .item_desc h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.page_about .section_coreSquade_item .item_desc span {
+  font-size: 16px;
+}
+
+.page_about .section_happyClients {
+  background: #003a5f;
+}
+
+.page_about .section_happyClients .general_title {
+  color: #ffffff;
+}
+
+.page_about .section_happyClients .general_text {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.page_about .section_indexMission {
+  background: #003a5f;
+}
+
+.page_about .section_indexMission .box_wrap .general_title {
+  color: #ffffff;
+  max-width: 190px;
+  font-size: 30px;
+  line-height: 36px;
+  margin: auto 40px auto 0px;
+}
+
+.page_about .section_indexMission .box_wrap .item {
+  background: #000000;
+  padding: 15px;
+}
+
+.page_about .section_indexMission .box_wrap .item_pic {
+  overflow: hidden;
+}
+
+.page_about .section_indexMission .box_wrap .item_pic img {
+  height: 100%;
+  width: auto;
+}
+
+.page_about .section_indexMission .box_wrap .item_desc {
+  color: #666666;
+  font-size: 12px;
+  display: block;
+  padding: 10px 0px;
+}
+
+.page_about .section_indexMission .box_wrap .item.item_1 {
+  max-width: 392px;
+}
+
+.page_about .section_indexMission .box_wrap .item.item_1 .item_pic {
+  max-height: 360px;
+}
+
+.page_about .section_indexMission .box_wrap .item.item_2 {
+  max-width: 392px;
+  margin-top: auto;
+}
+
+.page_about .section_indexMission .box_wrap .item.item_2 .item_pic {
+  max-height: 200px;
+}
+
+.page_about .section_indexExp {
+  background: #003a5f;
+}
+
+.page_about .section_indexExp .box_wrap .general_title {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.page_about .section_indexExp .box_wrap .item {
+  background: #000000;
+  padding: 15px;
+}
+
+.page_about .section_indexExp .box_wrap .item_pic {
+  overflow: hidden;
+}
+
+.page_about .section_indexExp .box_wrap .item_pic img {
+  height: 100%;
+  width: auto;
+}
+
+.page_about .section_indexExp .box_wrap .item_desc {
+  color: #666666;
+  font-size: 12px;
+  display: block;
+  padding: 10px 0px;
+}
+
+.page_about .section_indexExp .box_wrap .item.item_1 {
+  max-width: 520px;
+}
+
+.page_about .section_indexExp .box_wrap .item.item_1 .item_pic {
+  max-height: 360px;
+}
+
+.page_about .section_indexExp .box_wrap .item.item_2 {
+  max-width: 100%;
+  margin-bottom: auto;
+}
+
+.page_about .section_indexExp .box_wrap .item.item_2 .item_pic {
+  max-height: 220px;
+}
+
+.page_about .section_indexExp .box_wrap .box_item {
+  max-width: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page_about .section_mentions {
+  background: #003a5f;
+}
+
+.page_about .section_mentions .general_title {
+  color: #ffffff;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+
+.page_about .section_mentions .general_text {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.page_about .section_mentions .box_desc {
+  max-width: 256px;
+  margin: auto 0;
+}
+
+.page_about .section_mentions .box_mentions {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 746px;
+  max-height: 365px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.page_about .section_mentions .box_mentions_item {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #ffffff;
 }
 
 .mous-arrow {
