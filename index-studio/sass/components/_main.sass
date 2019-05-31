@@ -1,29 +1,43 @@
 body, html
-    overflow: hidden
+    overflow: visible
     cursor: none
+    @media screen and (min-width: #{$dw-1100})
+        overflow: hidden
 .container
     height: 100%
 
 .global_section
-    height: 100vh
-    position: absolute
-    width: 100%
+    min-height: 100vh
+    height: 100%
+    position: static
+    width: 100vw
     transition: 0.7s
-    &.active
-        right: 0!important
+    @media screen and (min-width: #{$dw-1100})
+        position: absolute
+        height: 100vh
 .inner_box
     display: flex
+    min-height: 100vh
     flex-wrap: wrap
     flex-direction: column
     justify-content: center
-    height: 100%
+    @media screen and (min-width: #{$dw-1100})
+        height: 100%
+        display: flex
+        
 
 
 .page
 
     //about page styles
     &_about
-       .section
+        &_header
+            background: $thr-color
+            @media screen and (min-width: #{$dw-1100})
+                background: $none
+            .header_logo
+                color: #ffffff
+        .section
             //banner section styles
             &_banner
                 background: $thr-color
@@ -59,7 +73,10 @@ body, html
             //core Squade section styles
             &_coreSquade
                 background: $thr-color
-                
+                .inner_box
+                    display: block
+                    @media screen and (min-width: #{$dw-1100})
+                        display: flex
                 .general_text
                     font-size: 14px
                     line-height: 18px
@@ -68,11 +85,16 @@ body, html
                     color: #ffffff
 
                 .box_item
-                    flex-grow: 1
-                    max-height: 340px
+                    min-height: 340px
                     margin-bottom: 20px
                 &_item
-                    width: calc(100%/6 - 26px)
+                    width: calc(100%/2 - 18px)
+                    margin-bottom: 26px
+                    display: block
+                    @media screen and (min-width: #{$dw-560})
+                        width: calc(100%/3 - 18px)
+                    @media screen and (min-width: #{$dw-1100})
+                        width: calc(100%/6 - 26px)
 
                     .item
                         &_pic
@@ -103,22 +125,39 @@ body, html
             //index Mission section styles
             &_indexMission
                 background: $thr-color
-                .box_wrap 
+                .box_wrap
+                    width: 100%
                     .general_title
                         color: #ffffff
-                        max-width: 190px
+                        max-width: 100%
                         font-size: 30px
                         line-height: 36px
-                        margin: auto 40px auto 0px
+                        margin: auto 0px 40px
+                        @media screen and (min-width: #{$dw-1100})
+                            max-width: 190px
+                            margin: auto 40px auto 0px
 
                     .item
                         background: #000000
                         padding: 15px
+                        margin-bottom: 30px
+                        max-width: 100%
+                        width: 100%
+                        @media screen and (min-width: #{$dw-640})
+                            margin-bottom: 0
+                            width: calc(50% - 20px)
+                        @media screen and (min-width: #{$dw-1100})
+                            max-width: 392px
+                            width: 100%
+
                         &_pic
                             overflow: hidden
                             img
-                                height: 100%
-                                width: auto
+                                width: 100%
+                                height: auto
+                                @media screen and (min-width: #{$dw-1100})
+                                    height: 100%
+                                    width: auto
                         &_desc
                             color: #666666
                             font-size: 12px
@@ -126,19 +165,26 @@ body, html
                             padding: 10px 0px
 
                         &.item_1
-                            max-width: 392px
                             .item_pic
-                                max-height: 360px
+                                max-height: 100%
+                            @media screen and (min-width: #{$dw-1100})
+                                .item_pic
+                                    max-height: 360px
                         
                         &.item_2
-                            max-width: 392px
-                            margin-top: auto
                             .item_pic
-                                max-height: 200px
+                                max-height: 100% 
+                            @media screen and (min-width: #{$dw-1100})
+                                margin-top: auto
+                                .item_pic
+                                    max-height: 200px
+                            
 
+            //index Exp section styles
             &_indexExp
                 background: $thr-color
-                .box_wrap 
+                .box_wrap
+                    width: 100%
                     .general_title
                         color: #ffffff
                         font-size: 24px
@@ -161,22 +207,42 @@ body, html
                             padding: 10px 0px
 
                         &.item_1
-                            max-width: 520px
+                            max-width: 100%
+                            width: 100%
+                            margin-bottom: 40px
                             .item_pic
                                 max-height: 360px
-                        
+                            @media screen and (min-width: #{$dw-640})
+                                margin-bottom: 0
+                                width: calc(50% - 20px)
+                            @media screen and (min-width: #{$dw-1100})
+                                max-width: 520px
+                                width: 100%
+                                 
                         &.item_2
                             max-width: 100%
-                            margin-bottom: auto
+                            margin-bottom: 20px
                             .item_pic
                                 max-height: 220px
                     .box_item
-                        max-width: 550px
+                        max-width: 100%
+                        width: 100%
                         display: flex
                         flex-direction: column
+                        @media screen and (min-width: #{$dw-640})
+                            width: calc(50% - 20px)
+                        @media screen and (min-width: #{$dw-1100})
+                            max-width: 550px
+                            width: 100%
 
+            //mentions section styles
             &_mentions
                 background: $thr-color
+                .inner_box
+                    display: block
+                    height: 100%
+                    @media screen and (min-width: #{$dw-1100})
+                        display: flex
                 .general_title
                     color: #ffffff
                     line-height: 50px
@@ -187,20 +253,62 @@ body, html
                 .box
                     &_desc
                         max-width: 256px
-                        margin: auto 0
+                        margin: 0px 0px 40px
+                        @media screen and (min-width: #{$dw-1100})
+                            margin: auto 0
                     &_mentions
                         flex-grow: 1
                         max-width: 746px
-                        max-height: 365px
+                        max-height: 100%
                         display: flex
                         flex-wrap: wrap
-                        justify-content: space-between
-
+                        justify-content: center
+                        @media screen and (min-width: #{$dw-1100})
+                            max-height: 365px
                         &_item
                             width: 110px
                             height: 110px
-                            margin-bottom: 17px
+                            margin: 0px 7px 17px
                             display: flex
                             align-items: center
                             justify-content: center
                             background: #ffffff
+            
+            //index Action section styles
+            &_indexAction
+                background: $thr-color
+                .general_title
+                    color: #ffffff
+                    font-size: 36px
+                    line-height: 45px
+                    margin-bottom: 20px
+                    max-width: 625px
+
+                .general_text
+                    font-size: 30px
+
+                .box_wrap
+                    margin-top: 60px
+                    a
+                        width: 100%
+                        max-width: 205px
+                        margin-bottom: 30px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        flex-direction: column
+                        background: #9cff00
+                        color: $thr-color
+                        padding: 50px 10px
+                        font-weight: bold
+                        position: relative
+                        z-index: 10
+                        cursor: none
+                        @media screen and (min-width: #{$dw-780})
+                            width: calc(100%/3 - 21px)
+                            max-width: 100%
+                            margin-bottom: 0
+                        img
+                            margin-bottom: 10px
+                            width: auto
+                            height: auto

@@ -170,7 +170,7 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
   margin: 12px 12px 12px 12px;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 9999px) {
   .navbar_list li {
     margin: 0px 0px 0px 38px;
   }
@@ -186,7 +186,7 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
   display: block;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 9999px) {
   .nav-icon {
     display: none;
   }

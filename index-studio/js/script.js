@@ -6,12 +6,15 @@ $(document).ready(function() {
 	function scrolling(){
 		let count = 0,
 			arrow = $('.mous-arrow'),
-			global_section = $('.global_section');
+			global_section = $('.global_section'),
+			general_main = $('.general_main');
 
 		
-		global_section.css('right', '-100%');
-		
-		global_section.eq(0).css('right', '0%');
+		general_main.css('width', $(window).width()*global_section.length+'px');
+
+		global_section.each(function(i){
+			$(this).css('left', i*$(window).width()+'px');
+		})
 
 		$(document).mousemove(function(e){
 			let x_pos = e.pageX,
@@ -41,12 +44,12 @@ $(document).ready(function() {
 				count++
 			)
 
-			global_section.css('right', '-100%');
+			general_main.css('left', '-'+$(window).width()*count+'px');
 
 			// add main section class active
 			let this_global_section = global_section.eq(count);
 			
-			this_global_section.css('right', '0%');
+			this_global_section.addClass('active');
 
 			$(function(){
 				if(count >= 1){

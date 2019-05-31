@@ -4,8 +4,13 @@
         min-height: 100vh
         max-height: 100vh
         position: relative
-        overflow: hidden
-
+        overflow: visible
+        transition: 0.9s 0s
+        left: 0px
+        @media screen and (min-width: #{$dw-1100})
+            min-height: 100vh
+            max-height: 100vh
+            overflow: hidden
     //title
     &_title
         font-weight: bold    
