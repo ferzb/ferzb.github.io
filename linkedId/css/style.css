@@ -42,7 +42,7 @@ input[type="checkbox"] {
   display: none;
 }
 
-input[type="checkbox"]:checked + label:before {
+input[type="checkbox"].checked + label:before, input[type="checkbox"]:checked + label:before {
   -webkit-box-shadow: 0 0 0 11px #0073b1 inset;
           box-shadow: 0 0 0 11px #0073b1 inset;
 }
@@ -816,6 +816,80 @@ body, html {
 .all_filters_box.show {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
+}
+
+.all_filters_box .header_all_filters .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.all_filters_box .header_all_filters .container h2 {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: lighter;
+}
+
+.all_filters_box .header_all_filters .container .clear_btn {
+  margin-left: auto;
+  background: transparent;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 10px 16px;
+}
+
+.all_filters_box .header_all_filters .container .clear_btn[data-status='disable'] {
+  color: rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+}
+
+.all_filters_box .header_all_filters .container .clear_btn[data-status='able'] {
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.all_filters_box .header_all_filters .container .clear_btn[data-status='able']:hover {
+  background-color: rgba(207, 207, 207, 0.25);
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.all_filters_box .header_all_filters .container .clear_btn[data-status='able'] span {
+  font-size: 12px;
+  padding: 1px 4px 0px 3px;
+  height: 18px;
+  border: 2px solid #0073b1;
+  border-radius: 50%;
+  margin-left: 6px;
+  color: #fff;
+  min-width: 14px;
+  text-align: center;
+  background-color: #0073b1;
+  font-weight: 400;
+}
+
+.all_filters_box .header_all_filters .container .box_btn {
+  margin-top: 0;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.all_filters_box .header_all_filters .container .box_btn .close {
+  background: transparent;
+}
+
+.all_filters_box .header_all_filters .container .box_btn .close:hover {
+  background-color: rgba(207, 207, 207, 0.25);
 }
 
 .all_filters_box .inner_all_filters {

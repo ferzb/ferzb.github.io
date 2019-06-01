@@ -244,6 +244,9 @@ body, html
     background: rgba(0, 0, 0, 0.8)
     z-index: 9997
     display: none
+
+
+    
 .all_filters_box
     position: fixed
     transform: translateY(-200%)
@@ -258,6 +261,53 @@ body, html
     overflow: hidden
     &.show
         transform: translateY(0%)
+
+    .header_all_filters
+        .container
+            display: flex
+            align-items: center
+            h2
+                font-size: 20px
+                color: rgba(0, 0, 0, 0.6)
+                font-weight: lighter
+            .clear_btn
+                margin-left: auto
+                background: $none
+                font-size: 16px
+                display: flex
+                align-items: center
+                transition: 0.3s
+                padding: 10px 16px
+                &[data-status='disable']
+                    color: rgba(0, 0, 0, 0.25)
+                    cursor: not-allowed
+                &[data-status='able']
+                    color: rgba(0, 0, 0, 0.6)
+                    cursor: pointer
+                    &:hover
+                        background-color: rgba(207,207,207,.25)
+                        color: rgba(0,0,0,.75)
+                    span
+                        font-size: 12px
+                        padding: 1px 4px 0px 3px
+                        height: 18px
+                        border: 2px solid #0073b1
+                        border-radius: 50%
+                        margin-left: 6px
+                        color: #fff
+                        min-width: 14px
+                        text-align: center
+                        background-color: #0073b1
+                        font-weight: 400
+            .box_btn
+                margin-top: 0
+                margin-left: 20px
+                padding-left: 20px
+                border-left: 1px solid rgba(0,0,0,.15)
+                .close
+                    background: $none
+                    &:hover
+                        background-color: rgba(207,207,207,.25)
     .inner_all_filters
         overflow-y: scroll
         overflow-x: hidden
