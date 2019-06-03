@@ -43,6 +43,7 @@ $(document).ready(function() {
 				$(this).toggleClass('active');
 
 				that_list.slideToggle();
+
 			})
 
 			that_list_item.each(function(){
@@ -87,22 +88,93 @@ $(document).ready(function() {
 	modal_window.each(function(){
 
 		let that = $(this),
-			btn_dropdown = that.find('.dropdown_form'),
-			box_dropdown = that.find('.dropdown_form-box');
+			inner_wrapper = that.find('.inner_wrapper');
+			
+		inner_wrapper.each(function(){
 
-		btn_dropdown.click(function(){
-			$(this).toggleClass('active');
-			box_dropdown.slideToggle();
+			let count = 0,
+				this_inner_wrapper = $(this),
+				btn_dropdown = this_inner_wrapper.find('.dropdown_form'),
+				btn_add_display = this_inner_wrapper.find('.add_display'),
+				box_dropdown = this_inner_wrapper.find('.dropdown_form-box'),
+				elevator_yes = $('.elevator_yes').attr('id'),
+				elevator_no = $('.elevator_no').attr('id');
 
-			if($(this).hasClass('active')){
-				$(this).text('Hide Advance Settings')
-			}else{
-				$(this).text('Show Advance Settings')
-			}
+				//dropdown button
+				btn_dropdown.click(function(){
+					$(this).toggleClass('active');
+					box_dropdown.slideToggle();
+		
+					if($(this).hasClass('active')){
+						$(this).text('Hide Advance Settings')
+					}else{
+						$(this).text('Show Advance Settings')
+					}
+				})
+				
+				//add new display button
+				btn_add_display.click(function(){
+
+					count++
+
+					let parent_form_btn = $(this).parent(),
+						clone_inner = parent_form_btn.parent(),
+						clone_inner_wrapper = clone_inner.parent();
+
+
+					//clone inner wrapper box and function for this box
+					clone_inner_wrapper.clone().each(function(){
+
+						let this_clone = $(this),
+							btn_dropdown = this_clone.find('.dropdown_form'),
+							box_dropdown = this_clone.find('.dropdown_form-box'),
+							remove_add = this_clone.find('.remove_display');
+
+						//remove new display box
+						remove_add.click(function(){
+
+							this_clone.remove();
+						})
+
+						//dropdown button for new display box
+						btn_dropdown.click(function(){
+							$(this).toggleClass('active');
+							box_dropdown.slideToggle();
+				
+							if($(this).hasClass('active')){
+								$(this).text('Hide Advance Settings')
+							}else{
+								$(this).text('Show Advance Settings')
+							}
+						})
+
+						//function fot radio button for each inner wrapper
+						this_clone.each(function(){
+
+							let this_input_yes = $(this).find('.elevator_yes'),
+								this_label_yes = $(this).find('.elevator_yes + label'),
+								this_input_no = $(this).find('.elevator_no'),
+								this_label_no = $(this).find('.elevator_no + label');
+
+							this_input_yes.attr('id', 'display_'+count+'_'+elevator_yes).attr('name', 'elevator_'+count);
+							this_label_yes.attr('for', 'display_'+count+'_'+elevator_yes);
+							
+
+							this_input_no.attr('id', 'display_'+count+'_'+elevator_no).attr('name', 'elevator_'+count);
+							this_label_no.attr('for', 'display_'+count+'_'+elevator_no);
+						})
+						
+
+					}).addClass('clone').appendTo('.building_screens');
+
+				})
+
+
 		})
 
+
 		let count = 0,
-			inner_box = that.find('.inner_wrap'),
+			inner_box = that.find('.global_wrap'),
 			inner_box_l = inner_box.length,
 			g_btn_action = that.find('.modal_footer .general_btn'),
 			progress = that.find('.progerss span');
@@ -110,9 +182,6 @@ $(document).ready(function() {
 		inner_box.eq(count).addClass('active')
 
 		g_btn_action.click(function(){
-
-			box_dropdown.css('display', 'none');
-			btn_dropdown.removeClass('active').text('Show Advance Settings');
 
 			if($(this).hasClass('back')){
 				count--;

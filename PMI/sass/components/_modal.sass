@@ -15,27 +15,42 @@
         height: 100%
 
     &_inner
-        background: #ffffff
+        
         max-width: 700px
         width: 100%
         min-width: 300px
         margin: auto auto 80px
-        box-shadow: 0px 2px 6px 1px rgba(50, 50, 50, 0.1)
+
+        .global_wrap
+            display: none
+            &.active
+                display: block
+
+        .inner_wrapper
+            display: block
+            box-shadow: 0px 2px 6px 1px rgba(50, 50, 50, 0.1)
+            background: #ffffff
+            &.clone
+                margin-top: 40px
+                .form_btn .remove_display
+                    display: block
+                .form_btn .add_display
+                    display: none
 
         .inner_wrap, .dropdown_form-box, .dropdown_new-user
-            display: none
+            display: block
             padding: 20px
             h1,h2,h3,h4,h5,h6
                 margin-bottom: 20px
                 text-transform: capitalize
             &.assing_users
                 padding: 0
-            &.active
-                display: block
+           
 
         .dropdown_form-box, .dropdown_new-user
             border-top: 1px solid #cdcdcd
             display: none
+    
     &_footer
         background: #ffffff
         width: 100%
@@ -123,7 +138,7 @@
             justify-content: space-between
             flex-wrap: wrap
             margin-bottom: 20px
-
+            position: relative
 
             &[data-name="condo_url"]
                 input[type="file"]
@@ -166,7 +181,6 @@
                     @media screen and (min-width: #{$dw-560})
                         max-width: 40%
 
-
             &[data-name="type"]
                 div
                     flex-grow: 1
@@ -179,10 +193,13 @@
                         margin-top: 0px
                     input
                         &:checked + label:before
-                            background: #dddddd
+                            border: 1px solid #2da4dc
+                        &:checked + label:after
+                            display: block
                     label
                         display: flex
                         text-transform: capitalize
+                        position: relative
                         align-items: center
                         cursor: pointer
                         font-size: 12px
@@ -197,12 +214,21 @@
                             border: 1px solid #cdcdcd
                             border-radius: 2px
                             margin-right: 10px
-
+                        &:after
+                            display: none
+                            height: 16px
+                            width: 6px
+                            left: 8px
 
             &[data-name="building_elevator"]
                 div
-                    margin-left: 16px
-                    flex-grow: 1
+                    margin-top: 16px
+                    width: 100%
+                    @media screen and (min-width: #{$dw-480})
+                        flex-grow: 1
+                        margin-left: 16px
+                        width: auto
+                        margin-top: 0px
                     input
                         display: none
                         &:checked + label
@@ -331,7 +357,13 @@
                 cursor: pointer
                 display: flex
                 align-items: center
-                margin-left: 10px
+                justify-content: flex-end
+                margin-top: 10px
+                width: 100%
+                @media screen and (min-width: #{$dw-480})
+                    margin-left: 10px
+                    width: auto
+                    justify-content: flex-start
                 &:first-child
                    margin-left: auto 
                 &:before
@@ -341,3 +373,7 @@
                     background-repeat: no-repeat
                     background-position: center center
                     margin-right: 14px
+                &.remove_display
+                    display: none
+                    color: #fa7486
+        
