@@ -42,7 +42,7 @@ $(document).ready(function() {
 			that_span.click(function(){
 				$(this).toggleClass('active');
 
-				that_list.slideToggle();
+				that.toggleClass('show');
 
 			})
 
@@ -53,21 +53,32 @@ $(document).ready(function() {
 
 					that_span.html(this_val).attr('data-name', this_attr).removeClass('active');
 
-					that_list.slideUp();
+					that.removeClass('show');
 
 					if($(this).attr('data-name') == 'new-user'){
 						
 						that_span.html('New User').attr('data-name', this_attr).removeClass('active');
 
-						$('.dropdown_new-user').slideDown();
+						$('.dropdown_new-user').addClass('show');
 					}else{
-						$('.dropdown_new-user').slideUp();
+						$('.dropdown_new-user').removeClass('show');
 					}
 				})
 			})
 
 	})
 
+	let select_user = $('#select_user'),
+		dropdown_new_user = $('.dropdown_new-user');
+
+	select_user.each(function(){
+		let that = $(this),
+			that_option = that.find('option').last();
+
+		that_option.click(function(){
+			dropdown_new_user.css('display', 'block');
+		})
+	})
 	
 	
 	//modal functional
@@ -100,74 +111,81 @@ $(document).ready(function() {
 				elevator_yes = $('.elevator_yes').attr('id'),
 				elevator_no = $('.elevator_no').attr('id');
 
-				//dropdown button
-				btn_dropdown.click(function(){
-					$(this).toggleClass('active');
-					box_dropdown.slideToggle();
-		
-					if($(this).hasClass('active')){
-						$(this).text('Hide Advance Settings')
-					}else{
-						$(this).text('Show Advance Settings')
-					}
-				})
+			//dropdown button
+			btn_dropdown.click(function(){
+				$(this).toggleClass('active');
+				box_dropdown.slideToggle();
+	
+				if($(this).hasClass('active')){
+					$(this).text('Hide Advance Settings')
+				}else{
+					$(this).text('Show Advance Settings')
+				}
+			})
 				
-				//add new display button
-				btn_add_display.click(function(){
+			//add new display button
+			btn_add_display.click(function(){
 
-					count++
+				count++;
 
-					let parent_form_btn = $(this).parent(),
-						clone_inner = parent_form_btn.parent(),
-						clone_inner_wrapper = clone_inner.parent();
+				let parent_form_btn = $(this).parent(),
+					clone_inner = parent_form_btn.parent(),
+					clone_inner_wrapper = clone_inner.parent();
 
 
-					//clone inner wrapper box and function for this box
-					clone_inner_wrapper.clone().each(function(){
+				//clone inner wrapper box and function for this box
+				clone_inner_wrapper.clone().each(function(i){
 
-						let this_clone = $(this),
-							btn_dropdown = this_clone.find('.dropdown_form'),
-							box_dropdown = this_clone.find('.dropdown_form-box'),
-							remove_add = this_clone.find('.remove_display');
+					let this_clone = $(this),
+						btn_dropdown = this_clone.find('.dropdown_form'),
+						box_dropdown = this_clone.find('.dropdown_form-box'),
+						remove_add = this_clone.find('.remove_display');
 
-						//remove new display box
-						remove_add.click(function(){
+					//remove new display box
+					remove_add.click(function(){
+						let clone = $('.clone');
 
-							this_clone.remove();
-						})
+						count = count - (count + 1);
+	
 
-						//dropdown button for new display box
-						btn_dropdown.click(function(){
-							$(this).toggleClass('active');
-							box_dropdown.slideToggle();
-				
-							if($(this).hasClass('active')){
-								$(this).text('Hide Advance Settings')
-							}else{
-								$(this).text('Show Advance Settings')
-							}
-						})
+						this_clone.remove();
+					})
 
-						//function fot radio button for each inner wrapper
-						this_clone.each(function(){
+					//dropdown button for new display box
+					btn_dropdown.click(function(){
+						$(this).toggleClass('active');
+						box_dropdown.slideToggle();
 
-							let this_input_yes = $(this).find('.elevator_yes'),
-								this_label_yes = $(this).find('.elevator_yes + label'),
-								this_input_no = $(this).find('.elevator_no'),
-								this_label_no = $(this).find('.elevator_no + label');
+						
+			
+						if($(this).hasClass('active')){
+							$(this).text('Hide Advance Settings')
+						}else{
+							$(this).text('Show Advance Settings')
+						}
 
-							this_input_yes.attr('id', 'display_'+count+'_'+elevator_yes).attr('name', 'elevator_'+count);
-							this_label_yes.attr('for', 'display_'+count+'_'+elevator_yes);
-							
+					})
 
-							this_input_no.attr('id', 'display_'+count+'_'+elevator_no).attr('name', 'elevator_'+count);
-							this_label_no.attr('for', 'display_'+count+'_'+elevator_no);
-						})
+					//function fot radio button for each inner wrapper
+					this_clone.each(function(){
+
+						let this_input_yes = $(this).find('.elevator_yes'),
+							this_label_yes = $(this).find('.elevator_yes + label'),
+							this_input_no = $(this).find('.elevator_no'),
+							this_label_no = $(this).find('.elevator_no + label');
+
+						this_input_yes.attr('id', 'display_'+count+'_'+elevator_yes).attr('name', 'elevator_'+count);
+						this_label_yes.attr('for', 'display_'+count+'_'+elevator_yes);
 						
 
-					}).addClass('clone').appendTo('.building_screens');
+						this_input_no.attr('id', 'display_'+count+'_'+elevator_no).attr('name', 'elevator_'+count);
+						this_label_no.attr('for', 'display_'+count+'_'+elevator_no);
+					})
+					
 
-				})
+				}).addClass('clone clone_'+count).appendTo('.building_screens');
+
+			});
 
 
 		})

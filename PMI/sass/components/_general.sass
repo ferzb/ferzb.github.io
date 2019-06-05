@@ -43,6 +43,7 @@
         border: 1px solid #979797
         padding: 8px 12px
         width: 200px
+        position: relative
         span
             display: block
             width: 100%
@@ -61,12 +62,25 @@
                 right: 0
         ul
             display: none
-            padding: 6px 0px
+            padding: 8px 12px
             line-height: 24px
+            background: #ffffff
+            position: absolute
+            width: calc(100% + 2px)
+            z-index: 99
+            left: -1px
+            border: 1px solid #979797
+            border-top: none
             li
                 cursor: pointer
                 list-style: none
-    
+        &.show
+            ul
+                display: block
+            span
+                &:after
+                    top: 4px
+                    transform: rotate(-135deg)
     &_dashboard
         width: 100%
         min-width: 1000px
