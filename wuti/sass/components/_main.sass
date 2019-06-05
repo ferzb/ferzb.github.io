@@ -1,6 +1,6 @@
 .page_container
     min-height: 100vh
-    
+    line-height: 24px
     
 .buy_tickets
     background: #ff0000
@@ -10,7 +10,7 @@
 
 .page_main
     min-height: 100vh
-    padding-top: 252px
+    padding-top: 220px
     display: flex
     width: 100%
     height: 100%
@@ -29,6 +29,8 @@
         flex-direction: column
         @media screen and (min-width: #{$dw-640})
             width: calc(100%/3)
+        article
+            padding: 60px 30px
         &.section_col-1
             .festival
                background: #ff9b7d
@@ -44,8 +46,8 @@
                         margin-bottom: 10px
                         display: block
                     span
-                        font-family: 'Rockled'
-                        font-size: 24px
+                        font-family: 'RockledgeWUTI'
+                        font-size: 35px
                         margin-bottom: 10px
                         display: block
             .discover
@@ -53,23 +55,28 @@
                 text-align: center
                 padding: 20px 0px
                 img
-                    width: 50%
+                    margin-top: 30px
+                    width: auto
+                    max-width: 115px
         
         &.section_col-2
             .idyll
+                flex-grow: 1
                 background: #d7d77d
-                font-size: 100px
-                line-height: 85px
+                font-size: 10vw
+                line-height: 8vw
                 text-align: center
-                font-family: 'Rockled'
+                font-family: 'RockledgeWUTI'
+                img
+                    width: auto
             .support
                 background: #ffa0c3
                 text-align: center
                 padding-top: 30px
-                flex-grow: 1
                 img
                     width: auto
-                    max-width: 45%
+                    margin: 20px
+                    max-width: 80px
                     display: inline-block
         &.section_col-3
             .women
@@ -86,7 +93,7 @@
                     margin-bottom: 10px
                     display: block
                 span
-                    font-family: 'Rockled'
-                    font-size: 24px
+                    font-family: 'RockledgeWUTI'
+                    font-size: 35px
                     margin-bottom: 10px
                     display: block
