@@ -178,14 +178,14 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
   margin: 12px 12px 12px 12px;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 780px) {
   .navbar_list li {
     margin: 0px 0px 0px 38px;
   }
 }
 
 .navbar_list li a {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 /*navbar*/
@@ -194,7 +194,7 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
   display: block;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 780px) {
   .nav-icon {
     display: none;
   }
@@ -204,8 +204,8 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
   margin: 0px;
   cursor: pointer;
   display: block;
-  width: 42px;
-  height: 39px;
+  width: 32px;
+  height: 15px;
   position: relative;
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
@@ -215,8 +215,8 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
   width: 80%;
   border-radius: 16px;
   display: block;
-  height: 3px;
-  background: #fff;
+  height: 2px;
+  background: #002337;
   position: absolute;
   left: 3px;
   top: 0;
@@ -228,38 +228,38 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
 }
 
 .nav-icon_line:nth-child(1) {
-  top: 5px;
+  top: 0px;
 }
 
 .nav-icon_line:nth-child(2) {
-  top: 17px;
+  top: 6px;
 }
 
 .nav-icon_line:nth-child(3) {
-  top: 29px;
+  top: 12px;
 }
 
-.nav-icon_line.active {
+.nav-icon.active .nav-icon_line {
   -webkit-transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease;
   -webkit-transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, -webkit-transform 0.3s 0.4s ease;
   transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, -webkit-transform 0.3s 0.4s ease;
   transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease;
   transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease, -webkit-transform 0.3s 0.4s ease;
-  background: #fff;
+  background: #002337;
 }
 
-.nav-icon_line.active:nth-child(1) {
-  top: 12px;
+.nav-icon.active .nav-icon_line:nth-child(1) {
+  top: 6px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.nav-icon_line.active:nth-child(2) {
+.nav-icon.active .nav-icon_line:nth-child(2) {
   opacity: 0;
 }
 
-.nav-icon_line.active:nth-child(3) {
-  top: 12px;
+.nav-icon.active .nav-icon_line:nth-child(3) {
+  top: 6px;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }

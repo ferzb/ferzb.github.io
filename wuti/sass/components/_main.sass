@@ -4,16 +4,24 @@
     
 .buy_tickets
     background: #ff0000
+    font-size: 14px
+    letter-spacing: 0.25em
     text-align: center
     color: #ffffff
     text-transform: uppercase
+    &:hover
+        box-shadow: inset 0px 0px 0px 40px #55affa
 
 .page_main
     min-height: 100vh
-    padding-top: 220px
+    padding-top: 0px
     display: flex
     width: 100%
     height: 100%
+    @media screen and (min-width: #{$dw-780})
+        padding-top: 210px
+    @media screen and (min-width: #{$dw-960})
+        padding-top: 218px
     .container
         padding: 0
         @media screen and (min-width: #{$dw-640})
@@ -69,13 +77,17 @@
                 font-family: 'RockledgeWUTI'
                 img
                     width: auto
+                    max-width: 33vw
+                    display: block
+                    margin: auto auto 10px
+                    @media screen and (min-width: #{$dw-780})
+                        max-width: 100%
             .support
                 background: #ffa0c3
                 text-align: center
-                padding-top: 30px
                 img
                     width: auto
-                    margin: 20px
+                    margin: 20px 1vw 0px
                     max-width: 80px
                     display: inline-block
         &.section_col-3

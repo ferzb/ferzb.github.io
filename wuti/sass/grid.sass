@@ -124,8 +124,8 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
 		margin: 0px
 		cursor: pointer
 		display: block
-		width: 42px
-		height: 39px
+		width: 32px
+		height: 15px
 		position: relative
 		-webkit-transition: all 0.35s ease 
 		-moz-transition: all 0.35s ease 
@@ -148,12 +148,13 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
 		-o-transition: background 0.3s, opacity 0.35s 0.2s, top 0.2s 0.4s, transform 0.2s 0.2s ease 
 		transition: background 0.3s, opacity 0.35s 0.2s, top 0.2s 0.4s, transform 0.2s 0.2s ease 
 		&:nth-child(1)
-			top: 5px
+			top: 0px
 		&:nth-child(2)
-			top: 17px
+			top: 6px
 		&:nth-child(3)
-			top: 29px
-		&.active
+			top: 12px
+	&.active
+		.nav-icon_line
 			-webkit-transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease 
 			-moz-transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease 
 			-ms-transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease 
@@ -161,7 +162,7 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
 			transition: background 0.3s, opacity 0.35s 0.4s, top 0.2s 0.2s, transform 0.3s 0.4s ease 
 			background: $nav-toggle-background
 			&:nth-child(1)
-				top: 12px
+				top: 6px
 				-webkit-transform: rotate(45deg) 
 				-moz-transform: rotate(45deg) 
 				-ms-transform: rotate(45deg) 
@@ -170,7 +171,7 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
 			&:nth-child(2)
 				opacity: 0 
 			&:nth-child(3)
-				top: 12px
+				top: 6px
 				-webkit-transform: rotate(-45deg) 
 				-moz-transform: rotate(-45deg) 
 				-ms-transform: rotate(-45deg) 
