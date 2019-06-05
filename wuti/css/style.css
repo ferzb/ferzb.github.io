@@ -63,14 +63,8 @@ header .logo {
 
 @media screen and (min-width: 780px) {
   header .logo {
-    max-width: 220px;
-    display: none;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  header .logo {
     max-width: 226px;
+    display: none;
     margin: 0;
   }
 }
@@ -160,12 +154,6 @@ header .navbar .logo_li, header .navbar .logo {
 
 @media screen and (min-width: 780px) {
   .page_main {
-    padding-top: 210px;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .page_main {
     padding-top: 191px;
   }
 }
@@ -212,7 +200,7 @@ header .navbar .logo_li, header .navbar .logo {
 
 @media screen and (min-width: 780px) {
   .main_wrapper section.section_col-1 .festival {
-    height: 38vw;
+    height: 32vw;
   }
 }
 
@@ -238,6 +226,10 @@ header .navbar .logo_li, header .navbar .logo {
 .main_wrapper section.section_col-1 .festival p i {
   margin-bottom: 20px;
   display: block;
+}
+
+.main_wrapper section.section_col-1 .festival p i:last-child {
+  margin-bottom: 0px;
 }
 
 .main_wrapper section.section_col-1 .festival p span {
@@ -318,6 +310,7 @@ header .navbar .logo_li, header .navbar .logo {
   font-size: 30vw;
   line-height: 26vw;
   text-align: center;
+  padding: 6vw 20px;
   font-family: 'RockledgeWUTI';
 }
 
@@ -326,6 +319,7 @@ header .navbar .logo_li, header .navbar .logo {
     font-size: 8.5vw;
     line-height: 9vw;
     height: 75vw;
+    padding: 4vw 20px 2vw;
   }
 }
 
@@ -363,6 +357,7 @@ header .navbar .logo_li, header .navbar .logo {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  padding: 35px 0px;
 }
 
 .main_wrapper section.section_col-2 .support img {
@@ -378,7 +373,7 @@ header .navbar .logo_li, header .navbar .logo {
 
 @media screen and (min-width: 780px) {
   .main_wrapper section.section_col-3 .box_pic {
-    height: 38vw;
+    height: 32vw;
   }
 }
 
@@ -449,11 +444,11 @@ footer {
   background: #96f5d2;
   text-align: center;
   letter-spacing: 0.15em;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 footer .container {
-  padding: 0px 18px;
+  padding: 10px 18px;
 }
 
 footer .input_box {
@@ -470,12 +465,19 @@ footer .input_box form {
 }
 
 footer .input_box input {
-  height: 20px;
+  height: 32px;
   padding-top: 4px;
-  font-size: 10px;
-  width: 143px;
+  font-size: 14px;
+  max-width: 145px;
+  width: 100%;
   text-align: center;
   letter-spacing: 0.15em;
+}
+
+@media screen and (min-width: 480px) {
+  footer .input_box input {
+    width: 210px;
+  }
 }
 
 footer .input_box input:-webkit-input-placeholder, footer .input_box input:-moz-placeholder, footer .input_box input:-moz-placeholder, footer .input_box input:-ms-input-placeholder {
@@ -485,9 +487,9 @@ footer .input_box input:-webkit-input-placeholder, footer .input_box input:-moz-
 footer .input_box button {
   color: #96f5d2;
   padding-top: 4px;
-  font-size: 10px;
-  height: 20px;
-  max-width: 75px;
+  font-size: 14px;
+  height: 32px;
+  max-width: 95px;
   width: 100%;
   text-align: center;
   margin-left: 10px;
@@ -505,13 +507,19 @@ footer .input_box button {
   cursor: pointer;
 }
 
+@media screen and (min-width: 480px) {
+  footer .input_box button {
+    max-width: 125px;
+  }
+}
+
 footer span {
   display: block;
 }
 
 footer .footer_soc_links a {
-  width: 18px;
-  height: 18px;
+  width: 32px;
+  height: 32px;
   margin: 20px 10px;
 }
 
