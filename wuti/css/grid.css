@@ -36,13 +36,13 @@ html, body {
   min-width: 320px;
   font-family: "UniversLTStd", sans-serif;
   color: #002337;
-  font-size: 12px;
+  font-size: 14px;
   position: relative;
 }
 
 @media screen and (min-width: 640px) {
   html, body {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -185,7 +185,7 @@ textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-p
 }
 
 .navbar_list li a {
-  font-size: 12px;
+  font-size: 11px;
 }
 
 /*navbar*/
