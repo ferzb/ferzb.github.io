@@ -1,5 +1,4 @@
 .page_container
-    min-height: 100vh
     line-height: 24px
     
 .buy_tickets
@@ -15,7 +14,6 @@
         padding: 8px 0px 6px
 
 .page_main
-    min-height: 100vh
     padding-top: 0px
     display: flex
     width: 100%
@@ -28,21 +26,6 @@
         padding: 0
         @media screen and (min-width: #{$dw-640})
             padding: 0px 20px
-
-/*.box_pic
-    width: 100%
-    position: relative
-    padding-bottom: 75%
-    padding-top: 30px
-    height: 0
-    overflow: hidden
-    img
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        z-index: 1 */
         
 
 .main_wrapper
@@ -51,14 +34,16 @@
         width: 100%
         display: flex
         flex-direction: column
-        @media screen and (min-width: #{$dw-640})
+        @media screen and (min-width: #{$dw-780})
             width: calc(100%/3)
         article
-            padding: 60px 30px
+            padding: 10px 30px
         &.section_col-1
             .festival
                 background: #ff9b7d
                 height: 38%
+                @media screen and (min-width: #{$dw-780})
+                    height: 38vw
                 p
                     display: flex
                     letter-spacing: 0.15em
@@ -68,17 +53,19 @@
                     justify-content: center
                     text-align: center
                     i
-                        margin-bottom: 10px
+                        margin-bottom: 20px
                         display: block
                     span
                         font-family: 'RockledgeWUTI'
                         font-size: 35px
-                        margin-bottom: 10px
+                        margin-bottom: 20px
                         display: block
                         @media screen and (min-width: #{$dw-780})
                             font-size: 46px
             .box_pic
                 height: 32%
+                @media screen and (min-width: #{$dw-780})
+                    height: 32vw
                 img
                     object-fit: cover
                     height: 100%
@@ -99,19 +86,19 @@
         
         &.section_col-2
             order: -1
-            @media screen and (min-width: #{$dw-640})
+            @media screen and (min-width: #{$dw-780})
                 order: 0
             .idyll
-                height: 88%
+                height: 90%
                 background: #d7d77d
                 font-size: 30vw
                 line-height: 26vw
                 text-align: center
                 font-family: 'RockledgeWUTI'
-                @media screen and (min-width: #{$dw-640})
+                @media screen and (min-width: #{$dw-780})
                     font-size: 8.5vw    
-                    line-height: 8vw
-                    height: 78%
+                    line-height: 9vw
+                    height: 75vw
                 img
                     width: auto
                     max-width: 76vw
@@ -138,6 +125,8 @@
         &.section_col-3
             .box_pic
                 height: 38%
+                @media screen and (min-width: #{$dw-780})
+                    height: 38vw
                 img
                     object-fit: cover
                     height: 100%
@@ -153,15 +142,17 @@
                     text-align: center
                     letter-spacing: 0.15em
                 i
-                    margin-bottom: 10px
+                    margin-bottom: 20px
                     display: block
                 span
                     font-family: 'RockledgeWUTI'
                     font-size: 35px
-                    margin-bottom: 10px
+                    margin-bottom: 20px
                     display: block
                     @media screen and (min-width: #{$dw-780})
                         font-size: 46px
             .pic
                 height: 32%
                 object-fit: cover
+                @media screen and (min-width: #{$dw-780})
+                    height: 32vw
