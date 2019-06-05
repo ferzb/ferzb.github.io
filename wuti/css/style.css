@@ -18,7 +18,7 @@
 /*container wrapper*/
 /*btn up*/
 header {
-  position: static;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
@@ -45,6 +45,7 @@ header a {
 
 .page_main {
   min-height: 100vh;
+  padding-top: 252px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,6 +143,9 @@ header a {
   background: #ffa0c3;
   text-align: center;
   padding-top: 30px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .main_wrapper section.section_col-2 .support img {
