@@ -43,7 +43,7 @@ header {
 }
 
 header .header {
-  padding: 42px 20px 22px;
+  padding: 48px 20px 11px;
 }
 
 header a {
@@ -154,7 +154,7 @@ header .navbar .logo_li, header .navbar .logo {
 
 @media screen and (min-width: 780px) {
   .page_main {
-    padding-top: 191px;
+    padding-top: 187px;
   }
 }
 
@@ -200,7 +200,7 @@ header .navbar .logo_li, header .navbar .logo {
 
 @media screen and (min-width: 780px) {
   .main_wrapper section.section_col-1 .festival {
-    height: 32vw;
+    height: 33vw;
   }
 }
 
@@ -224,7 +224,7 @@ header .navbar .logo_li, header .navbar .logo {
 }
 
 .main_wrapper section.section_col-1 .festival p i {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: block;
 }
 
@@ -234,15 +234,9 @@ header .navbar .logo_li, header .navbar .logo {
 
 .main_wrapper section.section_col-1 .festival p span {
   font-family: 'RockledgeWUTI';
-  font-size: 35px;
-  margin-bottom: 20px;
+  font-size: 32px;
+  margin-bottom: 10px;
   display: block;
-}
-
-@media screen and (min-width: 780px) {
-  .main_wrapper section.section_col-1 .festival p span {
-    font-size: 46px;
-  }
 }
 
 .main_wrapper section.section_col-1 .box_pic {
@@ -251,7 +245,7 @@ header .navbar .logo_li, header .navbar .logo {
 
 @media screen and (min-width: 780px) {
   .main_wrapper section.section_col-1 .box_pic {
-    height: 32vw;
+    height: 28vw;
   }
 }
 
@@ -316,10 +310,10 @@ header .navbar .logo_li, header .navbar .logo {
 
 @media screen and (min-width: 780px) {
   .main_wrapper section.section_col-2 .idyll {
-    font-size: 8.5vw;
-    line-height: 9vw;
-    height: 75vw;
-    padding: 4vw 20px 2vw;
+    font-size: 9.5vw;
+    line-height: 8.2vw;
+    height: 67vw;
+    padding: 2vw 20px;
   }
 }
 
@@ -327,12 +321,12 @@ header .navbar .logo_li, header .navbar .logo {
   width: auto;
   max-width: 76vw;
   display: block;
-  margin: auto auto 10px;
+  margin: auto;
 }
 
 @media screen and (min-width: 780px) {
   .main_wrapper section.section_col-2 .idyll img {
-    max-width: 100%;
+    max-width: 90%;
   }
 }
 
@@ -373,7 +367,7 @@ header .navbar .logo_li, header .navbar .logo {
 
 @media screen and (min-width: 780px) {
   .main_wrapper section.section_col-3 .box_pic {
-    height: 32vw;
+    height: 33vw;
   }
 }
 
@@ -410,21 +404,15 @@ header .navbar .logo_li, header .navbar .logo {
 }
 
 .main_wrapper section.section_col-3 .women i {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: block;
 }
 
 .main_wrapper section.section_col-3 .women span {
   font-family: 'RockledgeWUTI';
-  font-size: 35px;
-  margin-bottom: 20px;
+  font-size: 32px;
+  margin-bottom: 10px;
   display: block;
-}
-
-@media screen and (min-width: 780px) {
-  .main_wrapper section.section_col-3 .women span {
-    font-size: 46px;
-  }
 }
 
 .main_wrapper section.section_col-3 .pic {
@@ -435,7 +423,7 @@ header .navbar .logo_li, header .navbar .logo {
 
 @media screen and (min-width: 780px) {
   .main_wrapper section.section_col-3 .pic {
-    height: 32vw;
+    height: 28vw;
   }
 }
 

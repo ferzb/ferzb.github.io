@@ -36,13 +36,13 @@ html, body {
   min-width: 320px;
   font-family: "UniversLTStd", sans-serif;
   color: #002337;
-  font-size: 14px;
+  font-size: 12px;
   position: relative;
 }
 
 @media screen and (min-width: 640px) {
   html, body {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
