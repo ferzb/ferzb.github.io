@@ -1,0 +1,246 @@
+@import url("grid.css");
+@font-face {
+  font-family: 'Rockled';
+  src: url("../fonts/RockledgeWUTI.otf");
+  font-weight: normal;
+}
+
+/****Grid layout settings****/
+/*General for documetn settings*/
+/*Color*/
+/*Typography*/
+/*h1*/
+/*navbar*/
+/*navigation icon*/
+/*container*/
+/*wrapper*/
+/*section wrapper*/
+/*container wrapper*/
+/*btn up*/
+header {
+  position: static;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #96f5d2;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+header a {
+  display: block;
+  margin: 0;
+}
+
+.page_container {
+  min-height: 100vh;
+}
+
+.buy_tickets {
+  background: #ff0000;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.page_main {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.page_main .container {
+  padding: 0;
+}
+
+@media screen and (min-width: 640px) {
+  .page_main .container {
+    padding: 0px 20px;
+  }
+}
+
+.main_wrapper {
+  height: 100%;
+}
+
+.main_wrapper section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 640px) {
+  .main_wrapper section {
+    width: calc(100%/3);
+  }
+}
+
+.main_wrapper section.section_col-1 .festival {
+  background: #ff9b7d;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.main_wrapper section.section_col-1 .festival p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.main_wrapper section.section_col-1 .festival p i {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.main_wrapper section.section_col-1 .festival p span {
+  font-family: 'Rockled';
+  font-size: 24px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.main_wrapper section.section_col-1 .discover {
+  background: #55affa;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.main_wrapper section.section_col-1 .discover img {
+  width: 50%;
+}
+
+.main_wrapper section.section_col-2 .idyll {
+  background: #d7d77d;
+  font-size: 100px;
+  line-height: 85px;
+  text-align: center;
+  font-family: 'Rockled';
+}
+
+.main_wrapper section.section_col-2 .support {
+  background: #ffa0c3;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.main_wrapper section.section_col-2 .support img {
+  width: auto;
+  max-width: 45%;
+  display: inline-block;
+}
+
+.main_wrapper section.section_col-3 .women {
+  background: #55affa;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.main_wrapper section.section_col-3 .women p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.main_wrapper section.section_col-3 .women i {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.main_wrapper section.section_col-3 .women span {
+  font-family: 'Rockled';
+  font-size: 24px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+footer {
+  margin-top: auto;
+  background: #96f5d2;
+  text-align: center;
+}
+
+footer .input_box {
+  margin-bottom: 30px;
+}
+
+footer .input_box form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .input_box input {
+  padding: 6px 10px;
+  text-align: center;
+}
+
+footer .input_box button {
+  color: #96f5d2;
+  font-size: 14px;
+  padding: 6px 10px;
+  margin-left: 10px;
+  background: #002337;
+}
+
+footer span {
+  display: block;
+  margin-bottom: 6px;
+}
+
+footer .footer_soc_links a {
+  width: 75px;
+  height: 75px;
+}
+
+footer .footer_page_link {
+  position: relative;
+  max-width: 225px;
+}
+
+footer .footer_page_link:after {
+  content: '';
+  max-width: 225px;
+  margin: auto auto 20px;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #000000;
+}
+/*# sourceMappingURL=style.css.map */
