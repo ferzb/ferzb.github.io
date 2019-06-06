@@ -1,5 +1,6 @@
 .page_container
     line-height: 24px
+    min-height: 100vh
     
 .buy_tickets
     background: #ff0000
@@ -189,13 +190,43 @@
     
     &_accommodation
         background: #55affa
-        height: 100vw
-        min-height: 100%
-
+        height: auto
+        min-height: auto
+        
     &_contact
         max-height: 58vh
-        height: 100vw
+        height: auto
         min-height: auto
         background: #96f5d2
         a
             display: block
+
+.about_us_page
+    footer
+        background: #d7d77d
+
+.location_page
+    header
+        background: #55affa
+    footer
+        background: #ff9b7d
+
+.accommodation_page
+    header
+        background: #d7d77d
+    .page_main
+        flex-grow: 1
+        display: flex
+
+    footer
+        margin-top: auto
+        background: #96f5d2
+
+.contact_page
+    header
+        background: #ff9b7d
+    .page_main
+        flex-grow: 1
+        display: flex
+    footer
+        background: #55affa
