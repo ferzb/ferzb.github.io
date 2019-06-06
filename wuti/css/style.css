@@ -126,7 +126,7 @@ header .navbar {
   background: #96f5d2;
   width: 100%;
   height: 100vh;
-  top: 23%;
+  top: 19%;
   left: 0;
 }
 
@@ -161,6 +161,10 @@ header .navbar li:last-child {
     padding: 0;
     border: none;
   }
+}
+
+header .navbar li a:hover {
+  opacity: 0.6;
 }
 
 header .navbar .logo_li, header .navbar .logo {
@@ -201,12 +205,6 @@ header .navbar .logo_li, header .navbar .logo {
   height: 100%;
 }
 
-@media screen and (min-width: 780px) {
-  .page_main {
-    padding-top: 205px;
-  }
-}
-
 .page_main .container {
   padding: 0;
 }
@@ -219,6 +217,13 @@ header .navbar .logo_li, header .navbar .logo {
 
 .main_wrapper {
   height: 100%;
+  padding-top: 0;
+}
+
+@media screen and (min-width: 780px) {
+  .main_wrapper {
+    padding-top: 205px;
+  }
 }
 
 .main_wrapper section {
@@ -483,8 +488,15 @@ header .navbar .logo_li, header .navbar .logo {
   padding: 26px 0;
 }
 
+@media screen and (min-width: 780px) {
+  .section_about, .section_location, .section_accommodation, .section_contact {
+    padding-top: 205px;
+  }
+}
+
 .section_about .container, .section_location .container, .section_accommodation .container, .section_contact .container {
   max-width: 460px;
+  padding: 26px;
 }
 
 .section_about .general_title, .section_about .general_text, .section_about .general_column_text, .section_location .general_title, .section_location .general_text, .section_location .general_column_text, .section_accommodation .general_title, .section_accommodation .general_text, .section_accommodation .general_column_text, .section_contact .general_title, .section_contact .general_text, .section_contact .general_column_text {
@@ -537,7 +549,6 @@ header .navbar .logo_li, header .navbar .logo {
 }
 
 .section_contact {
-  max-height: 58vh;
   height: auto;
   min-height: auto;
   background: #96f5d2;
@@ -623,7 +634,7 @@ footer .input_box input {
   height: 32px;
   padding-top: 4px;
   font-size: 14px;
-  max-width: 145px;
+  max-width: 200px;
   width: 100%;
   text-align: center;
   letter-spacing: 0.15em;
@@ -660,12 +671,18 @@ footer .input_box button {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 @media screen and (min-width: 480px) {
   footer .input_box button {
     max-width: 125px;
   }
+}
+
+footer .input_box button:hover {
+  opacity: 0.6;
 }
 
 footer span {

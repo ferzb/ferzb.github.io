@@ -15,7 +15,7 @@ footer
             height: 32px
             padding-top: 4px
             font-size: 14px
-            max-width: 145px
+            max-width: 200px
             width: 100%
             text-align: center
             letter-spacing: 0.15em
@@ -42,8 +42,11 @@ footer
             align-items: center
             justify-content: center
             cursor: pointer
+            transition: 0.2s
             @media screen and (min-width: #{$dw-480})
                 max-width: 125px
+            &:hover
+                opacity: 0.6
     span
         display: block
     .footer

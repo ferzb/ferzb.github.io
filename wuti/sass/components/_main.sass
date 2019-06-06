@@ -18,8 +18,6 @@
     padding-top: 0px
     width: 100%
     height: 100%
-    @media screen and (min-width: #{$dw-780})
-        padding-top: 205px
     .container
         padding: 0
         @media screen and (min-width: #{$dw-640})
@@ -28,6 +26,9 @@
 
 .main_wrapper
     height: 100%
+    padding-top: 0
+    @media screen and (min-width: #{$dw-780})
+        padding-top: 205px
     section
         width: 100%
         display: flex
@@ -164,8 +165,11 @@
         text-align: center
         min-height: 100vh
         padding: 26px 0
+        @media screen and (min-width: #{$dw-780})
+            padding-top: 205px
         .container
             max-width: 460px
+            padding: 26px
         
         .general_title, .general_text, .general_column_text
             margin-bottom: 26px
@@ -199,7 +203,6 @@
                     line-height: 45px
         
     &_contact
-        max-height: 58vh
         height: auto
         min-height: auto
         background: #96f5d2
