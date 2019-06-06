@@ -28,16 +28,22 @@ $(document).ready(function() {
 			$('html, body').removeAttr('style');
 		}
 	});
-    
-    //input focus function
-    let input_box = $('.input_box input');
-    
-	input_box.focus(function(){
-		$(this).parent().addClass('focus')
-	}).blur(function(){
-		if($(this).val() === ''){
-			$(this).parent().removeClass('focus')
-		}
-	})
+
+	$(window).scroll(function(){
+
+		$('.panel').each(function(){
+			var top = $(this).offset().top - 200,
+				bottom = $(this).offset().top + 1000;
+			console.log(bottom, top)
+			if ($(window).scrollTop() > top && $(window).scrollTop() < bottom){
+				$(this).addClass('show');
+				var color = $('.panel.show').attr('data-color');
+				$('header').css('background', color);
+			}else{
+				$(this).removeClass('show');
+			}
+		});
+
+	});
 	
 });

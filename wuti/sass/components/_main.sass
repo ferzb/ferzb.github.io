@@ -15,7 +15,6 @@
 
 .page_main
     padding-top: 0px
-    display: flex
     width: 100%
     height: 100%
     @media screen and (min-width: #{$dw-780})
@@ -156,3 +155,47 @@
                 object-fit: cover
                 @media screen and (min-width: #{$dw-780})
                     height: 28vw
+
+
+.section
+    &_about, &_location, &_accommodation, &_contact
+        width: 100%
+        text-align: center
+        min-height: 100vh
+        padding: 26px 0
+        .container
+            max-width: 460px
+        
+        .general_title, .general_text, .general_column_text
+            margin-bottom: 26px
+        .general_text:last-child
+            margin-bottom: 0
+    &_about
+        background: #55affa
+
+    &_location
+        background: #d7d77d
+        .map_box
+            position: relative
+            max-width: 512px
+            max-height: 380px
+            width: 100%
+            height: 100vh
+            display: flex
+            align-items: center
+            justify-content: center
+            background: #ffffff
+            margin: auto
+    
+    &_accommodation
+        background: #55affa
+        height: 100vw
+        min-height: 100%
+
+    &_contact
+        max-height: 58vh
+        height: 100vw
+        min-height: auto
+        background: #96f5d2
+        a
+            display: block

@@ -25,6 +25,35 @@
 /*section wrapper*/
 /*container wrapper*/
 /*btn up*/
+.general_title {
+  font-family: 'RockledgeWUTI';
+  font-size: 32px;
+  margin-bottom: 10px;
+  display: block;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  line-height: 34px;
+}
+
+.general_text {
+  margin-bottom: 10px;
+  display: block;
+  letter-spacing: 0.15em;
+  line-height: 20px;
+}
+
+.general_column_text {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-transform: uppercase;
+}
+
 header {
   position: relative;
   width: 100%;
@@ -34,6 +63,8 @@ header {
   background: #96f5d2;
   text-transform: uppercase;
   font-weight: lighter;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 @media screen and (min-width: 780px) {
@@ -145,9 +176,6 @@ header .navbar .logo_li, header .navbar .logo {
 
 .page_main {
   padding-top: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 100%;
   height: 100%;
 }
@@ -427,9 +455,72 @@ header .navbar .logo_li, header .navbar .logo {
   }
 }
 
+.section_about, .section_location, .section_accommodation, .section_contact {
+  width: 100%;
+  text-align: center;
+  min-height: 100vh;
+  padding: 26px 0;
+}
+
+.section_about .container, .section_location .container, .section_accommodation .container, .section_contact .container {
+  max-width: 460px;
+}
+
+.section_about .general_title, .section_about .general_text, .section_about .general_column_text, .section_location .general_title, .section_location .general_text, .section_location .general_column_text, .section_accommodation .general_title, .section_accommodation .general_text, .section_accommodation .general_column_text, .section_contact .general_title, .section_contact .general_text, .section_contact .general_column_text {
+  margin-bottom: 26px;
+}
+
+.section_about .general_text:last-child, .section_location .general_text:last-child, .section_accommodation .general_text:last-child, .section_contact .general_text:last-child {
+  margin-bottom: 0;
+}
+
+.section_about {
+  background: #55affa;
+}
+
+.section_location {
+  background: #d7d77d;
+}
+
+.section_location .map_box {
+  position: relative;
+  max-width: 512px;
+  max-height: 380px;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #ffffff;
+  margin: auto;
+}
+
+.section_accommodation {
+  background: #55affa;
+  height: 100vw;
+  min-height: 100%;
+}
+
+.section_contact {
+  max-height: 58vh;
+  height: 100vw;
+  min-height: auto;
+  background: #96f5d2;
+}
+
+.section_contact a {
+  display: block;
+}
+
 footer {
   margin-top: auto;
-  background: #96f5d2;
+  background: #55affa;
   text-align: center;
   letter-spacing: 0.15em;
   font-size: 14px;
