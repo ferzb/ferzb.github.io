@@ -12,14 +12,14 @@
     &:hover
         background: #e60000
     .container
-        padding: 8px 0px 6px
+        padding: 18px 0px 14px
 
 .page_main
     padding-top: 0px
     width: 100%
     height: 100%
     @media screen and (min-width: #{$dw-780})
-        padding-top: 187px
+        padding-top: 205px
     .container
         padding: 0
         @media screen and (min-width: #{$dw-640})
@@ -192,6 +192,11 @@
         background: #55affa
         height: auto
         min-height: auto
+        .container
+            max-width: 560px
+            .general_title
+                &:last-child
+                    line-height: 45px
         
     &_contact
         max-height: 58vh
@@ -206,13 +211,13 @@
         background: #d7d77d
 
 .location_page
-    header
+    header, .navbar
         background: #55affa
     footer
         background: #ff9b7d
 
 .accommodation_page
-    header
+    header, .navbar
         background: #d7d77d
     .page_main
         flex-grow: 1
@@ -223,7 +228,7 @@
         background: #96f5d2
 
 .contact_page
-    header
+    header, .navbar
         background: #ff9b7d
     .page_main
         flex-grow: 1
