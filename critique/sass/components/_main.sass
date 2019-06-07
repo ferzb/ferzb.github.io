@@ -1,0 +1,197 @@
+body, html
+    overflow-x: hidden
+    
+.page_wrapper
+    min-height: 100vh
+    background: #f8f8f8
+
+
+.page_main
+    padding: 40px 0px
+    .form_wrapper
+        margin-bottom: 80px
+    .search_form
+        width: 100%
+        max-width: 100%
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        @media screen and (min-width: #{$dw-480})
+            flex-wrap: nowrap
+        @media screen and (min-width: #{$dw-780})
+            max-width: 470px
+        @media screen and (min-width: #{$dw-960})
+            max-width: 570px
+        span
+            font-family: $font
+            font-size: 20px
+            color: #777777
+            font-weight: bold
+            margin-right: 28px
+        input
+            display: block
+            background: $none
+            flex-grow: 1
+            font-size: 13px
+            padding: 18px 18px 18px 47px
+            border-radius: 10px
+            border: 1px solid #dddddd
+            margin-top: 30px
+            width: 100%
+            @media screen and (min-width: #{$dw-480})
+                margin-top: 0
+        &+.general_btn
+            background: #05aef5
+            font-size: 15px
+            padding: 18px 56px
+            margin-left: auto
+            margin-top: 30px
+            @media screen and (min-width: #{$dw-780})
+                margin-top: 0
+
+    .acthor_box
+        margin-top: 30px
+        border: 1px solid #d6d6d6
+        border-radius: 10px
+        overflow: hidden
+        &_header
+            background: #f2f2f2
+            border-bottom: 1px solid #d6d6d6
+            padding: 10px 31px
+            min-height: 55px
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            .acthor_name
+                color: #555555
+                font-size: 16px
+                font-weight: bold
+                margin-right: 16px
+                @media screen and (min-width: #{$dw-560})
+                    font-size: 20px
+            .acthor_date
+                margin-left: auto
+                color: #05aef5
+                font-size: 10px
+                font-weight: bold
+                font-family: $font
+                i
+                    font-weight: bold
+            .general_btn
+                background: #ff3f3f
+                font-size: 10px
+                padding: 10px 22px
+                margin-top: 10px
+                @media screen and (min-width: #{$dw-480})
+                    margin-left: 15px
+                    margin-top: 0px
+                @media screen and (min-width: #{$dw-560})
+                    margin-left: 35px
+        &_info
+            padding: 22px 31px 18px
+            line-height: 24px
+            border-bottom: 1px solid #d6d6d6
+            &>div
+                margin-top: 30px
+                &:first-child
+                    margin-top: 0
+                @media screen and (min-width: #{$dw-780})
+                    margin-top: 0
+            span
+                color: #999999
+                font-size: 12px
+                display: block
+                font-weight: bold
+                letter-spacing: 0.2em
+            a, p
+                font-size: 15px
+                color: #555555
+                letter-spacing: 0.12em
+        
+        &_status
+            padding: 22px 31px 18px
+            line-height: 24px
+            text-align: center
+            display: flex
+            flex-direction: column
+            @media screen and (min-width: #{$dw-640})
+                flex-direction: row
+            .point_status
+                max-width: 185px
+                width: 100%
+                display: block
+                position: relative
+                .offer_day
+                    color: #555555
+                    font-size: 10px
+                    display: block
+                .offer_status
+                    color: #999999
+                    font-size: 8px
+                    display: flex
+                    flex-direction: column
+                    position: relative
+                    &:after
+                        content: ''
+                        display: block
+                        border-radius: 50%
+                        width: 13px
+                        height: 13px
+                        background: #05aef5
+                        margin: auto auto 0
+                        position: absolute
+                        top: 6px
+                        left: 0
+                        z-index: 1
+                        @media screen and (min-width: #{$dw-640})
+                            position: relative
+                            top: 0
+                    &:before
+                        content: ''
+                        display: block
+                        height: calc(100% + 12px)
+                        width: 2px
+                        background: #05aef5
+                        position: absolute
+                        z-index: 0
+                        top: calc(-100% - 5px)
+                        left: 5px
+                        @media screen and (min-width: #{$dw-640})
+                            width: 100%
+                            height: 2px
+                            left: -50% 
+                            bottom: 5px
+                            top: auto
+                        
+                &[data-status='offer_sent']
+                    width: auto
+                    margin-right: 0px
+                    @media screen and (min-width: #{$dw-640})
+                        margin-right: 67px
+                    .offer_status
+                        &:before
+                            display: none
+                &[data-status='offer_waiting']
+                    .offer_day
+                        color: #999999
+                    .offer_status
+                        height: 24px
+                        @media screen and (min-width: #{$dw-640})
+                            height: 37px
+                        &:before, &:after
+                            background: #dddddd
+                &[data-status='offer_accepted']     
+                    .offer_status
+                        color: #0ca118
+                        &:before, &:after
+                            background: #0ca118
+                &[data-status='offer_accepted_another']     
+                    .offer_status
+                        color: #f54305
+                        &:before, &:after
+                            background: #f54305
+                &[data-status='offer_decliend']     
+                    .offer_status
+                        color: #eb1917
+                        &:before, &:after
+                            background: #eb1917
