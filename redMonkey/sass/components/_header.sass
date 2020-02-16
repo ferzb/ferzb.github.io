@@ -1,0 +1,133 @@
+.page_header
+    border-bottom: 1px solid #ededed
+    background-color: #ffffff
+    .wrap
+        padding: 9px 10px
+        @media screen and (min-width: #{$dw-480})
+            padding: 15px 24px
+    &-menu
+        .heart
+            margin-left: 26px
+            display: none
+            cursor: pointer
+            position: relative
+            &:after
+                content: ''
+                display: block
+                position: absolute
+                top: -1px
+                right: -1px
+                width: 5px
+                height: 5px
+                background: #EE2316
+                border-radius: 50%
+            @media screen and (min-width: #{$dw-640})
+                display: block
+        .market-time
+            display: none
+            margin-left: 26px
+            align-items: center
+            &:before
+                content: ''
+                display: block
+                margin-right: 4px
+                width: 17px
+                height: 16px
+                background-image: url('../img/cards.svg')
+                background-size: contain
+            @media screen and (min-width: #{$dw-960})
+                display: flex
+    &-logo
+        max-width: 150px
+        text-align: center
+        font-size: 10px
+        @media screen and (min-width: #{$dw-640})
+            max-width: 225px
+            font-size: 15px
+        a
+            display: block
+    &-profile
+        .phone
+            margin-right: 25px
+            display: none
+            @media screen and (min-width: #{$dw-960})
+                display: block
+            a
+                display: flex
+        .language
+            cursor: pointer
+            margin-right: 14px
+            position: relative
+            align-items: center
+            display: none
+            @media screen and (min-width: #{$dw-960})
+                display: flex
+            &:before
+                content: ''
+                display: inline-block
+                background-image: url('../img/world.svg')
+                background-size: contain
+                width: 17px
+                height: 17px
+                margin-top: -2px
+                margin-right: 4px
+            &_active
+                display: flex
+                align-items: center
+                &:after
+                    content: ''
+                    display: block
+                    width: 5px
+                    height: 5px
+                    border-right: 2px solid #000
+                    border-bottom: 2px solid #000
+                    transform: rotate(45deg)
+                    position: relative
+                    top: -2px
+                    margin-left: 5px
+            &_list
+                display: none
+                position: absolute
+                z-index: 2
+                top: 20px
+                right: 11px
+                li
+                    margin-bottom: 2px
+        .user
+            &_photo
+                width: 35px
+                height: 35px
+                border-radius: 50%
+                background-color: #ededed
+                display: flex
+                align-items: center
+                justify-content: center
+                margin-right: 0px
+                @media screen and (min-width: #{$dw-640})
+                    margin-right: 9px
+            &_name
+                display: none
+                @media screen and (min-width: #{$dw-640})
+                    display: block
+            &_list
+                position: absolute
+                display: none
+                z-index: 2
+                background-color: #ffffff
+                top: 95px
+                right: 30px
+                width: 262px
+                box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
+                li
+                    padding: 15px
+                    border-bottom: 1px solid #ededed
+                    a:hover
+                        color: #00AEEF
+                    &:last-child
+                        border-bottom: none
+                        color: #00AEEF
+            .general_arrow
+                cursor: pointer
+                transform: rotate(-45deg)
+                position: relative
+                top: -2px
